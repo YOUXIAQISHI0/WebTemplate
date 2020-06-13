@@ -1,0 +1,266 @@
+/* DaTouWang URL: www.zhansucai.com */
+*,
+:after,
+:before{box-sizing: inherit;padding: 0;margin: 0;}
+[class^=dn-]{box-sizing: border-box}
+html{color: #333;-webkit-font-smoothing: antialiased}
+body,
+html{font-size: 14px;font-family: PingFangSC-Light, helvetica neue, hiragino sans gb, arial, microsoft yahei ui, microsoft yahei, simsun, sans-serif;color: #373d41;line-height: 1.28571;background-color: #000;background-image: none;background-repeat: repeat;background-position: 0 0}
+body::-webkit-scrollbar{display: none}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight: inherit}
+ol,ul{list-style: none;margin: 0;padding: 0}
+li{margin-left: 0}
+strong{font-weight: 500}
+small{font-size: 75%}
+a{text-decoration: none}
+a:link{color: #00c1de}
+a:visited{color: #00b7d3}
+a:active,a:hover{color: #00afc9}
+img{border: 0}
+.clearfix:after{visibility: hidden;display: block;height: 0;font-size: 0;content: " ";clear: both}
+.dn-container{margin-right: auto;margin-left: auto;min-width: 100%;padding-right: 10px;padding-left: 10px}
+@media (min-width:769px){.dn-container{min-width: 1000px}}
+@media (min-width:1000px){.dn-container{min-width: 100%}}
+@media (min-width:1200px){.dn-container{min-width: 1200px;max-width: 1200px}}
+.wb-zc-lxmod-yunqi-review-2018-anim h6,
+.wb-zc-lxmod-yunqi-review-2018-anim p{margin: 0}
+.wb-zc-lxmod-yunqi-review-2018-anim .module-wrap{position: absolute;top: 0;left: 0;z-index: 0;width: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018-anim .module-wrap #aniBg,
+.wb-zc-lxmod-yunqi-review-2018-anim .module-wrap #aniBg-wrap{position: absolute;top: 0;left: 0;z-index: 0;height: 100%;width: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018-anim .module-wrap #aniBg-wrap canvas,
+.wb-zc-lxmod-yunqi-review-2018-anim .module-wrap #aniBg canvas{width: 100%;height: 100%}
+.wb-zc-lxmod-yunqi-review-2018 a:active,
+.wb-zc-lxmod-yunqi-review-2018 a:focus{text-decoration: none;outline: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap{position: relative;width: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo{position: fixed;top: 0;left: 0;z-index: 10;width: 100%;height: 75px;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con{min-width: 1200px;max-width: 1200px;box-sizing: border-box;padding-right: 10px;padding-left: 10px;margin-right: auto;margin-left: auto;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con a{display: inline-block;padding: 15px 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con a img{display: block;height: 45px;vertical-align: top}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container{position: relative;z-index: 1;height: 100%;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container h6{line-height: 28px;font-size: 14px;color: #fff;font-weight: 400;margin-top: 134px;margin-left: 6%;overflow: hidden;margin-bottom: 0;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container h6 b{font-size: 20px;font-weight: 700;margin-right: 10px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years{float: left;display: inline-block;width: 230px;height: 75%;padding-top: 9.5%;border-right: 1px solid hsla(0, 0%, 100%, .3);margin-top: 14px;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item{height: 20%;font-size: 0;text-align: right;padding-right: 18px;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item .vertical{display: inline-block;width: 1px;height: 100%;vertical-align: middle;margin-left: -1px;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item.show a span{right: 0}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item a{display: inline-block;vertical-align: middle;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item a:focus{text-decoration: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item a:hover b{color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item a span{position: relative;right: -100%;transition: all .3s ease-in-out}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item a b{display: block;height: 34px;line-height: 34px;font-size: 28px;color: hsla(0, 0%, 100%, .32);overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item a i{display: none;line-height: 20px;font-size: 14px;color: #fff;font-style: normal;margin-top: 2px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item.cur{position: relative;height: 30%}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item.cur:after{position: absolute;top: 0;right: -2px;content: "";width: 4px;height: 100%;background-color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item.cur a b{color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item.cur a i{display: block}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap{float: left;display: inline-block;width: 890px;height: 75%;margin-left: 294px;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap .con{position: relative;top: 50%;transform: translateY(-65%);overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap img{display: block;width: 700px;vertical-align: top;opacity: 0}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap img.aniKv{animation: pulse 1s .2s forwards;-webkit-animation: pulse 1s .2s forwards;-moz-animation: pulse 1s .2s forwards;-ms-animation: pulse 1s .2s forwards;-o-animation: pulse 1s .2s forwards}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap .title{line-height: 25px;font-size: 18px;color: #fff;opacity: 0;margin-top: 14px;margin-left: 18px;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap .title.aniUp{animation: slideInUp 1s .5s forwards;-webkit-animation: slideInUp 1s .5s forwards;-moz-animation: slideInUp 1s .5s forwards;-ms-animation: slideInUp 1s .5s forwards;-o-animation: slideInUp 1s .5s forwards}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap .text{width: 72%;line-height: 24px;font-size: 14px;color: #fff;opacity: 0;margin-top: 12px;margin-left: 18px;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap .text.aniUp{animation: slideInUp 1s .5s forwards;-webkit-animation: slideInUp 1s .5s forwards;-moz-animation: slideInUp 1s .5s forwards;-ms-animation: slideInUp 1s .5s forwards;-o-animation: slideInUp 1s .5s forwards}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap{position: absolute;z-index: 2;top: 0;left: 240px;width: 1180px;height: 100%;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list{position: absolute;top: 178px;left: 30px;height: 75%;padding: 2% 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item{height: 12%;font-size: 0;cursor: pointer;opacity: 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item.aniText{animation: aniTextShow 1s .2s forwards;-webkit-animation: aniTextShow 1s .2s forwards;-moz-animation: aniTextShow 1s .2s forwards;-ms-animation: aniTextShow 1s .2s forwards;-o-animation: aniTextShow 1s .2s forwards}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item.cur em,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item.cur span{color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item em{display: inline-block;width: 1px;height: 100%;vertical-align: middle;margin-left: -1px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item span{display: inline-block;font-size: 16px;color: hsla(0, 0%, 100%, .62);vertical-align: middle;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item i{display: inline-block;width: 6px;height: 6px;vertical-align: middle;background-color: hsla(0, 0%, 100%, 0);margin-left: 20px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item:hover span{color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .swiper-container{width: 100%;height: 100%}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap{display: none;position: relative;top: 50%;width: 1040px;height: 440px;margin-top: -220px;margin-left: 142px;overflow: initial!important;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item{position: absolute;left: 0;top: 0;z-index: 0;width: 100%;height: 100%;transition: all .55s ease-in-out;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .unclick{position: absolute;top: 0;left: 0;width: 100%;height: 100%}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con{position: relative;width: 0;height: 0;margin-top: 220px;margin-left: 520px;transition: all .3s ease-in-out}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a{position: relative;display: block;width: 100%;height: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a:focus,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a:hover{text-decoration: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .color{position: relative;float: left;display: inline-block;width: 9px;height: 361px;margin-top: 26px;transition: all .3s ease-in-out}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .img{position: relative;float: left;display: inline-block;width: 670px;height: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .img img{display: block;vertical-align: top;width: 100%;height: 100%;object-fit: cover}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .img .title{position: absolute;top: 90px;left: 26px;width: 566px;padding-bottom: 20px;border-bottom: 1px solid #fff;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .img .title .etit{line-height: 83px;font-size: 56px;font-weight: 700;color: #fff;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .img .title .ctit{line-height: 52px;font-size: 36px;font-weight: 700;color: #fff;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .info{position: absolute;top: 26px;right: 0;width: 132px;height: 361px;overflow: hidden;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);transition: all .3s ease-in-out}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .info .date{width: 104px;height: 36px;line-height: 36px;font-size: 25px;color: #fff;margin: 18px auto 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .info .txt{width: 104px;line-height: 20px;font-size: 14px;color: #fff;margin: 236px auto 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .info i{position: absolute;right: 14px;bottom: 14px;display: block;height: 20px;line-height: 20px;font-size: 20px;color: #373d41}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con .play{position: absolute;left: 40px;bottom: 40px;width: 0;height: 21px;line-height: 21px;font-size: 14px;color: #373d41;cursor: pointer;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con .play i{position: relative;display: inline-block;margin-right: 12px;vertical-align: top;top: 4px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con .play span{margin-left: 20px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con .mask{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(26, 26, 26, .71)}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center{z-index: 2}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .unclick{display: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con{width: 854px;height: 440px;margin-top: 32px;margin-left: 93px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .color{width: 10px;height: 404px;margin-top: 18px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .img{width: 754px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .img .title{top: 102px;left: 51px;width: 596px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .img .title .etit{line-height: 83px;font-size: 56px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .img .title .ctit{line-height: 52px;font-size: 36px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .info{top: 18px;width: 148px;height: 404px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .info .date{width: 116px;height: 38px;line-height: 38px;margin: 18px auto 0}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .info .txt{width: 116px;line-height: 21px;margin: 274px auto 0}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .info i{color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con .play{width: auto;left: 66px;bottom: 46px;height: 21px;line-height: 21px;font-size: 14px;color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con .play span{margin-left: 20px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con .mask{display: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con{position: relative;width: 760px;height: 414px;margin-top: 28px;margin-left: 140px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a{position: relative;display: block;width: 100%;height: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a:focus,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a:hover,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a:focus,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a:hover{text-decoration: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .color,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .color{position: relative;float: left;display: inline-block;width: 9px;height: 361px;margin-top: 26px;transition: all .3s ease-in-out}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .img,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .img{position: relative;float: left;display: inline-block;width: 670px;height: 100%;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .img img,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .img img{display: block;vertical-align: top;width: 100%;height: 100%;object-fit: cover}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .img .title,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .img .title{position: absolute;top: 90px;left: 26px;width: 566px;padding-bottom: 20px;border-bottom: 1px solid #fff;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .img .title .etit,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .img .title .etit{line-height: 83px;font-size: 56px;font-weight: 700;color: #fff;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .img .title .ctit,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .img .title .ctit{line-height: 52px;font-size: 36px;font-weight: 700;color: #fff;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .info,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .info{position: absolute;top: 26px;right: 0;width: 132px;height: 361px;overflow: hidden;transition: all .3s ease-in-out}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .info .date,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .info .date{width: 104px;height: 36px;line-height: 36px;font-size: 25px;color: #fff;margin: 18px auto 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .info .txt,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .info .txt{width: 104px;line-height: 20px;font-size: 14px;color: #fff;margin: 236px auto 0;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con .play,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con .play{position: absolute;left: 40px;bottom: 40px;width: auto;height: 21px;line-height: 21px;font-size: 14px;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con .play span,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con .play span{margin-left: 20px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con .mask,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con .mask{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(26, 26, 26, .71)}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear{top: -470px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con{margin-left: 0}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear{top: 500px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con{margin-left: 280px}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .right-sign{position: absolute;z-index: 30;right: 40px;bottom: 20px;line-height: 18px;font-size: 12px;color: #fff}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav{display: none}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask{display: none;position: fixed;top: 0;left: 0;z-index: 30;width: 100%;height: 100%;background-color: rgba(0, 0, 0, .68);overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap{position: relative;top: 50%;width: 800px;height: 448px;background-color: #fff;margin: -224px auto 0;*zoom: 1}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap:after,
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap:before{content: "";display: table}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap:after{clear: both}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap video{display: block;width: 100%;height: 100%;object-fit: cover;overflow: hidden}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap i{position: absolute;top: 0;right: -38px;display: block;width: 22px;height: 22px;font-size: 22px;color: #d7d8d9;text-align: center;cursor: pointer}
+@media (min-width:1600px){.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con{min-width: 1440px;max-width: 1440px}}
+@media (max-width:1600px){
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years{width: 200px;height: 70%}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item{padding-right: 15px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .kv-wrap{width: 730px;height: 70%;margin-left: 230px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap{left: 220px;width: 960px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list{left: 15px;height: 70%}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap{width: 840px;margin-left: 120px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con{margin-left: 480px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con{width: 780px;margin-left: 40px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .img{width: 680px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con a .img .title{left: 40px;width: 550px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.center .con .play{left: 60px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear{top: -470px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con{margin-left: 0}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.lnear .con a .img{width: 640px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear{top: 500px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con{width: 720px;margin-left: 120px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item.rnear .con a .img{width: 640px}
+}
+@media (min-width:1000px){
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con{min-width: 100%}
+}
+@media (max-width:768px){
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap,body{height: auto!important}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .right-sign{display: none}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo{height: 50px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con{min-width: 100%;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con a{display: inline-block;padding: 10px 0}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .logo .con a img{display: block;height: 30px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav{display: block;width: 100%;height: 60px;*zoom: 1}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav:after,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav:before{content: "";display: table}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav:after{clear: both}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .fix{width: 100%;height: 60px;*zoom: 1}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .fix:after,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .fix:before{content: "";display: table}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .fix:after{clear: both}.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .fix.fixed{position: fixed;left: 0;z-index: 20;top: 50px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con{position: relative;width: 330px;height: 60px;margin: 0 auto;*zoom: 1}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con:after,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con:before{content: "";display: table}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con:after{clear: both;position: absolute;z-index: 0;left: 0;bottom: 9px;content: "";display: block;width: 100%;height: 1px;font-size: 0;background-color: #fff}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .scroll{height: 60px;font-size: 0;padding-top: 10px;white-space: nowrap;overflow: scroll}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .scroll::-webkit-scrollbar{display: none}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .scroll .item{position: relative;z-index: 1;display: inline-block;height: 42px;line-height: 30px;font-size: 24px;color: #5c5a63;font-weight: 700;box-sizing: border-box;padding: 0 6px;margin-right: 25px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .scroll .item a{color: #5c5a63}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .scroll .item.cur{border-bottom: 4px solid #00d2d3}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .scroll .item.cur a{color: #fff}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .next,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .prev{position: absolute;top: 50%;width: 16px;height: 16px;line-height: 16px;font-size: 16px;color: hsla(0, 0%, 85%, .48);text-align: center;margin-top: -8px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .next.prev,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .prev.prev{left: -16px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .next.next,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .nav .con .prev.next{right: -16px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner{display: block;padding: 60px 22px 0;*zoom: 1}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner:after,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner:before{content: "";display: table}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner:after{clear: both}.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .kv{display: block;vertical-align: top;width: 100%;margin-top: 55px;margin-bottom: 62px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .title{line-height: 20px;font-size: 14px;color: #fff;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .text{line-height: 24px;font-size: 12px;color: #fff;margin-top: 12px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list{margin-top: 40px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item{width: 100%;margin-bottom: 42px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con{position: relative;width: 100%;height: 177px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a{position: relative;display: block;width: 100%;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a:focus,.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a:hover{text-decoration: none}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .color{float: left;display: inline-block;width: 4px;height: 150px;margin-top: 13px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .img{position: relative;float: left;display: inline-block;width: 287px;height: 177px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .img img{display: block;vertical-align: top;width: 100%;height: 100%;object-fit: cover}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .img .tit{position: absolute;top: 20px;left: 15px;width: 232px;line-height: 32px;font-size: 25px;font-weight: 700;color: #fff;padding-bottom: 17px;border-bottom: 1px solid #fff;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .info{position: absolute;top: 8px;right: 0;width: 80px;height: 160px;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .info .date{width: 66px;height: 20px;line-height: 20px;font-size: 14px;color: #fff;margin: 7px auto 0;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .info .txt{width: 66px;line-height: 16px;font-size: 12px;color: #fff;margin: 78px auto 0;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .info i{position: absolute;right: 7px;bottom: 7px;display: block;height: 12px;line-height: 12px;font-size: 12px;color: #fff}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con .play{position: absolute;left: 32px;bottom: 24px;height: 20px;line-height: 20px;font-size: 14px;color: #fff;cursor: pointer;overflow: hidden}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con .play i{position: relative;display: inline-block;font-size: 12px;margin-right: 6px;vertical-align: top;top: 4px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con .play span{margin-left: 6px}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap{width: 288px;height: 180px;margin: -90px auto 0}
+	.wb-zc-lxmod-yunqi-review-2018 .module-wrap .video-mask .video-wrap i{right: -36px;width: 14px;height: 14px;font-size: 14px}
+}
+@keyframes slideInUp{0%{opacity: 0;transform: translate3d(0, 100%, 0)}to{opacity: 1;transform: translateZ(0)}}
+@keyframes aniTextShow{0%{opacity: 0;transform: translateX(-100%)}to{opacity: 1;transform: translateX(0)}}
+@keyframes pulse{0%{opacity: 0;transform: scale3d(1.2, 1.2, 1.2)}50%{opacity: .5;transform: scale3d(1.05, 1.05, 1.05)}to{opacity: 1;transform: scaleX(1)}}
+.wb-zc-hcmod-sz-home-nav .module-wrap .nav-wrap .right .nav .nav-li a:hover{color: #7866FF;}
+.wb-zc-hcmod-sz-home-nav .module-wrap .nav-wrap .right .nav .nav-li.select a:hover{color: #fff;}
+.wb-zc-hcmod-sz-home-nav .module-wrap .nav-wrap .right .nav .nav-li a:hover::after{display: none;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .years .item.cur:after{background-color: #7866FF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .city-list .item.cur i{background-color: #7866FF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .color{background-color: #7866FF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a .info{background-color: #7866FF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a:hover .color{background-color: #753EFF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con a:hover .info{background-color: #753EFF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .color{background-color: #7866FF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a .info{background-color: #7866FF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a:hover .color{background-color: #753EFF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .inner .list .item .con a:hover .info{background-color: #753EFF;}
+.wb-zc-lxmod-yunqi-review-2018 .module-wrap .dn-container .review-wrap .slick-wrap .item .con .play:hover{color: #753EFF;}

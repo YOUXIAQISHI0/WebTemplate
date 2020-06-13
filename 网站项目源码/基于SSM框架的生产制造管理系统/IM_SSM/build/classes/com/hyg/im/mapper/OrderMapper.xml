@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyg.im.mapper.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.hyg.im.model.Order" >
+    <id column="ID" property="ID" jdbcType="INTEGER" />
+    <result column="OrderCode" property="orderCode" jdbcType="VARCHAR" />
+    <result column="CustomID" property="customID" jdbcType="INTEGER" />
+    <result column="ProductID" property="productID" jdbcType="INTEGER" />
+    <result column="Quantity" property="quantity" jdbcType="INTEGER" />
+    <result column="DeliveryDate" property="deliveryDate" jdbcType="DATE" />
+    <result column="PlanStartDate" property="planStartDate" jdbcType="DATE" />
+    <result column="PlanFinishDate" property="planFinishDate" jdbcType="DATE" />
+    <result column="RFIDCode" property="RFIDCode" jdbcType="VARCHAR" />
+    <result column="CreateUserID" property="createUserID" jdbcType="INTEGER" />
+    <result column="CreateDate" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    
+     <!-- 多对一的关系 -->
+	<!-- property: 指的是属性的值, javaType：指的是属性的类型-->
+	<association property="product" javaType="com.hyg.im.model.Product">
+		<id column="ID" property="ID" jdbcType="INTEGER" />
+	    <result column="ProdCode" property="prodCode" jdbcType="VARCHAR" />
+	    <result column="ProdName" property="prodName" jdbcType="VARCHAR" />
+	    <result column="ProdSpec" property="prodSpec" jdbcType="VARCHAR" />
+	    <result column="ProdType" property="prodType" jdbcType="VARCHAR" />
+	    <result column="Price" property="price" jdbcType="DECIMAL" />
+	    <result column="Description" property="description" jdbcType="VARCHAR" />
+	</association>
+	<association property="customer" javaType="com.hyg.im.model.Customer">
+		<id column="ID" property="ID" jdbcType="INTEGER" />
+	    <result column="CustomCode" property="customCode" jdbcType="VARCHAR" />
+	    <result column="CustomName" property="customName" jdbcType="VARCHAR" />
+	    <result column="Linkman" property="linkman" jdbcType="VARCHAR" />
+	    <result column="ContactNumber" property="contactNumber" jdbcType="VARCHAR" />
+	    <result column="Address" property="address" jdbcType="VARCHAR" />
+	    <result column="Description" property="description" jdbcType="VARCHAR" />
+	</association>
+    
+    
+    
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, OrderCode, CustomID, ProductID, Quantity, DeliveryDate, PlanStartDate, PlanFinishDate, 
+    RFIDCode, CreateUserID, CreateDate, Description, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from mm_prod_order
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from mm_prod_order
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hyg.im.model.Order" >
+    insert into mm_prod_order (ID, OrderCode, CustomID, 
+      ProductID, Quantity, DeliveryDate, 
+      PlanStartDate, PlanFinishDate, RFIDCode, 
+      CreateUserID, CreateDate, Description, 
+      status)
+    values (#{ID,jdbcType=INTEGER}, #{orderCode,jdbcType=VARCHAR}, #{customID,jdbcType=INTEGER}, 
+      #{productID,jdbcType=INTEGER}, #{quantity,jdbcType=INTEGER}, #{deliveryDate,jdbcType=DATE}, 
+      #{planStartDate,jdbcType=DATE}, #{planFinishDate,jdbcType=DATE}, #{RFIDCode,jdbcType=VARCHAR}, 
+      #{createUserID,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{description,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hyg.im.model.Order" >
+    insert into mm_prod_order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        ID,
+      </if>
+      <if test="orderCode != null" >
+        OrderCode,
+      </if>
+      <if test="customID != null" >
+        CustomID,
+      </if>
+      <if test="productID != null" >
+        ProductID,
+      </if>
+      <if test="quantity != null" >
+        Quantity,
+      </if>
+      <if test="deliveryDate != null" >
+        DeliveryDate,
+      </if>
+      <if test="planStartDate != null" >
+        PlanStartDate,
+      </if>
+      <if test="planFinishDate != null" >
+        PlanFinishDate,
+      </if>
+      <if test="RFIDCode != null" >
+        RFIDCode,
+      </if>
+      <if test="createUserID != null" >
+        CreateUserID,
+      </if>
+      <if test="createDate != null" >
+        CreateDate,
+      </if>
+      <if test="description != null" >
+        Description,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="orderCode != null" >
+        #{orderCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customID != null" >
+        #{customID,jdbcType=INTEGER},
+      </if>
+      <if test="productID != null" >
+        #{productID,jdbcType=INTEGER},
+      </if>
+      <if test="quantity != null" >
+        #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="deliveryDate != null" >
+        #{deliveryDate,jdbcType=DATE},
+      </if>
+      <if test="planStartDate != null" >
+        #{planStartDate,jdbcType=DATE},
+      </if>
+      <if test="planFinishDate != null" >
+        #{planFinishDate,jdbcType=DATE},
+      </if>
+      <if test="RFIDCode != null" >
+        #{RFIDCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createUserID != null" >
+        #{createUserID,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hyg.im.model.Order" >
+    update mm_prod_order
+    <set >
+      <if test="orderCode != null" >
+        OrderCode = #{orderCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customID != null" >
+        CustomID = #{customID,jdbcType=INTEGER},
+      </if>
+      <if test="productID != null" >
+        ProductID = #{productID,jdbcType=INTEGER},
+      </if>
+      <if test="quantity != null" >
+        Quantity = #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="deliveryDate != null" >
+        DeliveryDate = #{deliveryDate,jdbcType=DATE},
+      </if>
+      <if test="planStartDate != null" >
+        PlanStartDate = #{planStartDate,jdbcType=DATE},
+      </if>
+      <if test="planFinishDate != null" >
+        PlanFinishDate = #{planFinishDate,jdbcType=DATE},
+      </if>
+      <if test="RFIDCode != null" >
+        RFIDCode = #{RFIDCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createUserID != null" >
+        CreateUserID = #{createUserID,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null" >
+        CreateDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null" >
+        Description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hyg.im.model.Order" >
+    update mm_prod_order
+    set OrderCode = #{orderCode,jdbcType=VARCHAR},
+      CustomID = #{customID,jdbcType=INTEGER},
+      ProductID = #{productID,jdbcType=INTEGER},
+      Quantity = #{quantity,jdbcType=INTEGER},
+      DeliveryDate = #{deliveryDate,jdbcType=DATE},
+      PlanStartDate = #{planStartDate,jdbcType=DATE},
+      PlanFinishDate = #{planFinishDate,jdbcType=DATE},
+      RFIDCode = #{RFIDCode,jdbcType=VARCHAR},
+      CreateUserID = #{createUserID,jdbcType=INTEGER},
+      CreateDate = #{createDate,jdbcType=TIMESTAMP},
+      Description = #{description,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  
+  <select id="findOrderListCount" resultType="int" parameterType="map" >
+    select count(*)
+     from mm_prod_order po, sys_Product p,sys_customer c where po.productId  = p.id and po.customid=c.id
+    <if test="customerName != null and customerName!=''" >
+        and c.CustomName like '%${customerName}%'
+    </if>
+    <if test="prodName != null and prodName!=''" >
+        and p.ProdName like '%${prodName}%'
+    </if>
+    <if test="deliveryDateBegin != null and deliveryDateBegin!=''" >
+        and po.deliveryDate &gt;= #{deliveryDateBegin,jdbcType=VARCHAR}
+    </if>
+    <if test="deliveryDateEnd != null and deliveryDateEnd!=''" >
+        and po.deliveryDate &lt;= #{deliveryDateEnd,jdbcType=VARCHAR}
+    </if>
+   
+  </select>
+  <select id="findOrderList" resultMap="BaseResultMap" parameterType="map" >
+    select po.*,p.ProdCode, p.ProdName, p.ProdSpec, p.ProdType, p.Price, c.CustomCode, c.CustomName, c.Linkman, c.ContactNumber, c.Address
+     from mm_prod_order po, sys_Product p,sys_customer c where po.productId  = p.id and po.customid=c.id
+     
+    <if test="customerName != null and customerName!=''" >
+        and c.CustomName like '%${customerName}%'
+    </if>
+    <if test="prodName != null and prodName!=''" >
+        and p.ProdName like '%${prodName}%'
+    </if>
+    <if test="deliveryDateBegin != null and deliveryDateBegin!=''" >
+        and po.deliveryDate &gt;= #{deliveryDateBegin,jdbcType=VARCHAR}
+    </if>
+    <if test="deliveryDateEnd != null and deliveryDateEnd!=''" >
+        and po.deliveryDate &lt;= #{deliveryDateEnd,jdbcType=VARCHAR}
+    </if>
+     
+   limit ${(pageNo - 1) * pageSize},${pageSize} 
+  </select>
+  
+    <!-- 根据id查询Order, 关联将Product Customer查询出来 -->
+   <select id="selectOrderById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select po.*,p.ProdCode, p.ProdName, p.ProdSpec, p.ProdType, p.Price, c.CustomCode, c.CustomName, c.Linkman, c.ContactNumber, c.Address
+     from mm_prod_order po, sys_Product p,sys_customer c where po.productId  = p.id and po.customid=c.id and po.id = #{id}
+  </select>
+  
+  
+</mapper>

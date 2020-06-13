@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyg.im.mapper.CustomerMapper" >
+  <resultMap id="BaseResultMap" type="com.hyg.im.model.Customer" >
+    <id column="ID" property="ID" jdbcType="INTEGER" />
+    <result column="CustomCode" property="customCode" jdbcType="VARCHAR" />
+    <result column="CustomName" property="customName" jdbcType="VARCHAR" />
+    <result column="Linkman" property="linkman" jdbcType="VARCHAR" />
+    <result column="ContactNumber" property="contactNumber" jdbcType="VARCHAR" />
+    <result column="Address" property="address" jdbcType="VARCHAR" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, CustomCode, CustomName, Linkman, ContactNumber, Address, Description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_customer
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_customer
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hyg.im.model.Customer" >
+    insert into sys_customer (ID, CustomCode, CustomName, 
+      Linkman, ContactNumber, Address, 
+      Description)
+    values (#{ID,jdbcType=INTEGER}, #{customCode,jdbcType=VARCHAR}, #{customName,jdbcType=VARCHAR}, 
+      #{linkman,jdbcType=VARCHAR}, #{contactNumber,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hyg.im.model.Customer" >
+    insert into sys_customer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        ID,
+      </if>
+      <if test="customCode != null" >
+        CustomCode,
+      </if>
+      <if test="customName != null" >
+        CustomName,
+      </if>
+      <if test="linkman != null" >
+        Linkman,
+      </if>
+      <if test="contactNumber != null" >
+        ContactNumber,
+      </if>
+      <if test="address != null" >
+        Address,
+      </if>
+      <if test="description != null" >
+        Description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="customCode != null" >
+        #{customCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customName != null" >
+        #{customName,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="contactNumber != null" >
+        #{contactNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hyg.im.model.Customer" >
+    update sys_customer
+    <set >
+      <if test="customCode != null" >
+        CustomCode = #{customCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customName != null" >
+        CustomName = #{customName,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        Linkman = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="contactNumber != null" >
+        ContactNumber = #{contactNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        Address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        Description = #{description,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hyg.im.model.Customer" >
+    update sys_customer
+    set CustomCode = #{customCode,jdbcType=VARCHAR},
+      CustomName = #{customName,jdbcType=VARCHAR},
+      Linkman = #{linkman,jdbcType=VARCHAR},
+      ContactNumber = #{contactNumber,jdbcType=VARCHAR},
+      Address = #{address,jdbcType=VARCHAR},
+      Description = #{description,jdbcType=VARCHAR}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+   <select id="findCustomerListCount" resultType="int" parameterType="map" >
+    select 
+    count(*)
+    from sys_customer
+   
+  </select>
+  <select id="findCustomerList" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_customer
+   where 1=1
+   limit ${(pageNo - 1) * pageSize},${pageSize} 
+  </select>
+  
+  
+</mapper>

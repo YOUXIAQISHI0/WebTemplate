@@ -1,0 +1,164 @@
+html, body{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #333333;
+}
+
+
+/*
+ * 公共类
+ */
+.zylTitle{
+	font-size: 16px;
+	font-weight: 300;
+	color: #000;
+	padding-left: 8px;
+    border-left: 2px solid #000000;
+}
+.zylMarTop{
+	margin-top: 50px;
+}
+.zylPadTop{
+	padding-top: 50px;
+}
+.zylPadBot{
+	padding-bottom: 50px;
+}
+.zylimg img{
+	width: 100%;
+	height: 100%;
+}
+.zylCenter{
+	text-align: center;
+}
+.zylRight{
+	float: right;
+}
+.zylColor_1{
+	color: #EA3206;
+}
+
+
+/*
+ * 导航栏
+ */
+.bg-light {
+    background-color: #FFFFFF !important;
+    min-height: 80px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.8);
+}
+.navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+    padding-left: 20px;
+}
+@media (min-width: 992px){
+	.navbar-expand-lg .navbar-nav .nav-link {
+	    padding-right: 2rem;
+	    padding-left: 2rem;
+	}
+}
+
+
+/*
+ * 香奈儿美妆
+ */
+.zylContainer{
+	height: 580px;
+	background-image: url(https://i.chanel.cn/content/dam/fnb/core/contents/chanelbeautywave4/Landing/banneremerch/Banner_desktop_Look2.adaptive.1600.jpg);
+	background-size: cover;
+}
+
+
+/*
+ * 明星产品
+ */
+.zylImgAnimation{
+	
+}
+.zylImgAnimation img{
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+.zylImgAnimation:hover img{
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	transform: translateY(-20px);
+}
+.zylImgAnimation figcaption{
+	margin-top: -50px;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	background-color: rgba(241,241,239,0.6);
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+.zylImgAnimation:hover figcaption{
+	opacity: 1;
+	background-color: rgba(241,241,239,0.6);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+
+
+/*
+ * 香奈儿美妆访谈 第六集
+ */
+.zylContainer_2{
+	padding-bottom: 5%;
+	background-image: url(https://www.chanel.com/images/q_65,f_auto,fl_lossy,dpr_auto/w_1440/FSH-1577898247887-hv4desktop.jpg);
+	background-size: cover;
+}
+.zylCard{
+	margin-top: 7%;
+	padding-bottom: 2%;
+	background-color: rgba(255,255,255,0.9);
+}
+.zylCard p{
+	padding-top: 15px;
+}
+
+
+
+/*
+ *滚动条样式
+ */
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-track {
+	background-color: #0084b5;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #0084b5;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #C5C7CA
+}
+::-webkit-scrollbar-thumb:active {
+	background-color: #C5C7CA
+}
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}

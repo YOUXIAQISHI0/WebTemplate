@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>绑定手机号</title>  
+</head>
+<body>
+	<div class="wrap">
+		<!--标题栏-->
+		<div class="fixed_top">
+			<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+			<h1>绑定手机号</h1>
+		</div>
+		
+		<!--主体区域-->
+		<div class="container">
+			<form class="login-form">
+				<ul>
+					<li>
+						<label>账号:</label>
+						<div class="username"><i class="icons">&#xe60c;</i><input type="text" value="" name="username"  placeholder="请输入您的手机号码"/></div>
+					</li>
+					<li>
+						<label>验证码:</label>
+						<div class="password"><i class="icons">&#xe6cf;</i><input type="text" value=""  name="yzcode"  placeholder="请输入您的验证码"/><a href="javascript:;" class="hqyzm">获取验证码</a></div>
+					</li>
+				</ul>
+				<div class="log">
+					<a href="javascript:;" class="btn-login">立即绑定</a>
+				</div>
+			</form>
+		</div>
+       
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.7.js" ></script>
+<script type="text/javascript">
+    $(function(){
+    	var flag = true;
+			var n=60;
+			var timer=null;
+			$(".hqyzm").click(function(){
+				$(".hqyzm").addClass("hqyzming");
+				clearInterval(timer);
+				timer = setInterval(function() {
+					n--;
+					$(".hqyzm").text(n + "s后重新获取")
+					if(n <= 0) {
+						clearInterval(timer);
+						n = 60;
+						nowflag = true;
+						flag = false;
+						$(".hqyzm").text("获取验证码").removeClass("hqyzming");
+					}
+				}, 1000)
+			})
+	})
+</script>
+</html>

@@ -1,0 +1,150 @@
+﻿body{
+  background: #f4f4f4;
+}
+.box{
+/*  width:500px;*/
+  padding:50px 65px;
+  font-size: 14px;
+}
+.box span{
+  margin-left:20px;
+  display: inline-block;
+  line-height: 26px;
+  margin-bottom:10px;
+}
+.box input,.box textarea{
+  margin-right:20px;
+  float: right;
+  margin-bottom:10px;
+}
+.box-list-pad input{
+  width:200px;
+}
+.box textarea{
+  height:100px;
+}
+.box input{
+  height:26px;
+}
+.box ul{
+  margin:0;padding:0;
+}
+.box li{
+  list-style-type: none;
+  height:36px;
+}
+.box-b{
+  clear:both;
+  width:360px;
+  padding:10px 0 0 130px;
+}
+.box-c{
+  width:200px;
+  float:right;
+  margin:10px 22px 0 0;
+}
+.box-b input,.box-c input{
+  float: left;
+  width:80px;
+}
+.bta{
+  background: #6fb3e0;
+}
+.btc{
+  background: #fcb46d;
+}
+.btd{
+  background: #de9c9c;
+}
+.bta,.btd,.btc{
+  color:#fff;
+  border:none;
+  height:28px;
+  width:80px;
+}
+.box .sent{
+  float: left;
+  width:325px;
+}
+.main-list-top{
+  width: 91%;
+  background-color: #6fb3e0;
+  font-size:14px;
+  text-align: center;
+  padding:5px 0;
+  color:#fff;
+  margin-left:20px;
+}
+.main-list-cont{
+  width: 91%;
+  background-color: #fff;
+  font-size:14px;
+  text-align: center;
+  color:#fff;
+  margin-left:20px;
+}
+.main-list-cont td{
+  padding:6px 0;
+  border-right:1px solid #eee;
+  color:#666;
+}
+.clear{
+  clear: both;
+}
+.box-header{
+  height:190px;
+}
+.box-list-pad{
+  padding:40px 65px;
+}
+.box-news-pad{
+  padding:40px 25px 30px 85px;
+}
+.list-page{
+  margin:10px 0 0 20px;
+  float: left;
+}
+.add-p{
+  float: left;
+  width:200px;
+  font-size: 12px;
+}
+.add-p input{
+  width:120px;
+  height:22px;
+}
+.add-p span{
+  margin-left:0;
+  line-height: 22px;
+}
+.add-p .lang{
+  width:320px;
+  position: absolute;
+  right:65px;
+}
+.add-p .langer{
+  width:520px;
+  position: absolute;
+  right:65px;
+}
+.box-btn-add{
+  margin-top:30px;
+  float: right;
+}
+.cont-list input,.cont-list textarea {
+  width:220px;
+}
+.box-btn-add-l{
+  float: left;
+  margin-top:30px;
+}
+.box-btn{
+  width:600px;
+  clear: both;
+  height:50px;
+  margin-top:-20px;
+
+}
+.box-btn>.box-btn-add,.box-btn>.box-btn-add-l{
+  margin-top:0;
+}

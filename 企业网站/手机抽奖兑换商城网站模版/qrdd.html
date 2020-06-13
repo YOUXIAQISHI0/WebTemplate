@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <title>确认订单</title>  
+</head>
+<body>
+	<div class="wrap">
+		<!--顶部-->
+	    <div class="fixed_top">
+	    	<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+	    	<h1>确认订单</h1>
+	    </div>
+
+		<!--主体区域-->
+		<div class="container" style="padding-bottom:60px">	
+			<div class="shdzxz">
+				<h1><i class="icons">&#xe6cd;</i>收货地址<a href="javascript:;">修改</a></h1>
+				<div class="shdzxx">
+				   <h4><span>侯钰凯</span><span>1586264544</span></h4>
+		  		   <p>武汉市江夏区保利海上五月花17栋1702</p>
+		  		   <a href="new_address.html" class="set_sh">设置收货地址</a>
+				</div>
+			</div>
+			
+	        <ul class="gw_list">
+	        	<li>
+	        		<dl>
+	        			<dt><i class="icons">&#xe628;</i><span>购买商品</span></dt>
+	        			<dd>
+	        				<div class="gwinfo">
+		        				<img class="gw_img" src="img/pic4.png"/>
+		        				<h4>
+		        				  <p>小米官方旗舰店小米官方旗舰店小米官小米官方旗舰店</p>
+		        				  <p>购买类型:<span class="red">单</span></p>
+		        				</h4>
+		        				<p><span class="price">￥1500.00</span></p>
+		        				<div class="addminus">
+		        					数量   x<span class="number">1</span>
+		        				</div>
+	        				</div>
+	        			</dd>
+	        		</dl>
+	        	</li>
+	        </ul>
+		</div>
+	    
+	    
+	   <!--结算--> 
+	   <div class="pay" style="bottom:0">
+	   	   <div class="js paytab">
+		   	   <p>合计:<span>￥1500</span></p>
+		   	   <a href="orders.html">提交订单</a>
+	   	   </div>
+	   </div>
+	  
+
+	  <!--选择地址-->
+	  <div class="zz">
+	  	<div class="select_window">
+	  		<h2>选择地址<i class="icons">&#xe611;</i></h2>
+	  		<ul class="address_list">
+	  			<li class="active">
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>侯钰凯</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>侯钰凯</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>侯钰凯</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>侯钰凯</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>侯钰凯</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>侯钰凯</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  			</li>
+	  		</ul>
+	  		<ul class="address_tab">
+	  			<li><a href="new_address.html">新建地址</a></li>
+	  			<li><a href="javascript:;">确定</a></li>
+	  		</ul>
+	  	</div>
+	  </div>
+
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script type="text/javascript">
+    $(function(){
+	    //统计
+	    function totals(){
+	    	var num=0;
+	    	$(".gwinfo").each(function(index,item){
+	    		num += ($(item).find(".price").text().substring(1,$(item).find(".price").text().length)*$(item).find(".number").text());
+	    	})
+	    	return num
+	    }
+	    function sum(){
+	    	$(".pay p span").text("￥"+totals())
+	    }
+	    
+	    sum()
+ 
+	    
+	    /*收货地址*/
+	    $(".shdzxz h1 a").click(function(){
+	    	$(".zz").fadeIn()
+	    })
+	    $("body").on("click",".select_window h2 i",function(){
+	    	$(".zz").fadeOut()
+	    })
+	    $("body").on("click",".address_tab li:last-child a",function(){
+	    	$(".address p").text($(".select_window li.active p").text())
+	    	$(".zz").fadeOut()
+	    })
+	    $("body").on("click",".select_window li",function(){
+	    	$(this).addClass("active").siblings().removeClass();
+	    })
+	})
+</script>
+</html>

@@ -1,0 +1,284 @@
+/*店铺管理中心-公司活动(已添加活动)*/
+a:focus{outline: none}
+.vip-right{ width: 818px;height: 1156px!important;padding: 5px 0 0 0;}
+.vip-left{height: 1126px!important;padding: 5px 0px 0px 0px;}
+.vip_right .midAll{width: 818px;height: 65px;border-bottom: 1px solid #ddd;}
+.vip_right .midAll span{font-size: 16px;line-height: 65px;margin-left: 25px;float: left}
+.midAll .addActive{float: right;margin-top: 20px;margin-right: 20px;}
+.midAll .addActive a{background: #42aef3;font-size: 16px;color: #fff;padding: 7px 20px;border-radius: 5px}
+.midAll .addActive a:hover{background: #138FD1}
+.vip_right .pic_text{width: 250px;height: 255px;border:1px solid #ddd;margin: 35px 10px 0px 0px;float: left}
+.vip_right .pic_text img{width: 232px;height: 156px;margin: 9px;margin-bottom: 0}
+.vip_right .pic_text p{width: 235px;padding:0;padding-left:15px;height:44px;line-height:44px;overflow:hidden;font-size: 16px;border-bottom:1px solid #ddd;}
+.vip_right .footer_text{width: 250px;height: 45px;overflow:hidden;line-height: 45px;}
+.vip_right .footer_text em{padding: 15px 5px;color: #999;font-size: 13px}
+.vip_right .footer_text span a{padding: 15px 4px 0px 0px;color: #999;font-size: 13px}
+.vip_right .footer_text span a:hover{color: #FF6561}
+.pic_text_all{overflow: hidden;padding-left: 25px;}
+.vip_right .top420{margin-top: 360px}
+/*店铺管理中心-公司活动*/
+.vip_right .prompts p{font-size: 14px;color: #666;padding: 50px 45px}
+/*店铺管理中心-公司活动-添加活动*/
+div.midLeft{clear: both;width: 762px;}
+.wrap .h880{height: 880px;border: 1px solid #ebebeb;background: #fff}
+.wrap .h840{height: 840px}
+.wrap .h880 .add_active{width: 1000px;height: 60px;border-bottom: 1px solid #ddd;}
+.wrap .h880 .add_active p{font-size: 16px;line-height:60px;padding:0;padding-left: 25px;float: left}
+.wrap .h880 .add_active .backLogo{float: right;width: 70px;height: 60px;line-height: 60px;padding-right:10px;}
+.wrap .h880 .add_active .backLogo a{padding-left: 30px;font-size: 14px;color: #999;background: url("../images/backLogo.png") no-repeat}
+.wrap .h880 .add_active .backLogo a:hover{color: #FF6561}
+.wrap .h880 .active_title{width: 712px;margin-left: 50px;margin-top: 35px;position: relative;clear: both;display: inline-block}
+.wrap .h880 .active_title .editor{width: 622px;height: 167px;border: 1px solid #ddd;margin-right: 11px;}
+.wrap .h880 .active_title span{font-size: 14px;margin-right: 10px}
+.wrap .h880 .active_title input{width: 592px;height: 37px;border:0;border: 1px solid #ddd;font-size: 14px;padding-left: 15px;padding-right: 15px}
+.wrap .h880 .active_title b{padding: 0px 20px}
+.active_title #datepicker-askstart{width: 118px;height: 37px}
+.active_title #datepicker-askend{width: 118px;height: 37px}
+input[placeholder], [placeholder], *[placeholder] {
+    padding-left: 10px;
+}
+div.filePic{clear: both;display: inline-block;}
+div.filePic a{display:inline-block; width:100px; height:28px; background:#DDDDDD; position:relative;top:9px; overflow:hidden;text-align: center;line-height: 28px;color: #999;font-size: 14px;border-radius: 5px}
+div.filePic input{width:98px!important;height: 28px!important;position:absolute; right:0; top:0; font-size:100px; opacity:0; filter:alpha(opacity=0);cursor: pointer}
+div.filePic em{font-size: 14px;color: #999;padding-left: 15px}
+div.filePic span.pay{font-size: 14px;color: #ff6561;padding-left: 5px;margin-right: 0px!important;}
+div.filePic .file{margin-top: 30px;margin-left: 65px;}
+div.filePic .file img{width: 189px;height: 126px}
+div.midLeft .submitButton{margin-top: 35px;margin-left: 115px;height: 44px;}
+div.midLeft .submitButton input{display: inline-block;border: 0;text-align:center;border-radius:5px;background: #ff6561;color: #fff;font-size: 16px;padding:10px 35px;outline: none;cursor: pointer }
+div.midRight{width: 180px;height: 177px;border: 1px solid #ddd;margin-top: 35px;margin-right: 25px;background: url("../images/midright.png") no-repeat 133px 20px}
+div.midRight span{font-size: 16px;color: #ff6561;display: inline-block;margin:17px 10px 0px 10px}
+div.midRight em{color: #999;font-size: 14px;display: inline-block;margin:18px 0px 0px 10px}
+/*店铺管理中心-套餐设置（已经添加）*/
+.search-input{width: 423px;position: relative;margin-top: 25px;float: right}
+.search-input input.searchinput{width: 311px;height: 38px; border: 0;border: 1px solid #ddd;font-size: 14px;padding-left: 14px;padding-right: 14px}
+.keywords em { margin-left: 0!important;}
+.keywords{
+    position: absolute;
+    color: #999!important;
+    font-weight: 500!important;
+    top: 0px;
+    left: 0px;
+    height: 39px;
+    line-height: 39px;
+    width: 326px;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    padding-left: 14px;
+    display: block;
+}
+.search-input .searchbtn{width: 60px;height: 38px;line-height: 38px;text-align: center;background:#ff6561;display: inline-block;margin-left: -3px;    border: 1px solid transparent;cursor: pointer}
+.search-input .searchbtn a{color: #fff;font-size: 14px;}
+.vip-right .formed{width: 770px;height: 108px;border: 1px solid #ddd;clear: both;margin-left:25px;margin-top: 30px;display: inline-block;}
+.mediaTitle{width: 590px;display: inline-block;padding-left: 10px;padding-top: 15px}
+.mediaTitle>span{font-size: 16px;width: 195px;height: 21px;overflow: hidden;display: inline-block;}
+.mediaTitle img{width: 160px;height: 108px;display: inline-block}
+.formed .mediaTitle .delete{width: 90px;height: 21px;display: inline-block;}
+.formed .mediaTitle .delete span a{font-size: 14px;color: #999;overflow: hidden;padding-left: 10px;width: 33px!important;height: 21px!important;}
+.formed .mediaTitle .delete span a:hover{color: #FF6561}
+.mediaTitle .locality span{font-size: 14px;color: #999}
+.mediaTitle .locality span.p3{padding-right: 3px}
+.mediaTitle .locality span.p5{padding-right: 5px}
+.mediaTitle .locality span.p8{padding-right: 8px}
+.mediaTitle .locality span.p20{padding-right: 20px}
+.mediaTitle .locality,.mediaTitle .timetotal{margin-top: 8px}
+.mediaTitle .timetotal span{font-size: 14px;color: #999}
+.mediaTitle .timetotal p{font-size: 14px;color: #999;display: inline-block;margin-left: 204px;text-decoration: line-through;margin-right: 20px}
+.mediaTitle .timetotal span em{color: #ff6561}
+.packageFormed{width: 144px;height: 159px;}
+.packageFormedContent>p{width: 134px;height:21px;overflow: hidden;font-size: 14px;font-weight: bold;padding: 0;padding: 15px 0px 5px 10px}
+.packageFormed .mediaTitleAll{width: 144px;height: 160px;}
+.packageFormed .mediaTitleAll img{display: block;width: 144px;height: 97px}
+.packageFormed .mediaTitleAll span{width: 135px;height: 19px;overflow: hidden; font-size: 14px;padding: 10px 0px 0px 10px;display: inline-block}
+.packageFormed .mediaTitleAll p{font-size: 12px;color: #999;padding-left: 10px}
+.packageFormed .mediaTitleAll p em{font-size: 14px;color: #FF6561}
+.addLogo{margin: 66px 3px;display: inline-block;}
+.addLogo a{font-size: 18px;color: #138fd1;margin-left: 15px;}
+.addLogo a:hover{color: #FF6561}
+.packageFormedContent{width: 770px;height: 200px;border: 1px solid #ddd;border-top:0;margin-left: 25px;}
+.formedAll{clear: both;}
+.mediaTitleAll .borderlr{border-left: 1px solid #ddd;border-right: 1px solid #ddd;}
+.vip-right div.top0{margin-top: 0px}
+/*店铺管理中心-套餐设置-添加套餐*/
+.wrap .h1255{height: 1255px!important;}
+.wrap .h1360{height: 1360px!important;}
+.midLeft .Information{font-size: 16px;font-weight: bold;padding: 25px 0px 0px 25px}
+.midLeft .choseMedia>a{font-size: 14px;color: #FF6561;padding: 5px 20px;border: 1px solid #FF6561;border-radius: 3px;display: inline-block;}
+.partsMedia .partsMediaTitle{width: 308px;height: 145px;border: 1px solid #FF6561;display: inline-block;float: left;margin-left: 15px;position: relative}
+.partsMedia .partsMediaTitleAll{margin-top: 33px;margin-left: 62px;display: inline-block;}
+.partsMediaTitle>a{overflow: hidden;display: inline-block;float: left}
+.partsMediaTitle a img{width: 160px;height: 108px;display: inline-block}
+.partsMediaTitle .partsMediaText{display: inline-block;margin-top: 15px;border-bottom: 1px solid #ddd;width: 148px;}
+.partsMediaTitle .partsMediaText p{font-size: 14px;padding-left: 9px;width: 139px;height: 21px;overflow: hidden}
+.partsMediaTitle .partsMediaText .planMedia{width: 138px;height: 18px;overflow: hidden;padding-left: 9px;margin-bottom: 13px;}
+.partsMediaTitle .partsMediaText .planMedia span{font-size: 12px;color: #999;}
+.partsMediaTitle .partsMediaText .planMedia em{font-size: 14px;color: #FF6561}
+.partsMediaTitle .partsMediaBottom{width: 290px;height: 21px;padding-left: 17px;margin-top: 5px;overflow: hidden;}
+.partsMediaTitle .partsMediaBottom span,.partsMediaTitle .partsMediaBottom span a{font-size: 12px!important;color: #999;margin-right: 3px!important;}
+.partsMediaTitle .partsMediaBottom span a:hover{color: #FF6561}
+.partsMediaTitle .opacityDelete{width: 310px;height: 147px;background: #000;position: absolute;opacity: 0.5;left:0;bottom: 0;display: none}
+.partsMediaTitle .deleteText>a{color: #fff;position: absolute;right:25px;bottom: 15px;display: inline-block;font-size: 14px}
+.active_title .price{width: 138px;height: 37px;border: 1px solid #ddd;float: left;margin-left: 3px;position: relative;color: #999;font-size: 14px;padding-left:10px;background: url("../images/arrow-down.png")no-repeat 130px 18px;cursor: pointer;line-height: 39px;margin-top: 2px}
+.active_title .industries{background: url("../images/arrow-down.png")no-repeat 590px 18px}
+.active_title .industries{width: 613px}
+.active_title>span.priceEmployer{float: left;margin-top: 10px}
+.active_title ul{position: absolute;left: 76px;top:39px;z-index:999999999;width: 148px;border: 1px solid #ddd;height: 100px;background: #fff;display: none}
+.industrie ul{width: 623px}
+.active_title ul li{padding: 0px 15px;font-size: 14px;line-height: 30px}
+.active_title ul li:hover{background: #F5F5F5}
+.active_title .priceContext{
+    position: absolute;
+    color: #999!important;
+    font-weight: 500!important;
+    top: 0px;
+    left: 308px;
+    height: 39px;
+    line-height: 39px;
+    width: 134px;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    padding-left: 14px;
+    display: block;
+    margin-right: 0!important;
+}
+.active_title .nowPriceContext{
+    position: absolute;
+    color: #999!important;
+    font-weight: 500!important;
+    top: 0px;
+    left: 540px;
+    height: 39px;
+    line-height: 39px;
+    width: 134px;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    padding-left: 14px;
+    display: block;
+    margin-right: 0!important;
+}
+.active_title .clientele,.active_title .nowPrice{margin-left: 35px}
+.active_title .priceinput,.active_title .nowPriceinput{width: 118px!important;height: 39px!important;}
+.active_title .mediaBriefing{width: 592px!important;height: 80px!important;resize:none;font-size: 14px;padding: 15px}
+/*店铺管理中心-套餐设置-添加套餐-选择媒体*/
+.wrap .choose{float: left;margin-top: 10px!important;left:400px;width: 390px!important;}
+.wrap .choose>input{width: 296px!important;}
+.h840 #mediaClassify{margin-left: 25px!important;width: 435px!important;}
+#classify{width: 342px;background: url("../images/arrow-down.png")no-repeat 325px 18px;}
+#classify+ul{width: 352px;}
+.partsMedia .chooseAll{margin-left: 9px!important;margin-top: 28px!important;}
+.chooseAll .p13{margin-left: 13px;border-color:#ddd}
+.partsMedia_text{position: relative}
+.partsMedia_text .choose_box{position: absolute;right:0px;top:-15px;display:inline-block;width: 30px;height: 30px;border-left: 1px solid #ddd;border-bottom:1px solid #ddd;}
+.partsMedia_text .choose_box img{width: 18px;height: 18px;margin-top: 6px;margin-left: 6px;display: none}
+.wrap .h840 .assign{margin-top: 35px;margin-left: 23px}
+.wrap .h840 .assign input{background: #FF6561;width: 100px;height: 35px;border-radius: 5px;color: #fff;border: 0;font-size: 16px;cursor: pointer}
+
+/*店铺管理中心-我的案例（已经添加案例)*/
+.pic_text_all .review{position: relative}
+.reviewLogo em{width: 58px;height: 24px;display: inline-block;background: url("../images/review.png")no-repeat;position: absolute;left: 0px;top:0px;color: #fff;line-height: 24px;font-size: 14px;padding-left: 5px}
+.addCases a.nobg{background:#fff;color: #42aef3;border: 1px solid #42aef3;margin-right: 18px}
+.addCases a.nobg:hover{color: #fff}
+.addCases a:hover{background: #138FD1}
+.activetitle{position: relative}
+.active_title .keyword {
+    position: absolute;
+    color: #999!important;
+    font-weight: 500!important;
+    top: 0px;
+    left: 76px;
+    height: 39px;
+    line-height: 39px;
+    width: 615px;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    padding-left: 9px;
+    margin-right: 0!important;
+}
+.yccn{position: relative}
+.yccn .checkbox{width: 14px!important;height: 14px!important;float: left;position: absolute;left: 77px;top: 4px;padding: 0!important;border: 0!important;}
+input:focus,a:focus,select:focus,textarea:focus{outline: none}
+.yccn em{margin-left: 20px;font-size: 14px;color: #999}
+/*店铺管理中心-我的案例-排序*/
+.vip-right .CasesSortAll{overflow: hidden; margin-top: 35px;margin-left: 25px;}
+.vip-right .CasesSortAll img{width: 138px;height: 93px;margin:5px}
+.vip-right .CasesSortAll .CasesSort{width:150px;height:125px;border: 1px solid #ddd;float: left;margin-right: 5px}
+.vip-right .CasesSortAll .CasesSort>p{font-size: 12px;padding-left: 10px;padding-bottom: 0;width: 140px;height: 18px;overflow: hidden}
+/*店铺管理中心-公司形象*/
+.vip-right .companyLogo,.vip-right .companyBg{margin-left: 45px;margin-top: 30px;overflow: hidden}
+.vip-right .companyLogo>span,.vip-right .companyBg>span{font-size: 16px;font-weight: bold;float: left;margin: 53px 30px 0px 0px;}
+.vip-right .LogoPic,.vip-right .bgPic{position:relative;float: left}
+.vip-right .companyLogo a img{width: 128px;height: 127px}
+.companyLogo .companyMask a{width: 127px;height: 126px;background: #000;opacity: 0.5;position: absolute;left: 0px;bottom: 0;display: none}
+.companyLogo em a{position: absolute;left: 32px;bottom: 50px;color: #fff;font-size: 16px;display: none}
+.vip-right .companyBg a img{width: 572px;height: 162px}
+.companyBg .bgMask a{width: 572px;height: 162px;background: #000;opacity: 0.5;position: absolute;left: 0px;bottom: 0;display: none}
+.companyBg em a{position: absolute;left: 260px;bottom: 63px;color: #fff;font-size: 16px;display: none}
+/*店铺管理中心-公司形象-更换背景*/
+.wrap .pr20{padding-right: 20px!important;}
+.vip-right .backLogo a{padding-left: 30px;font-size: 14px;color: #999;background: url("../images/backLogo.png") no-repeat;float: right;margin-top: 22px;margin-right: 15px}
+.recommend .recommendSort{margin-top: 30px;overflow: hidden;margin-bottom: 40px}
+.recommend .recommendSort em{float: left;font-size: 16px;font-weight: bold;margin-left: 25px;margin-top: 6px}
+.recommend .recommendSort a:hover{color: #fff;background: #138FD1}
+.recommend .recommendSort a{display:inline-block; width:100px; height:35px;position:relative;top:0px; overflow:hidden;text-align: center;line-height: 35px;color: #42aef3;border: 1px solid #42aef3;border-radius: 3px;float: right;font-size: 16px;margin-right: 15px}
+.recommend .recommendSort input{width:100px!important;height: 35px!important;position:absolute; right:0; top:0; font-size:100px; opacity:0; filter:alpha(opacity=0);cursor: pointer}
+.recommend .change_bg .changePic{width: 509px;height: 144px;clear: both}
+.recommend .change_bg{position: relative;width: 509px;height: 144px;margin: 25px 0px 0px 154px;}
+.change_bg .change_Mask{width: 509px;height: 144px;background: #333;opacity: 0.4;position: absolute;left: 0px;bottom: 0px;display: none}
+.change_bg .change_Mask_text a{width:112px;height:41px;position: absolute;left:206px;top:48px;background: #666;opacity: 0.6;border: 2px solid #fff;border-radius: 5px;display: none}
+.change_bg .change_text a{position: absolute;left:233px;top:58px;color: #fff;font-size: 16px;display: none}
+/*未加入媒体主*/
+.NotMedia{height: 600px!important;}
+.NotMedia .comeon{margin-left: 330px;}
+.NotMedia .comeon img{width: 137px;height: 137px}
+.NotMedia .comeon p{font-size: 16px;color: #999;display: inline-block;width: 225px;margin-top: 45px;margin-left: 15px;height: 48px;overflow: hidden;padding-bottom: 0}
+.NotMedia .promptJoin{text-align: center;margin-top: 25px}
+.NotMedia .promptJoin a{display: inline-block;background: #FF6561;color: #fff;padding: 5px 55px;border-radius: 5px;font-size: 16px;}
+.NotMedia .joinProcessAll{width: 952px;height: 365px;border: 1px solid #ddd;margin: 45px auto 0px auto}
+.joinProcessAll .joinProcess p{background: #f4f4f4;font-size: 16px;padding-left: 22px;line-height: 50px;padding-bottom: 0;height: 50px;width: 930px;overflow: hidden}
+.joinProcessAll .joinProcess span{padding-left: 22px;font-size: 16px;height: 55px;width: 930px;overflow: hidden;display: inline-block;line-height: 55px}
+.NotMedia .phase{margin-top: 10px}
+.joinProcessAll .phaseone{width: 314px;height:222px;border-right: 1px solid #ddd;display: inline-block;overflow: hidden}
+.joinProcessAll .phaseone span{color: #4fd3e7;font-size: 16px;font-weight: bold;padding-left: 22px;width: 293px;display: inline-block;height: 24px}
+.joinProcessAll .phaseone .submitPic{margin: 35px 10px 0px 55px;display: inline-block;float: left}
+.joinProcessAll .phaseone img{width: 73px;height: 67px;}
+.joinProcessAll .phaseone em{color: #4fd3e7;font-size: 18px;display: inline-block;width: 173px;height: 24px;overflow: hidden;margin-top: 44px;margin-bottom: 10px}
+.joinProcessAll .phaseone .submitText{float: right}
+.joinProcessAll .phaseone .submitText .text b{width: 12px;height: 12px;background: #4fd3e7;border-radius: 12px;display: inline-block;margin-top: 5px;float: left;margin-right: 5px}
+.joinProcessAll .phaseone .submitText .text{margin-top: 5px}
+.phaseone .submitText .text p{font-size: 14px;display: inline-block;width: 150px;height: 21px;overflow: hidden;padding-bottom: 0;}
+.joinProcessAll .phasetwo span{color: #a0d666}
+.joinProcessAll .phasetwo em{color: #a0d666}
+.joinProcessAll .phasetwo img{width: 67px;height: 66px}
+.joinProcessAll .phasetwo .submitText .text{margin-top: 35px}
+.joinProcessAll .phasetwo .submitText .text b{background: #a0d666}
+.joinProcessAll .phasetwo .jobDay{background: #a0d666;color: #fff;width:140px;height:35px;border-radius: 20px;text-align: center;line-height: 35px;display: inline-block;margin-left: 130px;margin-top: 20px;font-size: 14px}
+.joinProcessAll .phasethree{border-right: 0}
+.joinProcessAll .phasethree span{color:#f47b7c}
+.joinProcessAll .phasethree img{width: 80px;height: 83px}
+.joinProcessAll .phasethree .submitPic{margin-left: 120px}
+.joinProcessAll .phasethree .online{color: #f58485;font-size: 18px;padding-left: 123px;display: inline-block;clear: both;margin-top: 28px}
+/*未加入媒体主-立即入驻*/
+.wrap .h680{height: 680px!important;}
+.wrap .NotMedia .mt15{margin-top: 15px!important;}
+.NotMedia .joinExist{display: inline-block;overflow: hidden;margin-top: 35px;margin-left: 23px}
+.NotMedia .joinExist span{font-size: 16px;width: 977px;height: 24px;overflow: hidden;display: inline-block;margin-bottom: 20px}
+.NotMedia .joinExist .check_box{margin-bottom: 15px}
+.NotMedia .joinExist .check_box input{float: left;margin-top: 5px;margin-right: 5px;display: inline-block}
+.NotMedia .joinExist .check_box em{font-size: 14px;display: inline-block}
+.NotMedia .joinExist a{display: inline-block;background: #999;width: 100px;height: 35px;line-height: 35px;text-align: center;font-size: 16px;border-radius: 3px;color: #fff;margin-top: 10px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.js" ></script>
+    <script type="text/javascript" src="js/public.js?123" ></script>
+</head>
+<body>
+	<div class="wrap">
+		<!--顶部-->
+	    <div class="fixed_top">
+				<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+	    	<h1>提现记录</h1>
+	    </div>
+
+	    <div class="container_inner">
+	       <table class="txjl">
+	       	  <thead>
+	       	  	<tr>
+	       	  		<td width="20%">提现类型</td>
+	       	  		<td width="30%">提现金额</td>
+	       	  		<td width="20%">提现状态</td>
+	       	  		<td width="30%">更新时间</td>
+	       	  	</tr>
+	       	  </thead>
+	       	  <tbody>
+	       	  	 
+	       	  </tbody>
+	       </table>
+	    </div>
+    </div>
+    
+</body>
+ <script>
+ 	$(function(){
+   		gdata('txlists',{},function(data){
+				if(data.retInt==1){
+					var arr1=["银行卡","微信"];
+					var arr2=["未处理","已打款","拒绝打款"];
+					$.each(data.retRes,function(index,item){
+						var tr=$("<tr><td>"+arr1[item.type_id - 1]+"</td><td>"+item.price+"</td><td>"+arr2[item.status - 1]+"</td><td>"+formatDate(item.update_time)+"</td></tr>");
+						$("tbody").append(tr)
+					})
+				}else{
+					alert(data.retErr)
+				}
+	    })
+ 	})
+ </script>
+</html>

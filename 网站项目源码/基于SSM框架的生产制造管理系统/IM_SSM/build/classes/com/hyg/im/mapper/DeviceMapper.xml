@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyg.im.mapper.DeviceMapper" >
+  <resultMap id="BaseResultMap" type="com.hyg.im.model.Device" >
+    <id column="ID" property="ID" jdbcType="INTEGER" />
+    <result column="DeviceCode" property="deviceCode" jdbcType="VARCHAR" />
+    <result column="DeviceSpec" property="deviceSpec" jdbcType="VARCHAR" />
+    <result column="DeviceName" property="deviceName" jdbcType="VARCHAR" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, DeviceCode, DeviceSpec, DeviceName, Description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_device
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_device
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hyg.im.model.Device" >
+    insert into sys_device (ID, DeviceCode, DeviceSpec, 
+      DeviceName, Description)
+    values (#{ID,jdbcType=INTEGER}, #{deviceCode,jdbcType=VARCHAR}, #{deviceSpec,jdbcType=VARCHAR}, 
+      #{deviceName,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hyg.im.model.Device" >
+    insert into sys_device
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        ID,
+      </if>
+      <if test="deviceCode != null" >
+        DeviceCode,
+      </if>
+      <if test="deviceSpec != null" >
+        DeviceSpec,
+      </if>
+      <if test="deviceName != null" >
+        DeviceName,
+      </if>
+      <if test="description != null" >
+        Description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="deviceCode != null" >
+        #{deviceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceSpec != null" >
+        #{deviceSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceName != null" >
+        #{deviceName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hyg.im.model.Device" >
+    update sys_device
+    <set >
+      <if test="deviceCode != null" >
+        DeviceCode = #{deviceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceSpec != null" >
+        DeviceSpec = #{deviceSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceName != null" >
+        DeviceName = #{deviceName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        Description = #{description,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hyg.im.model.Device" >
+    update sys_device
+    set DeviceCode = #{deviceCode,jdbcType=VARCHAR},
+      DeviceSpec = #{deviceSpec,jdbcType=VARCHAR},
+      DeviceName = #{deviceName,jdbcType=VARCHAR},
+      Description = #{description,jdbcType=VARCHAR}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+  <select id="findDeviceListCount" resultType="int" parameterType="map" >
+    select 
+    count(*)
+    from sys_device
+   
+  </select>
+  <select id="findDeviceList" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_device
+   where 1=1
+   limit ${(pageNo - 1) * pageSize},${pageSize} 
+  </select>
+  
+  
+</mapper>

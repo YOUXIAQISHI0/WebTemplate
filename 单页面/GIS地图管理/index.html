@@ -1,0 +1,243 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内蒙古GIS地图DEMO</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="./other/style/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" type="text/css" rel="stylesheet">
+<link href="./other/images/index.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet"	href="jquery-ztree/3.5.12/css/zTreeStyle/zTreeStyle.css"	type="text/css">
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/xzqh.js"></script>
+<script type="text/javascript"	src="jquery-ztree/3.5.12/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript"	src="http://api.map.baidu.com/api?v=2.0&ak=eBcmZoBfRi9MGENgw2tmmLMI8tYr7rYS"></script>
+<style>
+div.content_wrap {
+	width: 600px;
+	height: 380px;
+	margin-left: 10px;
+}
+
+div.content_wrap div.left {
+	float: left;
+	width: 250px;
+	margin-left: 10px;
+}
+
+div.content_wrap div.right {
+	float: right;
+	width: 340px;
+}
+
+div.zTreeDemoBackground {
+	width: 250px;
+	height: 362px;
+	margin-left: 10px;
+}
+
+ul.ztree {
+	font-size: 14px;
+	margin-top: 10px;
+	border: 0px solid #617775;
+	background: #00;
+	width: 260px;
+	height: 600px;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+.ztree * {
+	padding: 0;
+	margin: 0;
+	margin-right: 10px;
+	font-size: 14px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<!--头部-->
+		<div class="top-head">
+			<div class="f-l img-top">
+				<img src="img/logo.png" width="54" height="54" /> <span
+					class="logo-name">内蒙古GIS地图DEMO</span>
+			</div>
+			<div class="f-r">
+				<ul>
+					<li class="head-list"><span class="icon-top"><img
+							src="img/user.png" width="50" height="50" /></span> <span
+						class="user-info">系统管理员</span></li>
+					<a href="#">
+						<li class="head-list cursor"><img src="img/icon-s03.png"
+							width="20" height="20" />关闭</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+
+		<!--菜单-->
+		<div class="top-nav">
+			<ul>
+				<li class="active">菜单一</li>
+				<li>菜单二</li>
+				<li>菜单三</li>
+			</ul>
+		</div>
+
+		<div id="bd">
+			<div id="boxLeft" class="leftbox">
+				<div class="zTreeDemoBackground left">
+					<ul id="treeDemo" class="ztree"></ul>
+				</div>
+			</div>
+			<div id="main">
+				<div id="slidbtn" class="slidLeftBtn" onclick="SlidLeft();"></div>
+				<div id="map" class="mapContainer"></div>
+				<input type="hidden" id="IsHidden" value="0" />
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	var map,num=0;
+	var setting = {
+	       key : { title : "code"},
+			callback: {
+				onClick: zTreeOnClick
+			}	
+		};
+	
+	function zTreeOnClick(event, treeId, treeNode) {
+	
+		map.clearOverlays();//清除地图覆盖物
+		map.centerAndZoom(new BMap.Point(treeNode.lat,treeNode.lng), 16);
+	    //alert(treeNode.tId + ", " + treeNode.name+","+treeNode.lat+","+treeNode.lng);
+		addMarker({'lat': treeNode.lat, 'lng': treeNode.lng});   
+		getBoundary(treeNode.name);
+	};
+	
+	$(function() {
+		init();
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		//添加百度地图
+		map = new BMap.Map("map"); // 创建地图实例  
+		//map.centerAndZoom(new BMap.Point(107.484018, 38.188197), 16);
+		map.centerAndZoom("赤峰市红山区", 15);                 // 初始化地图，设置中心点坐标和地图级别  
+		map.addControl(new BMap.NavigationControl()); // 添加平移缩放控件
+		map.addControl(new BMap.ScaleControl()); // 添加比例尺控件
+		map.addControl(new BMap.OverviewMapControl()); //添加缩略地图控件
+		map.enableScrollWheelZoom(); //启用滚轮放大缩小
+		map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+		var mapStyle = {
+			features : [ "road", "building", "water", "land" ],//隐藏地图上的poi
+			style : "road" //设置地图风格为高端黑
+		}
+		map.setMapStyle(mapStyle);
+		getBoundary("呼和浩特市");
+		getBoundary("包头市");
+		getBoundary("乌海市");
+		getBoundary("赤峰市");
+		getBoundary("通辽市");
+		getBoundary("鄂尔多斯市");
+		getBoundary("呼伦贝尔市");
+		getBoundary("巴彦淖尔市");
+		getBoundary("乌兰察布市");
+		getBoundary("兴安盟");
+		getBoundary("锡林郭勒盟");
+        getBoundary("阿拉善盟");
+		
+		getBoundary("内蒙古");
+		var items = [{'lat': 119.950657, 'lng': 47.183097},{'lat': 107.48665, 'lng': 38.190494},{'lat': 107.487265, 'lng': 38.189289}];
+		for (var i = 0; i < items.length; i++) {
+			addMarker(items[i]);
+		}
+	
+		
+		
+	});
+	
+	
+	function getBoundary(cityName){       
+		var bdary = new BMap.Boundary();
+		bdary.get(cityName, function(rs){       //获取行政区域
+			//map.clearOverlays();        //清除地图覆盖物       
+			var count = rs.boundaries.length; //行政区域的点有多少个
+			if (count === 0) {
+				alert('未能获取当前输入行政区域');
+				return ;
+			}
+          	var pointArray = [];
+			for (var i = 0; i < count; i++) {
+				var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeColor: "#ff0000"}); //建立多边形覆盖物
+				map.addOverlay(ply);  //添加覆盖物
+				pointArray = pointArray.concat(ply.getPath());
+			}    
+			map.setViewport(pointArray);    //调整视野  
+		});   
+	}
+	
+	function addMarker(item) {
+		var point = new BMap.Point(item.lat, item.lng)
+
+		var marker = new BMap.Marker(point);
+		map.addOverlay(marker);
+		var opts = {
+			width : 380, // 信息窗口宽度
+			height :160, // 信息窗口高度
+			title : "<span  style='font-size:16px;color:#ffa000'>信息展示</span>", // 信息窗口标题
+			enableMessage : true
+		//设置允许信息窗发送短息
+		}
+		var infoWindow = new BMap.InfoWindow(
+				 "<div  ><table width='380px;margin-top:10px;'><tr style='font-size:15px;'><td  width='70%' align='left'>寺庙名称：新上海庙  </td><td align='right'><a onclick='viewZj()'>查看</a></td></tr>"+
+			     "<tr  style='font-size:15px;'><td  width='70%' align='left'>教职人员统计数：15人</td><td align='right'><a onclick='viewJzgry()'>查看</a></td></tr>"+
+				 "<tr style='font-size:15px;'><td  width='70%' align='left'>民主管理小组组长姓名：昂素镇</td><td align='right'><a>查看</a></td></tr>"+
+				 "<tr style='font-size:15px;'><td  width='70%' align='left'>联络员姓名：昂素镇<a></td><td align='right'><a  onClick='viewWgy(1)'>查看</a></td></tr></table></div>",opts); 
+		marker.addEventListener("click", function() {
+			map.openInfoWindow(infoWindow, point); //开启信息窗口
+		});
+	}
+	
+	
+	
+	function init(){
+		var list = $('.top-nav li');
+		list.each(function(index, element) {
+			list.eq(index).click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.main').eq(index).addClass('main-show').removeClass('main-hide').siblings('div.main').addClass('main-hide').removeClass('main-show');
+			})
+		});
+	}
+	
+	//采用Jquery框架显示隐藏左侧列
+	function SlidLeft()
+	{
+	    var flag = $("#IsHidden").val();
+
+	    if( flag == "0" )
+	    {
+	        $("#boxLeft").toggle(500);
+	        $("#main").animate({left:'0px'});
+	        $("#IsHidden").val("1");
+	        
+	        checkSize(0);
+	        $("#slidbtn").toggleClass( "slidRightBtn");
+	    }
+	    if( flag == "1" )
+	    {
+	        $("#boxLeft").toggle(500);
+	        $("#main").animate({left:'263px'});
+	        $("#IsHidden").val("0");
+	        checkSize(263);
+	        $("#slidbtn").toggleClass( "slidRightBtn");
+	    }
+	}
+	
+	
+	
+</script>
+
+</body>
+</html>

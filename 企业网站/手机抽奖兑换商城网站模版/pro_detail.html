@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <title>商品详情</title>  
+</head>
+<body>
+	<div class="wrap">
+	  <!--顶部-->
+	    <div class="fixed_top">
+	    	<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+	    	<h1>产品详情</h1>
+	    </div>
+	    
+	    <div class="container pd">
+	    	<!--轮播图-->
+	    	<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide"><img src="img/banner.png"/></div>
+		        	<div class="swiper-slide"><img src="img/banner1.png"/></div>
+		        </div>
+             </div> 
+             
+             <div class="pro_detail">
+		        <!--产品指标-->
+		         <ul class="detail_list">
+		         	<h2><span>小米手机MIX全新款</span></h2>
+		         	<li><label>原价:</label><a class="grey">2000</a>元</li>
+		         	<li><label>抢购价:</label><a class="red">600</a>元</li>
+		         </ul>
+		        <!-- 服务保障-->
+		         <div class="spjs">
+			         <h3>商品详情</h3>
+			         <div class="details">
+			         	<img src="img/banner.png" />
+			         	<h4>标配免费服务内容</h4>
+			         	<p>全程免费维保服务；管家式客服跟踪服务。</p>
+			         	<img src="img/banner1.png" />
+			         	<img src="img/banner4.png" />
+			         </div>
+		         </div>
+         
+		     </div>
+            
+		</div>
+	</div>
+
+<div class="zzc"></div>
+<div class="sxlist xqfa">
+	<div class="maintitle">
+		<img src="img/pic1.png"/>
+		<h5>小米笔记本电脑</h5>
+		<p>原价:2000元</p>
+		<p>抢购价:600元</p>
+		<i class="icons">&#xe611;</i>
+	</div>
+	<div class="maininfo">
+		<h4>请选择抢购方案</h4>
+		<ul>
+			<li>买单</li>
+			<li>买双</li>
+		</ul>
+		<h4>购买数量</h4>
+		<div class="slxz"><input type="button" value="-"/><input type="number" value="1" id="num" /><input type="button" value="+"/></div>
+	</div>
+	<div class="hjje"><p class="gxzf">您共需支付:<span class="red">￥<b>600</b>元</span></p><p>账户余额:<span class="red"><b>600</b>金币</span></p></div>
+    <a href="javascript:;" class="ok">确定</a>
+</div>
+
+	
+<div class="footer">
+	<div class="foot_l"><p>抢购价:<span class="red">￥<b>600</b>元</span></p></div>
+	<div class="foot_r"><a href="javascript:;" class="ljgm">立即购买</a></div>
+</div>
+</body>
+ 
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script type="text/javascript" src="js/swiper.min.js" ></script>
+<script src="https://cdn.bootcss.com/eruda/1.4.4/eruda.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	var swiper = new Swiper('.swiper-container', {
+		    slidesPerView: 1,
+		    spaceBetween:0,
+		    loop: true,
+		    autoplay: 2500
+	    });
+	    
+	    //购买方案	
+   		$(".footer a").click(function(){
+   			var nindex=$(this).index();
+			$(".zzc").fadeIn();
+			$(".sxlist").fadeIn()
+		})
+
+	    
+	    $(".sxlist a.ok").click(function(){
+			var str="";
+			$("li.active").each(function(index,item){
+        	   str+=($(this).text()+"  ")
+            })
+			$(".zzc").fadeOut();
+			$(".sxlist").fadeOut();
+			window.location.href="qrdd.html"
+		})
+		$(".maintitle i").click(function(){
+			$(".zzc").fadeOut();
+			$(".sxlist").fadeOut();
+		})
+		$(".sxlist li").click(function(){
+			$(this).addClass("active").siblings().removeClass();
+		})
+		
+		
+		//计算价格
+ 		var n=0;
+ 		$("input[type=number]").change(function(){
+ 			var reg=/^\d+$/;
+ 			if(reg.test($(this).val())==false){
+ 				$(this).val(n);
+ 				return false
+ 			}else{
+ 				n=$(this).val();
+ 				$(".gxzf b").text($(".foot_l b").text()*$("input[type=number]").val())
+ 			}
+ 		}).next().click(function(){
+ 			$(this).prev().val($(this).prev().val()*1+1);
+ 			$(".gxzf b").text($(".foot_l b").text()*$("input[type=number]").val())
+ 		}).prev().prev().click(function(){
+ 			if($(this).next().val()>1){
+ 				$(this).next().val($(this).next().val()*1-1);
+ 				$(".gxzf b").text($(".foot_l b").text()*$("input[type=number]").val())
+ 			}
+ 		})
+ 		
+	})
+</script>
+</html>

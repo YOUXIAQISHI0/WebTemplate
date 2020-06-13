@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jquery基于html5历届回顾时间轴特效演示_大头网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/zhansucai.css" />
+<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+
+</head>
+<body>
+<!--
+	页面都是一样的，这里就写了两个页面，需要更换的只有canvas动画，以及时间节点和内容
+-->
+<div class=" page-layout page-main-content">
+	<div class="layout layout-grid-0">
+		<div class="grid-0">
+			<div class="col col-main">
+				<div class="main-wrap J_Region">
+
+					<!--canvas-->
+					<div class="wb-zc-lxmod-yunqi-review-2018-anim J_Module">
+						<div class="module-wrap J_tb_lazyload dbl_tms_module_wrap">
+							<!-- 避免用window的全局变量获取数据 -->
+							<textarea class="schemaData" style="display:none;">
+							{"moduleinfo":{"year":"2017"},"$tmsId":"tce/1578233"}
+							</textarea>
+							<div id="aniBg-wrap"></div>
+							<canvas id="aniBg"></canvas>
+						</div>
+					</div>
+					<!--canvas 结束 -->
+
+					<!--主体开始 -->
+					<div class="wb-zc-lxmod-yunqi-review-2018 J_Module">
+						<div class="module-wrap J_tb_lazyload dbl_tms_module_wrap">
+							<!-- 避免用window的全局变量获取数据 不要删 -->
+							<textarea class="schemaData" style="display:none;">{}</textarea>
+							<div class="logo">
+								<div class="con">
+									<a href="javascript:;" target="_blank">
+										<img src="images/logo.png">
+									</a>
+								</div>
+							</div>
+							<div class="dn-container">
+								<h6><b>Review</b>历届回顾</h6>
+								<div class="years">
+
+									<div class="item">
+										<span class="vertical"></span>
+										<a href="index.html" target="_self">
+
+											<b>2018</b>
+											<i></i>
+
+										</a>
+									</div>
+
+									<div class="item cur">
+										<span class="vertical"></span>
+										<a href="2017.html" target="_self">
+
+											<span>
+												<b>2017</b>
+												<i>飞天·智能</i>
+											</span>
+
+										</a>
+									</div>
+
+									<div class="item">
+										<span class="vertical"></span>
+										<a href="javascript:;" target="_self">
+
+											<b>2016</b>
+											<i></i>
+
+										</a>
+									</div>
+
+									<div class="item">
+										<span class="vertical"></span>
+										<a href="javascript:;" target="_self">
+
+											<b>2015</b>
+											<i></i>
+
+										</a>
+									</div>
+
+
+								</div>
+								<div class="kv-wrap">
+									<div class="con">
+										<img src="images/feitianzhineng.png" class="kv">
+										<p class="title">ABOUT 关于 2018 云栖大会</p>
+										<p class="text">云栖大会由阿里巴巴集团主办，已经成为全球云计算TOP级峰会，汇聚DT时代最强大脑，描绘云计算发展趋势和蓝图，展现云计算、大数据、人工智能蓬勃发展的技术生态全景。</p>
+									</div>
+								</div>
+								<div class="review-wrap">
+									<div class="city-list">
+
+										<div class="item"><em></em><span>深圳</span><i></i></div>
+
+										<div class="item"><em></em><span>南京</span><i></i></div>
+
+										<div class="item"><em></em><span>武汉</span><i></i></div>
+
+										<div class="item"><em></em><span>上海</span><i></i></div>
+
+										<div class="item"><em></em><span>重庆</span><i></i></div>
+
+										<div class="item"><em></em><span>杭州</span><i></i></div>
+
+										<div class="item"><em></em><span>广东</span><i></i></div>
+
+									</div>
+									<div class="slick-wrap swiper-container">
+										<div class="swiper-wrapper">
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/shenzhen.png">
+															<div class="title">
+																<div class="etit">SHENZHEN</div>
+																<div class="ctit">深圳峰会</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">3.28-29</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018sz/2018-03-28上午主会场.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/nanjing.png">
+															<div class="title">
+																<div class="etit">NANJING</div>
+																<div class="ctit">南京峰会</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">4.26</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018nj/驱动数字中国.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/wuhan.png">
+															<div class="title">
+																<div class="etit">WUHAN</div>
+																<div class="ctit">武汉峰会</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">5.23</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018wh/main.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/shanghai.jpg">
+															<div class="title">
+																<div class="etit">SHANGHAI</div>
+																<div class="ctit">上海峰会</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">6.7-8</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018sh/main.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/chongqing.jpg">
+															<div class="title">
+																<div class="etit">CHONGQING</div>
+																<div class="ctit">重庆峰会</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">8.24</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/od/dpkXP1535511721324.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/hangzhou.png">
+															<div class="title">
+																<div class="etit">HANGZHOU</div>
+																<div class="ctit">杭州云栖</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">9.19-22</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="#"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+											<div class="item swiper-slide">
+												<div class="con">
+													<a href="javascript:;" target="_blank">
+														<div class="color">
+															<div class="mask"></div>
+														</div>
+														<div class="img">
+															<img src="images/guangdong.jpg">
+															<div class="title">
+																<div class="etit">GUANGDONG</div>
+																<div class="ctit">广东云栖</div>
+															</div>
+															<div class="mask"></div>
+														</div>
+														<div class="info">
+															<div class="date">11.22</div>
+															<div class="txt">Conference<br>Review<br>精彩回顾</div>
+															<div class="mask"></div>
+															<i class="iconfont icon-arrow-right"></i>
+														</div>
+													</a>
+
+													<div class="play" data-url="#"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+												</div>
+												<div class="unclick"></div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="right-sign">www.zhansucai.com</div>
+							<!--响应式开始-->
+							<div class="nav">
+								<div class="fix fixed" style="background: #010017;">
+									<div class="con">
+
+										<div class="scroll">
+
+											<div class="item">
+												<a href="javascript:;" target="_self">2018</a>
+											</div>
+
+											<div class="item cur">
+												<a href="javascript:;" target="_self">2017</a>
+											</div>
+
+											<div class="item">
+												<a href="javascript:;" target="_self">2016</a>
+											</div>
+
+											<div class="item" style="margin-right: 0;">
+												<a href="javascript:;" target="_self">2015</a>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="inner">
+								<img src="images/shuziqudong.png" class="kv">
+								<p class="title">ABOUT 关于 2018 云栖大会</p>
+								<p class="text">云栖大会由阿里巴巴集团主办，已经成为全球云计算TOP级峰会，汇聚DT时代最强大脑，描绘云计算发展趋势和蓝图，展现云计算、大数据、人工智能蓬勃发展的技术生态全景。</p>
+								<div class="list">
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/shenzhen.png">
+													<div class="tit">
+														<div class="etit">SHENZHEN</div>
+														<div class="ctit">深圳峰会</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">3.28-29</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018sz/2018-03-28上午主会场.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/nanjing.png">
+													<div class="tit">
+														<div class="etit">NANJING</div>
+														<div class="ctit">南京峰会</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">4.26</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018nj/驱动数字中国.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/wuhan.png">
+													<div class="tit">
+														<div class="etit">WUHAN</div>
+														<div class="ctit">武汉峰会</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">5.23</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018wh/main.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/shanghai.jpg">
+													<div class="tit">
+														<div class="etit">SHANGHAI</div>
+														<div class="ctit">上海峰会</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">6.7-8</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/2018sh/main.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/chongqing.jpg">
+													<div class="tit">
+														<div class="etit">CHONGQING</div>
+														<div class="ctit">重庆峰会</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">8.24</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="/yunqivedio.oss-cn-hangzhou.aliyuncs.com/od/dpkXP1535511721324.mp4"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/hangzhou.png">
+													<div class="tit">
+														<div class="etit">HANGZHOU</div>
+														<div class="ctit">杭州云栖</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">9.19-22</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="#"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+									<div class="item swiper-slide">
+										<div class="con">
+											<a href="javascript:;" target="_blank">
+												<div class="color">
+													<div class="mask"></div>
+												</div>
+												<div class="img">
+													<img src="images/guangdong.jpg">
+													<div class="tit">
+														<div class="etit">GUANGDONG</div>
+														<div class="ctit">广东云栖</div>
+													</div>
+													<div class="mask"></div>
+												</div>
+												<div class="info">
+													<div class="date">11.22</div>
+													<div class="txt">Conference<br>Review<br>精彩回顾</div>
+													<div class="mask"></div>
+													<i class="iconfont icon-arrow-right"></i>
+												</div>
+											</a>
+
+											<div class="play" data-url="#"><i class="iconfont icon-arrow-bottom"></i>Watch Video<span>观看视频</span></div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!--响应式结束-->
+							<div class="video-mask">
+								<div class="video-wrap">
+									<i class="iconfont icon-wrong-thin close"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--主体结束-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/canvas.js"></script>
+<script type="text/javascript" src="js/zhansucai.js"></script>
+
+</body>
+</html>

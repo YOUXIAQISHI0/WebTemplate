@@ -1,0 +1,562 @@
+﻿/*手机导航*/
+
+
+/*默认样式*/
+.mobileNav { width: 100%; height: 2.813rem; line-height: 2.813rem; text-align: center; position: fixed; z-index: 950; }
+.mobileNav .showFloatLayerBtn { cursor: pointer; background:url(/images/phoneMenu.png) no-repeat;width:1.563rem; height:1.563rem;background-size: 100%;}
+.mobileNavRenderElem { width: 100%; height: 2.813rem;}
+.mobileNavFloatLayer { display: none; height: 100%; top: 0px; position: absolute; position: fixed; z-index: 100; }
+.mobileNavFloatLayer .itemList { }
+.mobileNavFloatLayer .itemList .item { }
+.mobileNavFloatLayer .itemList .item .itemLink {display:block; font-size:0.875rem;text-decoration:none;font-family: font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !important;}
+.mobileNavFloatLayer .itemList .item .itemLink .icon { background-size: 100% 100%; }
+.mobileNavFloatLayer.itemType0 .itemList .item .itemLink .icon { display: block; }
+.mobileNavFloatLayer.itemType1 .itemList .item .itemLink .icon { display: none; }
+.mobileNavMask {position:fixed;display:block;visibility:hidden; top:0rem;left:0rem;width:100%;height:100%;z-index:99;background:#BBBBBB;opacity:0;-ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;}
+
+/*样式1*/
+.pagebody_nav_1 { overflow: hidden;  }
+.mobileNav_1 { display: block; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_1 .titleName { color: #fff;}
+.mobileNav_1 .showFloatLayerBtn { position: absolute; left: 1.250rem; top: 0.625rem;   }
+.mobileNavFloatLayer_1 { display: block;visibility:hidden; width:10rem;height:100%; -ms-transform: translateX(-10rem); -khtml-transform: translateX(-10rem); -webkit-transform: translateX(-10rem); -o-transform: translateX(-10rem); -moz-transform: translateX(-10rem); transform: translateX(-10rem); -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;   -webkit-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);-ms-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);-moz-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);-o-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);}
+.mobileNavFloatLayer_1 .itemList { position: relative; top: 0rem; left: 0rem; }
+.mobileNavFloatLayer_1 .itemList .item { text-align: center; height: 3rem; line-height: 3rem; border-bottom: .063rem solid #ddd; position: relative; font-weight: normal; }
+.mobileNavFloatLayer_1 .itemList .item .itemLink {position:relative;display:block; color: #fff; -ms-transform: translateX(0rem); -khtml-transform: translateX(0rem); -webkit-transform: translateX(0rem); -o-transform: translateX(0rem); -moz-transform: translateX(0rem); transform: translateX(0rem); -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_1 .itemList .item .itemLink:after { content: ">"; position: absolute; right: 10%; top: 0; color: #fff; }
+.mobileNavFloatLayer_1 .itemList .item .itemLink .menuName{display: inline-block;overflow: hidden;margin-left: 0;max-width: 5.5rem;text-overflow: ellipsis;white-space: nowrap;font-family: "Microsoft YaHei","SimSun",Arial;}
+.mobileNavFloatLayer_1 .itemList .item .itemLink .icon { position: absolute; width: 20px; height: 20px; display: inline-block; top: 1rem; left: 1rem; }
+.mobileNavFloatLayer_1 .itemList .item { color: #fff;line-height:3rem; -webkit-transform: translateX(-10rem); -webkit-transition: 0.5s; }
+.mobileNavMask_1 {opacity:0;-ms-transform: translateX(-10rem) !important; -khtml-transform: translateX(-10rem) !important; -webkit-transform: translateX(-10rem) !important; -o-transform: translateX(-10rem) !important; -moz-transform: translateX(-10rem) !important; transform: translateX(-10rem) !important;}
+
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(1) { transition-delay: 150ms; -moz-transition-delay: 150ms; -webkit-transition-delay: 150ms; -o-transition-delay: 150ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(2) { transition-delay: 250ms; -moz-transition-delay: 250ms; -webkit-transition-delay: 250ms; -o-transition-delay: 250ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(3) { transition-delay: 350ms; -moz-transition-delay: 350ms; -webkit-transition-delay: 350ms; -o-transition-delay: 450ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(4) { transition-delay: 450ms; -moz-transition-delay: 450ms; -webkit-transition-delay: 450ms; -o-transition-delay: 450ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(5) { transition-delay: 550ms; -moz-transition-delay: 550ms; -webkit-transition-delay: 550ms; -o-transition-delay: 550ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(6) { transition-delay: 650ms; -moz-transition-delay: 650ms; -webkit-transition-delay: 650ms; -o-transition-delay: 650ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(7) { transition-delay: 750ms; -moz-transition-delay: 750ms; -webkit-transition-delay: 750ms; -o-transition-delay: 750ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(8) { transition-delay: 850ms; -moz-transition-delay: 850ms; -webkit-transition-delay: 850ms; -o-transition-delay: 850ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(9) { transition-delay: 950ms; -moz-transition-delay: 950ms; -webkit-transition-delay: 950ms; -o-transition-delay: 950ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(10) { transition-delay: 1050ms; -moz-transition-delay: 1050ms; -webkit-transition-delay: 1050ms; -o-transition-delay: 1050ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(11) { transition-delay: 1150ms; -moz-transition-delay: 1150ms; -webkit-transition-delay: 1150ms; -o-transition-delay: 1150ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(12) { transition-delay: 1250ms; -moz-transition-delay: 1250ms; -webkit-transition-delay: 1250ms; -o-transition-delay: 1250ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(13) { transition-delay: 1350ms; -moz-transition-delay: 1350ms; -webkit-transition-delay: 1350ms; -o-transition-delay: 1350ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(14) { transition-delay: 1450ms; -moz-transition-delay: 1450ms; -webkit-transition-delay: 1450ms; -o-transition-delay: 1450ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(15) { transition-delay: 1550ms; -moz-transition-delay: 1550ms; -webkit-transition-delay: 1550ms; -o-transition-delay: 1550ms; }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item:nth-child(16) { transition-delay: 1650ms; -moz-transition-delay: 1650ms; -webkit-transition-delay: 1650ms; -o-transition-delay: 1650ms; }
+
+
+.mobileNav_1.showFloatNav { -ms-transform: translateX(10rem); -khtml-transform: translateX(10rem); -webkit-transform: translateX(10rem); -o-transform: translateX(10rem); -moz-transform: translateX(10rem); transform: translateX(10rem); }
+.mobileNavFloatLayer_1.showFloatNav { visibility:visible; -ms-transform: translateX(0); -khtml-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); -webkit-transition: 0.5s; }
+.mobileNavFloatLayer_1.showFloatNav .itemList { -ms-transform: translateX(0); -khtml-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); }
+.mobileNavFloatLayer_1.showFloatNav .itemList .item { -ms-transform: translateX(0); -khtml-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); }
+/*.pagebody_nav_1.showFloatNav { -ms-transform: translateX(10rem) !important; -khtml-transform: translateX(10rem) !important; -webkit-transform: translateX(10rem) !important; -o-transform: translateX(10rem) !important; -moz-transform: translateX(10rem) !important; transform: translateX(10rem) !important; }*/
+.mobileFootNav_1.showFloatNav{-ms-transform: translateX(10rem) !important; -khtml-transform: translateX(10rem) !important; -webkit-transform: translateX(10rem) !important; -o-transform: translateX(10rem) !important; -moz-transform: translateX(10rem) !important; transform: translateX(10rem) !important;-ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;}
+.mobileNavMask_1.showFloatNav{visibility:visible;opacity:0.5;-ms-transform: translateX(10rem) !important; -khtml-transform: translateX(10rem) !important; -webkit-transform: translateX(10rem) !important; -o-transform: translateX(10rem) !important; -moz-transform: translateX(10rem) !important; transform: translateX(10rem) !important;}
+
+/*样式1 黑色*/
+.mobileNav_1.black { background-color: #323232; }
+.mobileNavFloatLayer_1.black { background-color: #464646; }
+.mobileNavFloatLayer_1.black .itemList .item{border-bottom: .063rem solid #999;}
+
+/*样式1 红色*/
+.mobileNav_1.red { background-color: #ca1012; }
+.mobileNavFloatLayer_1.red { background-color: #ce2122; }
+.mobileNavFloatLayer_1.red .itemList .item{border-bottom: .063rem solid #B10808;}
+
+/*样式1 棕色*/
+.mobileNav_1.brown { background-color:#9E6209; }
+.mobileNavFloatLayer_1.brown { background-color:#B26E0A;  }
+.mobileNavFloatLayer_1.brown .itemList .item{border-bottom: .063rem solid #D69432;}
+
+/*样式1 橙色*/
+.mobileNav_1.orange { background-color: #ff560a; }
+.mobileNavFloatLayer_1.orange { background-color: #ff621c; }
+.mobileNavFloatLayer_1.orange .itemList .item{border-bottom: .063rem solid #DE4C0B;}
+
+/*样式1 绿色*/
+.mobileNav_1.green { background-color: #058B4F; }
+.mobileNavFloatLayer_1.green { background-color: #06a05b; }
+.mobileNavFloatLayer_1.green .itemList .item{border-bottom: .063rem solid #07854C;}
+
+/*样式1 蓝色*/
+.mobileNav_1.blue { background-color: #1964B1; }
+.mobileNavFloatLayer_1.blue { background-color:#2576C8; }
+.mobileNavFloatLayer_1.blue .itemList .item{border-bottom: .063rem solid #0A5AAC;}
+
+/*样式1 紫色*/
+.mobileNav_1.purple { background-color: #9140A0; }
+.mobileNavFloatLayer_1.purple { background-color:#9b50a9; }
+.mobileNavFloatLayer_1.purple .itemList .item{border-bottom: .063rem solid #742782;}
+/*样式1 粉色*/
+.mobileNav_1.pink { background-color: #e91e63; }
+.mobileNavFloatLayer_1.pink { background-color:#e91e63; }
+.mobileNavFloatLayer_1.pink .itemList .item{border-bottom: .063rem solid #ec407a;}
+/*样式1 青色*/
+.mobileNav_1.cyan { background-color: #009688; }
+.mobileNavFloatLayer_1.cyan { background-color:#009688; }
+.mobileNavFloatLayer_1.cyan .itemList .item{border-bottom: .063rem solid #26a69a;}
+
+/*样式1 黄色*/
+.mobileNav_1.yellow { background-color: #fbc02d; }
+.mobileNavFloatLayer_1.yellow { background-color:#fbc02d; }
+.mobileNavFloatLayer_1.yellow .itemList .item{border-bottom: .063rem solid #fdd835;}
+
+/*样式2*/
+.pagebody_nav_2 { }
+.mobileNav_2 { display: block; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_2 .titleName { color: #fff; }
+.mobileNav_2 .showFloatLayerBtn { position: absolute; left: 1.250rem; top: .625rem;  }
+.mobileNavFloatLayer_2 { display: block; visibility:hidden; opacity: 0; width: 100%; height: 0; top: 3.125rem; background: #fff; z-index: 949; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_2 .itemList { position: relative; top: 0rem; left: 0rem; }
+.mobileNavFloatLayer_2 .itemList .item { text-align: center; height: 3.125rem; line-height: 3.125rem; border-bottom: 1px solid #fff; position: relative; font-weight: normal; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+
+.mobileNavFloatLayer_2 .itemList .item .itemLink {display:block; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_2 .itemList .item .itemLink:after { content: ">"; font-size: 14px; position: absolute; right: 10%; top: 0; color: #fff; }
+.mobileNavFloatLayer_2 .itemList .item .itemLink .menuName {display: inline-block;overflow: hidden;max-width: 16rem;text-overflow: ellipsis;white-space: nowrap;}
+.mobileNavFloatLayer_2 .itemList .item .itemLink .icon { position: absolute; width: 20px; height: 20px; display: inline-block; top: 15px; left: 10px; }
+.mobileNavMask_2 { opacity: 0; background-color: #333; }
+
+.mobileNavFloatLayer_2.showFloatNav { visibility:visible; opacity: 1; width: 100%; height: auto; }
+.mobileNavMask_2.showFloatNav { visibility: visible; opacity: 1; }
+
+/*样式2 黑色*/
+.mobileNav_2.black { background-color: #323232; }
+.mobileNavFloatLayer_2.black { background-color: #323232; }
+.mobileNavFloatLayer_2.black .itemList .item{border-bottom: .063rem solid #999;}
+
+/*样式2 红色*/
+.mobileNav_2.red { background-color: #ca1012; }
+.mobileNavFloatLayer_2.red { background-color: #ce2122; }
+.mobileNavFloatLayer_2.red .itemList .item{border-bottom: .063rem solid #B10808;}
+
+/*样式2 棕色*/
+.mobileNav_2.brown { background-color:#9E6209; }
+.mobileNavFloatLayer_2.brown { background-color:#B26E0A;  }
+.mobileNavFloatLayer_2.brown .itemList .item{border-bottom: .063rem solid #D69432;}
+
+
+/*样式2 橙色*/
+.mobileNav_2.orange { background-color: #ff560a; }
+.mobileNavFloatLayer_2.orange { background-color: #ff621c; }
+.mobileNavFloatLayer_2.orange .itemList .item{border-bottom: .063rem solid #DE4C0B;}
+
+/*样式2 绿色*/
+.mobileNav_2.green { background-color: #058B4F; }
+.mobileNavFloatLayer_2.green { background-color: #06a05b; }
+.mobileNavFloatLayer_2.green .itemList .item{border-bottom: .063rem solid #07854C;}
+
+/*样式2 蓝色*/
+.mobileNav_2.blue { background-color: #1964B1; }
+.mobileNavFloatLayer_2.blue { background-color:#2576C8; }
+.mobileNavFloatLayer_2.blue .itemList .item{border-bottom: .063rem solid #0A5AAC;}
+
+/*样式2 紫色*/
+.mobileNav_2.purple { background-color: #9140A0; }
+.mobileNavFloatLayer_2.purple { background-color:#9b50a9; }
+.mobileNavFloatLayer_2.purple .itemList .item{border-bottom: .063rem solid #742782;}
+
+/*样式2 粉色*/
+.mobileNav_2.pink { background-color: #e91e63; }
+.mobileNavFloatLayer_2.pink { background-color:#e91e63; }
+.mobileNavFloatLayer_2.pink .itemList .item{border-bottom: .063rem solid #ec407a;}
+/*样式2 青色*/
+.mobileNav_2.cyan { background-color: #009688; }
+.mobileNavFloatLayer_2.cyan { background-color:#009688; }
+.mobileNavFloatLayer_2.cyan .itemList .item{border-bottom: .063rem solid #26a69a;}
+
+/*样式2 黄色*/
+.mobileNav_2.yellow { background-color: #fbc02d; }
+.mobileNavFloatLayer_2.yellow { background-color:#fbc02d; }
+.mobileNavFloatLayer_2.yellow .itemList .item{border-bottom: .063rem solid #fdd835;}
+
+/*样式3*/
+.mobileNav_3 { display: block; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_3 .titleName { color: #fff; font-size: 1rem;}
+.mobileNav_3 .showFloatLayerBtn { position: absolute; left: 1.250rem; top: .625rem;  }
+.mobileNavFloatLayer_3 { display: block; visibility:hidden; opacity: 0; width: 100%; height: auto;line-height:3.125rem; top: 3.125rem; background: #fff; z-index: 950; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_3 .itemList { overflow:hidden; line-height: 3.125rem; margin: 0; }
+.mobileNavFloatLayer_3 .itemList .item { text-align: left; width: 50%; height: 2.5rem; line-height: 2.5rem; border-right: 1px solid #fff; position: relative; float: left; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+
+.mobileNavFloatLayer_3 .itemList .item .itemLink { display:block;width: 100%; height: 100%; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_3 .itemList .item .itemLink .menuName{position: absolute;display: inline-block;top: 0rem;left: 3rem;overflow: hidden;max-width: 7rem;text-align: center;text-overflow: ellipsis;white-space: nowrap;}
+.mobileNavFloatLayer_3 .itemList .item .itemLink .icon { position: absolute;  width: 20px; height: 20px; display: none; top: 10px; left: 10px; }
+
+.mobileNavFloatLayer_3.showFloatNav { visibility: visible; opacity: 1; }
+
+/*样式3 黑色*/
+.mobileNav_3.black { background-color: #464646; }
+.mobileNavFloatLayer_3.black { background-color: #464646; }
+.mobileNavFloatLayer_3.black .itemList .item{border-right: .063rem solid #999;border-bottom: .063rem solid #999;}
+
+/*样式3 红色*/
+.mobileNav_3.red { background-color: #ca1012; }
+.mobileNavFloatLayer_3.red { background-color: #ce2122; }
+.mobileNavFloatLayer_3.red .itemList .item{border-right: .063rem solid #B10808;}
+
+/*样式3 棕色*/
+.mobileNav_3.brown { background-color:#9E6209; }
+.mobileNavFloatLayer_3.brown { background-color:#B26E0A;  }
+.mobileNavFloatLayer_3.brown .itemList .item{border-right: .063rem solid #D69432;}
+
+
+/*样式3 橙色*/
+.mobileNav_3.orange { background-color: #ff560a; }
+.mobileNavFloatLayer_3.orange { background-color: #ff621c; }
+.mobileNavFloatLayer_3.orange .itemList .item{border-right: .063rem solid #DE4C0B;}
+
+/*样式3 绿色*/
+.mobileNav_3.green { background-color: #058B4F; }
+.mobileNavFloatLayer_3.green { background-color: #06a05b; }
+.mobileNavFloatLayer_3.green .itemList .item{border-right: .063rem solid #07854C;}
+
+/*样式2 蓝色*/
+.mobileNav_3.blue { background-color: #1964B1; }
+.mobileNavFloatLayer_3.blue { background-color:#2576C8; }
+.mobileNavFloatLayer_3.blue .itemList .item{border-right: .063rem solid #0A5AAC;}
+
+/*样式3 紫色*/
+.mobileNav_3.purple { background-color: #9140A0; }
+.mobileNavFloatLayer_3.purple { background-color:#9b50a9; }
+.mobileNavFloatLayer_3.purple .itemList .item{border-right: .063rem solid #742782;}
+
+/*样式3 粉色*/
+.mobileNav_3.pink { background-color: #e91e63; }
+.mobileNavFloatLayer_3.pink { background-color:#e91e63; }
+.mobileNavFloatLayer_3.pink .itemList .item{border-bottom: .063rem solid #ec407a;}
+
+/*样式3 青色*/
+.mobileNav_3.cyan { background-color: #009688; }
+.mobileNavFloatLayer_3.cyan { background-color:#009688; }
+.mobileNavFloatLayer_3.cyan .itemList .item{border-bottom: .063rem solid #26a69a;}
+
+/*样式3 黄色*/
+.mobileNav_3.yellow { background-color: #fbc02d; }
+.mobileNavFloatLayer_3.yellow { background-color:#fbc02d; }
+.mobileNavFloatLayer_3.yellow .itemList .item{border-bottom: .063rem solid #fdd835;}
+
+/*样式4*/
+.mobileNavRenderElem_4 { display: none !important; }
+.mobileNav_4 { width: auto; height: auto; border-radius: 5px;  position: fixed; bottom: 12.8%; left: 5%; display: block; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_4 .titleName { color: #fff; display: none; }
+.mobileNav_4 .showFloatLayerBtn { position: relative; background-image:none; display: block;  width: 2.75rem;height: 2.75rem;margin:0; top: 0;left: 0; }
+.mobileNav_4 .showFloatLayerBtn i{  display: block;position: absolute;left: 8px;top: 8px;  background: url(/images/phoneMenu.png) no-repeat; width: 2.75rem;height: 2.75rem;cursor:pointer;}
+.mobileNavFloatLayer_4 { display: block; visibility:hidden; opacity: 0; overflow: hidden; background: #fff; top: initial; bottom: 12.8%; width: 195px; left: 19%; height: 0%; z-index: 949; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_4 .itemList { position: relative; width: 100%; height: auto; top: 0rem; margin: 0; }
+.mobileNavFloatLayer_4 .itemList .item { text-align: center; height: 3.125rem; line-height: 3.125rem; border-bottom: 1px solid #fff; position: relative;  color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_4 .itemList .item .itemLink {display:block; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_4 .itemList .item .itemLink:after { content: ">"; font-size: 14px; color: #fff; position: absolute; right: 8%; }
+.mobileNavFloatLayer_4 .itemList .item .itemLink .menuName{display: inline-block;overflow: hidden;max-width: 7.5rem;text-overflow: ellipsis;white-space: nowrap;}
+.mobileNavFloatLayer_4 .itemList .item .itemLink .icon { position: absolute; width: 20px; height: 20px; top: 1rem; left: 10px; }
+.mobileNavFloatLayer_4.showFloatNav { visibility:visible; opacity: 1; height: 80%; }
+.mobileNavMask_4.showFloatNav { visibility: visible; opacity: 0.5; }
+
+/*样式4 黑色*/
+.mobileNav_4.black { background-color: #323232; }
+.mobileNavFloatLayer_4.black { background-color: #464646; }
+.mobileNavFloatLayer_4.black .itemList .item{border-bottom: .063rem solid #999;}
+
+/*样式4 红色*/
+.mobileNav_4.red { background-color: #ca1012; }
+.mobileNavFloatLayer_4.red { background-color: #ce2122; }
+.mobileNavFloatLayer_4.red .itemList .item{border-bottom: .063rem solid #B10808;}
+
+/*样式4 棕色*/
+.mobileNav_4.brown { background-color:#9E6209; }
+.mobileNavFloatLayer_4.brown { background-color:#B26E0A;  }
+.mobileNavFloatLayer_4.brown .itemList .item{border-bottom: .063rem solid #D69432;}
+
+/*样式4 橙色*/
+.mobileNav_4.orange { background-color: #ff560a; }
+.mobileNavFloatLayer_4.orange { background-color: #ff621c; }
+.mobileNavFloatLayer_4.orange .itemList .item{border-bottom: .063rem solid #DE4C0B;}
+
+/*样式4 绿色*/
+.mobileNav_4.green { background-color: #058B4F; }
+.mobileNavFloatLayer_4.green { background-color: #06a05b; }
+.mobileNavFloatLayer_4.green .itemList .item{border-bottom: .063rem solid #07854C;}
+
+/*样式4 蓝色*/
+.mobileNav_4.blue { background-color: #1964B1; }
+.mobileNavFloatLayer_4.blue { background-color:#2576C8; }
+.mobileNavFloatLayer_4.blue .itemList .item{border-bottom: .063rem solid #0A5AAC;}
+
+/*样式4 紫色*/
+.mobileNav_4.purple { background-color: #9140A0; }
+.mobileNavFloatLayer_4.purple { background-color:#9b50a9; }
+.mobileNavFloatLayer_4.purple .itemList .item{border-bottom: .063rem solid #742782;}
+
+/*样式4 粉色*/
+.mobileNav_4.pink { background-color: #e91e63; }
+.mobileNavFloatLayer_4.pink { background-color:#e91e63; }
+.mobileNavFloatLayer_4.pink .itemList .item{border-bottom: .063rem solid #ec407a;}
+
+/*样式4 青色*/
+.mobileNav_4.cyan { background-color: #009688; }
+.mobileNavFloatLayer_4.cyan { background-color:#009688; }
+.mobileNavFloatLayer_4.cyan .itemList .item{border-bottom: .063rem solid #26a69a;}
+
+/*样式4 黄色*/
+.mobileNav_4.yellow { background-color: #fbc02d; }
+.mobileNavFloatLayer_4.yellow { background-color:#fbc02d; }
+.mobileNavFloatLayer_4.yellow .itemList .item{border-bottom: .063rem solid #fdd835;}
+
+/*样式5*/
+.pagebody_nav_5 { overflow: hidden;  }
+.mobileNav_5 { display: block; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_5 .titleName { color: #fff; }
+.mobileNav_5 .showFloatLayerBtn { position: absolute; left: 1.250rem; top: 0.625rem;   }
+.mobileNavFloatLayer_5 { display: block;visibility:hidden; width:6.25rem;height:120%; -ms-transform: translateX(-6rem); -khtml-transform: translateX(-6rem); -webkit-transform: translateX(-6rem); -o-transform: translateX(-6rem); -moz-transform: translateX(-6rem); transform: translateX(-6rem); -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;   -webkit-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);-ms-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);-moz-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);-o-box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);box-shadow: inset -0.3rem 0rem .5rem rgba(0,0,0,.3);}
+.mobileNavFloatLayer_5 .itemList {margin-top:3rem; }
+.mobileNavFloatLayer_5 .itemList .item { position: relative; text-align: center; height: auto; line-height: initial; border-bottom: .063rem solid #ddd; font-weight: normal;color: #fff; -webkit-transform: translateX(-6rem); -webkit-transition: 0.5s; }
+.mobileNavFloatLayer_5 .itemList .item .itemLink { position:static; font-size:0.875rem; color: #fff; -ms-transform: translateX(0rem); -khtml-transform: translateX(0rem); -webkit-transform: translateX(0rem); -o-transform: translateX(0rem); -moz-transform: translateX(0rem); transform: translateX(0rem); -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_5 .itemList .item .itemLink:after { content: ""; }
+.mobileNavFloatLayer_5 .itemList .item .itemLink .menuName{display: inline-block;max-width: 6rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 7px;}
+.mobileNavFloatLayer_5 .itemList .item .itemLink .icon { position: static; margin:10px auto 0 auto; width: 38px; height: 38px; display: block; }
+
+.mobileNavFloatLayer_5.itemType0 .itemList .item .itemLink {}
+.mobileNavFloatLayer_5.itemType1 .itemList .item .itemLink {line-height:2.3rem;}
+.mobileNavMask_5 {opacity:0;-ms-transform: translateX(-6rem) !important; -khtml-transform: translateX(-6rem) !important; -webkit-transform: translateX(-6rem) !important; -o-transform: translateX(-6rem) !important; -moz-transform: translateX(-6rem) !important; transform: translateX(-6rem) !important;}
+
+
+.mobileNav_5.showFloatNav { -ms-transform: translateX(6.25rem); -khtml-transform: translateX(6.25rem); -webkit-transform: translateX(6.25rem); -o-transform: translateX(6.25rem); -moz-transform: translateX(6.25rem); transform: translateX(6.25rem); }
+.mobileNavFloatLayer_5.showFloatNav { display: block;visibility:visible;  -ms-transform: translateX(0); -khtml-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); -webkit-transition: 0.5s; }
+.mobileNavFloatLayer_5.showFloatNav .itemList {position:relative; top:0rem; -ms-transform: translateX(0); -khtml-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); }
+.mobileNavFloatLayer_5.showFloatNav .itemList .item { -ms-transform: translateX(0); -khtml-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); }
+/*.pagebody_nav_5.showFloatNav { -ms-transform: translateX(6rem) !important; -khtml-transform: translateX(6rem) !important; -webkit-transform: translateX(6rem) !important; -o-transform: translateX(6rem) !important; -moz-transform: translateX(6rem) !important; transform: translateX(6rem) !important; }*/
+.mobileFootNav_5.showFloatNav{-ms-transform: translateX(6.25rem) !important; -khtml-transform: translateX(6.25rem) !important; -webkit-transform: translateX(6.25rem) !important; -o-transform: translateX(6.25rem) !important; -moz-transform: translateX(6.25rem) !important; transform: translateX(6.25rem) !important;-ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -o-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;}
+.mobileNavMask_5.showFloatNav{visibility:visible;opacity:0.5;-ms-transform: translateX(0rem) !important; -khtml-transform: translateX(0rem) !important; -webkit-transform: translateX(0rem) !important; -o-transform: translateX(0rem) !important; -moz-transform: translateX(0rem) !important; transform: translateX(0rem) !important;}
+
+
+/*样式_5 黑色*/
+.mobileNav_5.black { background-color: #323232; }
+.mobileNavFloatLayer_5.black { background-color: #464646; }
+.mobileNavFloatLayer_5.black .itemList .item{border-bottom: .063rem solid #999;}
+
+/*样式_5 红色*/
+.mobileNav_5.red { background-color: #ca1012; }
+.mobileNavFloatLayer_5.red { background-color: #ce2122; }
+.mobileNavFloatLayer_5.red .itemList .item{border-bottom: .063rem solid #B10808;}
+
+/*样式_5 棕色*/
+.mobileNav_5.brown { background-color:#9E6209; }
+.mobileNavFloatLayer_5.brown { background-color:#B26E0A;  }
+.mobileNavFloatLayer_5.brown .itemList .item{border-bottom: .063rem solid #D69432;}
+
+/*样式_5 橙色*/
+.mobileNav_5.orange { background-color: #ff560a; }
+.mobileNavFloatLayer_5.orange { background-color: #ff621c; }
+.mobileNavFloatLayer_5.orange .itemList .item{border-bottom: .063rem solid #DE4C0B;}
+
+/*样式_5 绿色*/
+.mobileNav_5.green { background-color: #058B4F; }
+.mobileNavFloatLayer_5.green { background-color: #06a05b; }
+.mobileNavFloatLayer_5.green .itemList .item{border-bottom: .063rem solid #07854C;}
+
+/*样式_5 蓝色*/
+.mobileNav_5.blue { background-color: #1964B1; }
+.mobileNavFloatLayer_5.blue { background-color:#2576C8; }
+.mobileNavFloatLayer_5.blue .itemList .item{border-bottom: .063rem solid #0A5AAC;}
+
+/*样式_5 紫色*/
+.mobileNav_5.purple { background-color: #9140A0; }
+.mobileNavFloatLayer_5.purple { background-color:#9b50a9; }
+.mobileNavFloatLayer_5.purple .itemList .item{border-bottom: .063rem solid #742782;}
+
+/*样式_5 粉色*/
+.mobileNav_5.pink { background-color: #e91e63; }
+.mobileNavFloatLayer_5.pink { background-color:#e91e63; }
+.mobileNavFloatLayer_5.pink .itemList .item{border-bottom: .063rem solid #ec407a;}
+
+/*样式_5 青色*/
+.mobileNav_5.cyan { background-color: #009688; }
+.mobileNavFloatLayer_5.cyan { background-color:#009688; }
+.mobileNavFloatLayer_5.cyan .itemList .item{border-bottom: .063rem solid #26a69a;}
+
+/*样式_5 黄色*/
+.mobileNav_5.yellow { background-color: #fbc02d; }
+.mobileNavFloatLayer_5.yellow { background-color:#fbc02d; }
+.mobileNavFloatLayer_5.yellow .itemList .item{border-bottom: .063rem solid #fdd835;}
+
+/*样式6*/
+.mobileNavRenderElem_6 { display: none; }
+.mobileNav_6 { position: fixed; display: block; bottom: 5rem; left: 5%; width: auto; height: auto; border-radius: 1.6rem; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_6 .titleName { color: #fff; display: none; }
+.mobileNav_6 .showFloatLayerBtn { position: relative; display: block; top: 0rem; left: 0rem; width: 3.125rem; height: 3.125rem; margin: 0; background-image: none; }
+.mobileNav_6 .showFloatLayerBtn i { position: absolute; display: block; left: 11px; top: 10px; background: url(/images/phoneMenu.png) no-repeat; width: 3.125rem; height: 3.125rem; cursor: pointer; }
+.mobileNavFloatLayer_6 { position: fixed; display: block; visibility: hidden; top: 0rem; left: 0rem; width: 100%; height: 0; padding: 5rem 1.25rem 1rem 1.25rem; overflow: hidden; z-index: 998; opacity: 0; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_6 .itemList { width: auto; height: auto; margin: 0; }
+.mobileNavFloatLayer_6 .itemList .item { position: static; float: left; width: 33%; height: 4rem; line-height: 1.5rem; padding: 0rem; margin-bottom: 2.4375rem; text-align: center; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_6 .itemList .item .itemLink { display: inline-block; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_6 .itemList .item .itemLink:after { content: ""; }
+.mobileNavFloatLayer_6 .itemList .item .itemLink .icon { position: static; width: 2.5rem; height: 2.5rem; margin: 0 auto; }
+.mobileNavFloatLayer_6 .itemList .item .itemLink .menuName { display: inline-block;font-size: 0.875rem;font-weight: normal;max-width: 5rem;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+/*.mobileNavFloatLayer_6.showFloatNav { opacity: 1; height: 100%; visibility: visible; }*/
+.mobileNavMask_6 { z-index: 997; opacity: 0; background: rgba(0,0,0,0.7); }
+
+.mobileNav_6.showFloatNav { opacity: 0; }
+.mobileNavFloatLayer_6.showFloatNav { visibility:visible; opacity: 1; height: auto; }
+.mobileNavMask_6.showFloatNav { opacity: 1; visibility: visible; }
+/*样式6 黑色*/
+.mobileNav_6.black { background-color: #323232; }
+
+/*样式6 红色*/
+.mobileNav_6.red { background-color: #ca1012; }
+
+/*样式6 棕色*/
+.mobileNav_6.brown { background-color:#9E6209; }
+
+/*样式6 橙色*/
+.mobileNav_6.orange { background-color: #ff560a; }
+
+/*样式6 绿色*/
+.mobileNav_6.green { background-color: #058B4F; }
+
+/*样式6 蓝色*/
+.mobileNav_6.blue { background-color: #1964B1; }
+
+/*样式6 紫色*/
+.mobileNav_6.purple { background-color: #9140A0; }
+
+
+/*样式6 粉色*/
+.mobileNav_6.pink { background-color: #e91e63; }
+
+
+/*样式6 青色*/
+.mobileNav_6.yellow { background-color: #fbc02d; }
+
+/*样式6 黄色*/
+.mobileNav_6.cyan { background-color: #009688; }
+
+
+/*样式7*/
+.mobileNavRenderElem_7 { display: none; }
+.mobileNav_7 { position: fixed; display: block; bottom: 5rem; left: 5%; width: auto; height: auto; border-radius: 1.6rem; opacity: 1; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_7 .titleName { display: none; color: #fff; }
+.mobileNav_7 .showFloatLayerBtn { position: relative; display: block; top: 0rem; left: 0rem; width: 3.125rem; height: 3.125rem; margin: 0; background-image: none; }
+.mobileNav_7 .showFloatLayerBtn i { position: absolute; display: block; left: 11px; top: 10px; background: url(/images/phoneMenu.png) no-repeat; width: 3.125rem; height: 3.125rem; cursor: pointer; }
+.mobileNavFloatLayer_7 { position: fixed; display: block; visibility: hidden; top: auto; bottom: 0rem; left: 0rem; width: 100%; height: 0; overflow: hidden; z-index: 998; opacity: 0; }
+.mobileNavFloatLayer_7 .itemList { width: auto;  margin: 0; height: auto;}
+.mobileNavFloatLayer_7 .itemList .item { position: static; float: left; width: 5rem; height: 2.5rem; line-height: 1.5rem; padding: 0rem; margin-bottom: 2.25rem; text-align: center; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_7 .itemList .item .itemLink { display: inline-block; color: #fff; }
+.mobileNavFloatLayer_7 .itemList .item .itemLink:after { content: ""; }
+.mobileNavFloatLayer_7 .itemList .item .itemLink .icon { position: static; width: 2.5rem; height: 2.5rem; margin: 0 auto; }
+.mobileNavFloatLayer_7 .itemList .item .itemLink .menuName { display: inline-block;top: 0rem;left: 3rem;overflow: hidden;max-width: 4rem;text-overflow: ellipsis;white-space: nowrap; font-size: 0.875rem;font-weight:normal;}
+.mobileNavMask_7 { z-index: 997; opacity: 0; background: rgba(0,0,0,0.7); }
+
+.mobileNav_7.showFloatNav { opacity: 0; }
+.mobileNavFloatLayer_7.showFloatNav { visibility:visible; opacity: 1; height: auto; }
+.mobileNavFloatLayer_7.showFloatNav .itemList { bottom:0rem; }
+.mobileNavMask_7.showFloatNav { opacity: 1; visibility: visible; }
+
+/*样式7 黑色*/
+.mobileNav_7.black { background-color: #323232; }
+
+/*样式7 红色*/
+.mobileNav_7.red { background-color: #ca1012; }
+/*.mobileNavFloatLayer_7.red .itemList{ background-color: #ca1012; }*/
+
+/*样式7 棕色*/
+.mobileNav_7.brown { background-color:#9E6209; }
+
+/*样式7 橙色*/
+.mobileNav_7.orange { background-color: #ff560a; }
+
+/*样式7 绿色*/
+.mobileNav_7.green { background-color: #058B4F; }
+.mobileNavFloatLayer_7.green .itemList{ background-color: #06a05b; }
+
+/*样式7 蓝色*/
+.mobileNav_7.blue { background-color: #1964B1; }
+
+/*样式7 紫色*/
+.mobileNav_7.purple { background-color: #9140A0; }
+
+/*样式7 粉色*/
+.mobileNav_7.pink { background-color: #e91e63; }
+/*.mobileNavFloatLayer_7.red .itemList{ background-color: #ca1012; }*/
+
+/*样式7 青色*/
+.mobileNav_7.cyan { background-color:#009688; }
+
+/*样式7 黄色*/
+.mobileNav_7.yellow { background-color: #fbc02d; }
+
+/*样式8*/
+.pagebody_nav_8 { }
+.mobileNav_8 { display: block; -ms-transition:-ms-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; -khtml-transition: -khtml-transform 0.5; -o-transition:-o-transform 0.5s; -moz-transition:-moz-transform 0.5s; transition:transform 0.5s; }
+.mobileNav_8 .titleName { color: #fff; }
+.mobileNav_8 .showFloatLayerBtn { position: absolute; left:auto; right: 1.250rem; top: .625rem;  }
+.mobileNavFloatLayer_8 { display: block;visibility: hidden; opacity: 0; width: 100%; height: 0; top: 3.125rem; background: #fff; z-index: 949; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_8 .itemList { position: relative; top: 0rem; min-height: 3.125rem; }
+.mobileNavFloatLayer_8 .itemList .item { text-align: center; height: 3.125rem; line-height: 3.125rem; border-bottom: 1px solid #fff; position: relative; font-weight: normal; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+
+.mobileNavFloatLayer_8 .itemList .item .itemLink {display:block; color: #fff; -ms-transition: 0.5s; -webkit-transition: 0.5s; -khtml-transition: 0.5; -moz-transition: 0.5s; transition: 0.5s; }
+.mobileNavFloatLayer_8 .itemList .item .itemLink:after { content: ">"; font-size: 14px; position: absolute; right: 10%; top: 0; color: #fff; }
+.mobileNavFloatLayer_8 .itemList .item .itemLink .menuName{display: inline-block;overflow: hidden;max-width: 16rem;text-overflow: ellipsis;white-space: nowrap;}
+.mobileNavFloatLayer_8 .itemList .item .itemLink .icon { position: absolute; width: 20px; height: 20px; display: inline-block; top: 15px; left: 10px; }
+
+.mobileNavFloatLayer_8.showFloatNav { visibility: visible; opacity: 0.9; height: auto; max-height: 100%; }
+
+/*样式8 黑色*/
+.mobileNav_8.black { background-color: #323232; }
+.mobileNavFloatLayer_8.black { background-color: #323232; }
+.mobileNavFloatLayer_8.black .itemList .item{border-bottom: .063rem solid #4C4C4C;}
+
+/*样式8 红色*/
+.mobileNav_8.red { background-color: #ca1012; }
+.mobileNavFloatLayer_8.red { background-color: #ce2122; }
+.mobileNavFloatLayer_8.red .itemList .item{border-bottom: .063rem solid #B10808;}
+
+/*样式8 棕色*/
+.mobileNav_8.brown { background-color:#9E6209; }
+.mobileNavFloatLayer_8.brown { background-color:#B26E0A;  }
+.mobileNavFloatLayer_8.brown .itemList .item{border-bottom: .063rem solid #D69432;}
+
+/*样式8 橙色*/
+.mobileNav_8.orange { background-color: #ff560a; }
+.mobileNavFloatLayer_8.orange { background-color: #ff621c; }
+.mobileNavFloatLayer_8.orange .itemList .item{border-bottom: .063rem solid #DE4C0B;}
+
+/*样式8 绿色*/
+.mobileNav_8.green { background-color: #058B4F; }
+.mobileNavFloatLayer_8.green { background-color: #06a05b; }
+.mobileNavFloatLayer_8.green .itemList .item{border-bottom: .063rem solid #07854C;}
+
+/*样式8 蓝色*/
+.mobileNav_8.blue { background-color: #1964B1; }
+.mobileNavFloatLayer_8.blue { background-color:#2576C8; }
+.mobileNavFloatLayer_8.blue .itemList .item{border-bottom: .063rem solid #0A5AAC;}
+
+/*样式8 紫色*/
+.mobileNav_8.purple { background-color: #9140A0; }
+.mobileNavFloatLayer_8.purple { background-color:#9b50a9; }
+.mobileNavFloatLayer_8.purple .itemList .item{border-bottom: .063rem solid #742782;}
+
+/*样式_5 粉色*/
+.mobileNav_8.pink { background-color: #e91e63; }
+.mobileNavFloatLayer_8.pink { background-color:#e91e63; }
+.mobileNavFloatLayer_8.pink .itemList .item{border-bottom: .063rem solid #ec407a;}
+
+/*样式_5 青色*/
+.mobileNav_8.cyan { background-color: #009688; }
+.mobileNavFloatLayer_8.cyan { background-color:#009688; }
+.mobileNavFloatLayer_8.cyan .itemList .item{border-bottom: .063rem solid #26a69a;}
+
+/*样式_5 黄色*/
+.mobileNav_8.yellow { background-color: #fbc02d; }
+.mobileNavFloatLayer_8.yellow { background-color:#fbc02d; }
+.mobileNavFloatLayer_8.yellow .itemList .item{border-bottom: .063rem solid #fdd835;}
+
+/*预览图*/
+.tplItem[num="1"] .tplImg { background: url(/images/mobile/tplItem1.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="2"] .tplImg { background: url(/images/mobile/tplItem2.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="3"] .tplImg { background: url(/images/mobile/tplItem3.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="4"] .tplImg { background: url(/images/mobile/tplItem4.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="5"] .tplImg { background: url(/images/mobile/tplItem5.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="6"] .tplImg { background: url(/images/mobile/tplItem6.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="7"] .tplImg { background: url(/images/mobile/tplItem7.jpg) no-repeat;background-size: 100%; }
+.tplItem[num="8"] .tplImg { background: url(/images/mobile/tplItem8.jpg) no-repeat;background-size: 100%; }
+

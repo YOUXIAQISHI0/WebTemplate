@@ -1,0 +1,575 @@
+#map{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+/*查询条件*/
+.mapConditionArea{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	
+	height:auto;
+	width: 178px;
+
+	font-size: 11px;
+	text-align: center;
+	
+	border: 1px solid #8BB1C7;
+	
+	margin-left: 5px;
+	z-index: 1256;
+	
+	background-color: #FFFFFF;
+	/*
+	opacity:0.9;
+	filter: alpha(opacity=30);
+	*/
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #D5D5D5 ;/*rgba(0, 0, 0, 0.1);*/
+}
+/*查询条件*/
+.mapConditionArea:hover{
+	opacity: 1;
+	filter: alpha(opacity=30);
+}
+.mapConditionArea .infoareatitle{
+	text-align:left;
+	font-size:12px;
+	margin-left:15px;
+	line-height : 30px;
+	height:30px;
+	line-height:30px;
+	width:100%;
+	font-weight:bold;
+}
+.mapConditionArea .splitline{
+	width:90%;
+	margin: 0 auto;
+	height:1px;
+	line-height:1px;
+	font-size:1px;
+	line-height:1px;
+	background-color:#8BB1C7;
+}
+.mapConditionArea select{
+	width:80px;
+	text-align: left;
+}
+
+.mapConditionArea .conditionarea{
+	margin: 5px 5px 5px 5px;
+}
+.mapConditionArea .submitButton{
+	  background-color: rgb(245, 245, 245);
+	  background-image: -moz-linear-gradient(center top , rgb(245, 245, 245), rgb(241, 241, 241));
+	  /*
+	  border: 1px solid rgba(0, 0, 0, 0.1);
+	  border-radius: 2px 2px 2px 2px;
+	  */
+	  color: rgb(68, 68, 68);
+	  display: inline-block;
+	  font-size: 85%;
+	  font-weight: bold;
+	  height: 22px;
+	  line-height: 22px;
+	  
+	  min-width: 54px;
+	  padding: 0 8px;
+	  text-align: center;
+  	  transition: all 0.218s ease 0s;
+	  margin-top:8px;
+}
+.mapConditionArea .submitButton:hover {
+    background-color: rgb(248, 248, 248);
+    background-image: -moz-linear-gradient(center top , rgb(248, 248, 248), rgb(241, 241, 241));
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    transition: all 0s ease 0s;
+}
+/*
+.mapConditionArea .submitButton:visited {
+    color: rgb(102, 102, 102);
+}
+*/
+
+
+
+/*信息框*/
+.mapExplainInfo{
+	height:auto;
+	width: 178px;
+
+	font-size: 11px;
+	text-align: center;
+	
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	
+	border: 1px solid #8BB1C7;
+	
+	margin-left: 5px;
+	z-index: 1256;
+	
+	background-color: #FFFFFF;
+	/*
+	opacity:0.9;
+	filter: alpha(opacity=30);
+	*/
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #D5D5D5 ;/*rgba(0, 0, 0, 0.1);*/
+}
+
+/*信息框*/
+.mapExplainInfo:hover{
+	opacity: 1;
+	filter: alpha(opacity=60);
+}
+.mapExplainInfo .bigtitle{
+	text-align:left;
+	margin-left:15px;
+	/*border-bottom: 1px solid #8BB1C7;*/
+	line-height : 30px;
+	height:30px;
+	width:100%;
+	font-weight:bold;
+	font-size:12px;
+}
+.mapExplainInfo .splitline{
+	width:90%;
+	margin: 0 auto;
+	height:1px;
+	font-size:1px;
+	line-height:1px;
+	background-color:#8BB1C7;
+}
+.mapExplainInfo .splitline .thick{
+	display:none;
+}
+.mapExplainInfo .splitline .light{
+	display:none;
+}
+.mapExplainInfo .infotitle{
+	width:50%;
+	height:auto;
+	margin: 0 auto;
+	margin-top:3px;
+	/*line-height:18px;*/
+	line-break: normal;
+	text-align:center;
+	font-weight:bold;
+	font-size: 11px;
+	border-bottom : 1px solid #8BB1C7;
+}
+.mapExplainInfo table{
+	border:0px;
+	width:100%;
+	min-height:100%;
+	position:relative;
+	margin-top:5px;
+	font-size: 11px;
+}
+.mapExplainInfo table tr{
+}
+.mapExplainInfo table .rowhead{
+	text-align:center;
+	width:45%;
+	margin-right:10px;
+	color : #6499CB;
+	line-height:20px
+	
+}
+.mapExplainInfo table .rowcontent{
+	color : #CF3A0A;
+	
+}
+
+
+
+/*图例*/
+.mapSymbol{
+	display:block;
+	z-index:1256;
+	position: absolute;
+	bottom:10px;
+	left:5px;
+	font-size:10px;
+	margin:5px;
+	-moz-opacity:0.5;
+	/*
+	opacity: 0.9;
+	filter: alpha(opacity=30);
+	*/
+	background-color: #FFFFFF;
+	
+	/*behavior: url(../../jslibs/PIE.htc);*/
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #8BB1C7;
+	width : 90px;
+	padding-bottom:3px;
+	vertical-align:middle;
+	
+}
+.mapSymbol .color{
+	width:22px;
+	height:15px;
+	margin:3px;
+	margin-left:5px;
+	display:table-cell;
+}
+.mapSymbol .text{
+	width:50px;
+	height:15px;
+	line-height:15px;
+	margin:3px;
+	display:table-cell;
+}
+.mapSymbol:hover{
+	opacity: 1;
+}
+
+
+
+
+/*弹出框*/
+.popupWin{
+	overflow:auto;
+	width:auto;
+	height:auto;
+}
+.fsdf{
+	width:100%;
+	border: 1px solid #8BB1C7;
+	table-layout:fixed;
+	padding:0;
+	margin:0;
+}
+.popupWin table { 
+	padding: 0px; 
+	margin: 0px; 
+	border:0px;
+	font-size:12px;
+} 
+.popupWin table tr{ 
+	padding: 0px 0px 0px 0px; 
+	margin: 0px 0px 0px 0px; 
+	border:0px;
+} 
+
+.popupWin table caption { 
+	padding: 0 0 5px 0; 
+	width: 700px; 
+	font: italic 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+	text-align: right; 
+} 
+
+.popupWin table th { 
+	margin:0px 0px 0px 0px;
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+	color: #4f6b72; 
+	/*
+	border-right: 1px solid #C1DAD7; 
+	border-bottom: 1px solid #C1DAD7; 
+	border-top: 1px solid #C1DAD7; 
+	*/
+	border:0px;
+	letter-spacing: 2px; 
+	text-transform: uppercase; 
+	text-align: left; 
+	/*padding: 6px 6px 6px 12px; */
+	background: #CAE8EA  no-repeat; 
+	text-align:center;
+	
+	margin-left:0px;
+	margin-right:0px;
+	border-left:1px;
+	border-right:1px;
+} 
+
+.popupWin table th.nobg { 
+	border-top: 0px; 
+	border-left: 0px; 
+	border-right: 1px solid #C1DAD7; 
+	background: none; 
+} 
+
+.popupWin table td { 
+	border-right: 1px solid #C1DAD7; 
+	/*border-bottom: 1px solid #C1DAD7; */
+	/*
+	border-left: 1px solid #D5D5D5;
+	border-right:0px;
+	border-top: 1px solid #D5D5D5;
+	border-bottom : 1px solid #D5D5D5;
+	*/
+	border:0px;
+	background: #fff; 
+	font-size:12px; 
+	padding: 6px 6px 6px 12px; 
+	color: #4f6b72; 
+	margin:0px 0px 0px 0px;
+	background-color:#ecfff9;
+	word-wrap:break-word;
+} 
+
+
+.popupWin table td.alt { 
+background: #F5FAFA; 
+color: #797268; 
+} 
+
+.popupWin table th.spec { 
+	border-left: 1px solid #C1DAD7; 
+	border-top: 0; 
+	background: #fff no-repeat; 
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+} 
+
+.popupWin table th.specalt { 
+	border-left: 1px solid #C1DAD7; 
+	border-top: 0; 
+	background: #f5fafa no-repeat; 
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+	color: #797268; 
+} 
+
+
+
+/*状态栏*/
+.commomstatusbar {
+    position: relative;
+    z-index: 1256;
+	font-family: arial,sans-serif;
+	top:3px;
+}
+.commomstatusbar .messagehtml {
+	background: none repeat scroll 0 0 rgb(249, 237, 190);
+    border: 1px solid rgb(240, 195, 109);
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 85%;
+    left: 50%;
+    line-height: 29px;
+    margin-left: -190px;
+    position: absolute;
+    top: 55px;
+	font-size:12px;
+    top:0px;
+}
+.msie-6 .messagehtml, .msie-7 .messagehtml, .msie-8 .messagehtml {
+    margin-bottom: 0;
+}
+.messagehtml a {
+    color: rgb(51, 51, 51);
+    text-decoration: underline;
+}
+.message-cont {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.errormessage-cont {
+    z-index: 1256;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+
+
+
+.dotcircle{
+	-moz-border-radius: 10px;
+
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	/*border: solid 2px #000000;*/
+	background-color: #FF00FF;
+	width: 18px;
+	height: 18px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+
+
+
+/*位置栏*/
+
+.locbar{
+	background-color:rgb(255, 255, 255);
+	font-family: arial,sans-serif;
+	position:absolute;
+	left:80px;
+	top:3px;
+	z-index: 1256;
+}
+
+.locbar .loc{
+	font-size : 14px;
+    font-weight: bolder;
+	color: rgb(51, 51, 51);
+	line-height:23px;
+	text-align:start;
+	vertical-align:baseline;
+}
+
+
+.locbar .clkpopup{
+	color: rgb(0, 0, 204);
+	font-size : 12px;
+    cursor: pointer;
+    text-decoration: underline;
+	-moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+	
+}
+/*弹出窗口*/
+.loc_popwin{
+	position:absolute;
+	left:80px;
+	top:30px;
+	
+	z-index: 1256;
+	
+	background-color:#FFFFFF;
+	border: 1px solid rgb(139, 164, 216);
+    height: auto;
+	width:350px;
+    overflow: hidden;
+	min-height:100px;
+}
+.loc_popwin .loc_head{
+	background: url("../gis/theme/images/popup_title.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: rgb(102, 136, 204);
+    font-size: 12px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 25px;
+    padding-left: 7px;
+    font: 12px/160%;
+}
+
+.loc_popwin .loc_pophead .title {
+    background: none repeat scroll 0 0 rgb(249, 249, 249);
+    border-bottom: 1px solid rgb(218, 218, 218);
+    color: rgb(76, 76, 76);
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 7px;
+}
+.loc_popwin .loc_pophead .closebtn{
+   background: url("../images/popup_close.gif") repeat scroll 0 0 rgb(34, 34, 34);
+   color: rgb(238, 238, 238);
+   border: 0 none;
+   cursor: pointer;
+   height: 12px;
+   position: absolute;
+   right: 2px;
+   top: 2px;
+   width: 12px;
+}
+.loc_popwin .loc_popbody{
+	z-index:inherit;
+	margin:0px auto;
+	max-height:200px;
+	min-height:100px;
+	height:auto;
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding:0px 5px 10px 5px;
+}
+
+.loc_popwin .loc_popbody .loc_popcontent tr{
+	display: table-row;
+    font-family: arial,sans-serif;
+	font-size : 12px;
+	font-weight : 400;
+	/*white-space: nowrap;*/
+}
+.loc_popwin .loc_popbody .loc_popcontent td{
+    display: table-cell;
+    padding: 1px;
+    text-align: inherit;
+    vertical-align: inherit;
+}
+.loc_popwin .loc_popbody .loc_popcontent a{
+	color: rgb(0, 0, 204);
+    cursor: pointer;
+    margin-right: 8px;
+    text-decoration: underline;
+}
+.loc_popwin .loc_popbody .loc_popcontent .black{
+	font-weight : bolder;
+}
+
+
+/*查询区域*/
+.loc_popwin .loc_popbody .searcharea .searchinput{
+	padding-left:4px;
+	width:249px;
+	color:#8C8C8C;
+	font: normal 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+.loc_popwin .loc_popbody .searcharea .searchsubmit{
+	 background-color: rgb(245, 245, 245);
+	  background-image: -moz-linear-gradient(center top , rgb(245, 245, 245), rgb(241, 241, 241));
+	  border: 1px solid rgba(0, 0, 0, 0.1);
+	  border-radius: 2px 2px 2px 2px;
+	  color: rgb(68, 68, 68);
+	  display: inline-block;
+	  font-size: 85%;
+	  font-weight: bold;
+	  height: 22px;
+	  line-height: 22px;
+	  
+	  min-width: 54px;
+	  padding: 0 8px;
+	  text-align: center;
+  	  transition: all 0.218s ease 0s;
+	  margin-top:8px;
+	  cursor: pointer;
+}
+.loc_popwin .loc_popbody .searcharea .searchsubmit:hover{
+	 background-color: rgb(248, 248, 248);
+    background-image: -moz-linear-gradient(center top , rgb(248, 248, 248), rgb(241, 241, 241));
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    transition: all 0s ease 0s;
+}
+
+
+/*提示区域*/
+.loc_popwin .hintarea{
+	width:250px;
+	position:absolute;
+	top:49px;
+	left:10px;
+	z-index:1256;
+	border: 1px solid rgb(198, 198, 198);
+	background-color:white;
+	height : auto;
+	font: 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+	display:none;
+	
+	min-height:10px;
+	max-height:200px;
+}
+.loc_popwin .hint{
+	background-color:white;
+	width:100%;
+	padding-left:4px;
+}
+.loc_popwin .hintselected{
+	background-color:#CFE6FF;
+	padding-left:2px;
+	width:100%;
+}

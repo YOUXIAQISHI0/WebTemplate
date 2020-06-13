@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.js" ></script>
+    <script type="text/javascript" src="js/public.js?123" ></script>
+</head>
+<body>
+	<div class="wrap">
+		<!--顶部-->
+	    <div class="fixed_top">
+	    	<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+	    	<h1>提现</h1>
+	    	<div class="top-r"><a href="czjl.html">提现记录</a></div>
+	    </div>
+
+	    <div class="container" style="padding-bottom:0">
+	    	<div style="background:#fff;margin-bottom:10px" id="yysb">
+	    		<h4 style="height:40px;line-height:40px;text-indent:10px;color:#bbb;font-size:16px">可提现余额(元)</h4>
+	    		<p style="height:80px;line-height:60px;text-align:center;color:#666;font-size:24px">19000元</p>
+	    	</div>
+	    	<div class="tx_form">
+	    	<form>
+		    	<ul class="sm_list">
+		    	  <li><p>开户银行：</p><input type="text" placeholder="请输入开户银行" name="khh" /></li>
+		    	  <li><p>银行卡号：</p><input type="text" placeholder="请输入银行卡号" name="yhkh"/></li>
+		    	  <li><p>提现金额：</p><input type="text" placeholder="请输入提现金额"  name="txje"/></li>
+		    	  <li><p>您的姓名：</p><input type="text" placeholder="请输入姓名" name="username"/></li>
+		    	  <li><p>手机号码：</p><input type="text" placeholder="请输入手机号码" name="phone"/></li>   
+		    	</ul>
+		    	<p class="warning hide">请保证您输入的信息与微信实名绑定的姓名、身份证号信息一致，否则将有可能影响您的退货申请！</p>
+	    	</form>
+	    	</div>
+	    	<a href="javascript:;" class="ljzf">提交</a>
+	    </div>
+
+    </div>
+    
+</body>
+ <script>
+ 	$(function(){
+// 		gdata('userinfo',{},function(data){
+//			if(data.retInt==1){
+//				console.log(data.retRes)
+//				 $("input[name=username]").val(data.retRes.true_name);
+//				 $("#yysb p").html(data.retRes.ye_price);
+//			}
+//	    })
+   		
+   
+       
+       $(".ljzf").click(function(){
+//     	   gdata('txsq',{"bank_name":$("input[name=khh]").val(),"card_numbers":$("input[name=yhkh]").val(),"price":$("input[name=txje]").val(),"title":$("input[name=username]").val(),"phone":$("input[name=phone]").val()},function(data){
+//			if(data.retInt==1){
+//				 console.log(data.retRes)
+//			}else{
+//				 console.log(data.retErr);
+//				 zz({"info":data.retErr,"txt1":"确定","txt2":"取消"});
+//				 $(window).on("click",".btns a",function(){
+//				 	$(".zz").remove()
+//				 })
+//			}
+//	       })
+       })
+      
+
+ 	})
+ </script>
+</html>

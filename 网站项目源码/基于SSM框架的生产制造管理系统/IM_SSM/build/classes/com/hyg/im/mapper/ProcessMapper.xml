@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyg.im.mapper.ProcessMapper" >
+  <resultMap id="BaseResultMap" type="com.hyg.im.model.Process" >
+    <id column="ID" property="ID" jdbcType="INTEGER" />
+    <result column="deviceId" property="deviceId" jdbcType="INTEGER" />
+    <result column="ProcessCode" property="processCode" jdbcType="VARCHAR" />
+    <result column="ProcessName" property="processName" jdbcType="VARCHAR" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+    
+    <!-- 多对一的关系 -->
+	<!-- property: 指的是属性的值, javaType：指的是属性的类型-->
+	<association property="device" javaType="com.hyg.im.model.Device">
+		<id column="ID" property="ID" jdbcType="INTEGER" />
+	    <result column="DeviceCode" property="deviceCode" jdbcType="VARCHAR" />
+	    <result column="DeviceSpec" property="deviceSpec" jdbcType="VARCHAR" />
+	    <result column="DeviceName" property="deviceName" jdbcType="VARCHAR" />
+	    <result column="Description" property="description" jdbcType="VARCHAR" />
+	</association>
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    ID, deviceId, ProcessCode, ProcessName, Description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_process
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_process
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hyg.im.model.Process" >
+    insert into sys_process (ID, deviceId, ProcessCode, 
+      ProcessName, Description)
+    values (#{ID,jdbcType=INTEGER}, #{deviceId,jdbcType=INTEGER}, #{processCode,jdbcType=VARCHAR}, 
+      #{processName,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hyg.im.model.Process" >
+    insert into sys_process
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        ID,
+      </if>
+      <if test="deviceId != null" >
+        deviceId,
+      </if>
+      <if test="processCode != null" >
+        ProcessCode,
+      </if>
+      <if test="processName != null" >
+        ProcessName,
+      </if>
+      <if test="description != null" >
+        Description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="deviceId != null" >
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="processCode != null" >
+        #{processCode,jdbcType=VARCHAR},
+      </if>
+      <if test="processName != null" >
+        #{processName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hyg.im.model.Process" >
+    update sys_process
+    <set >
+      <if test="deviceId != null" >
+        deviceId = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="processCode != null" >
+        ProcessCode = #{processCode,jdbcType=VARCHAR},
+      </if>
+      <if test="processName != null" >
+        ProcessName = #{processName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        Description = #{description,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hyg.im.model.Process" >
+    update sys_process
+    set deviceId = #{deviceId,jdbcType=INTEGER},
+      ProcessCode = #{processCode,jdbcType=VARCHAR},
+      ProcessName = #{processName,jdbcType=VARCHAR},
+      Description = #{description,jdbcType=VARCHAR}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  
+  <select id="findProcessListCount" resultType="int" parameterType="map" >
+    select 
+    count(*)
+    from sys_process
+   
+  </select>
+  <select id="findProcessList" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_process
+   where 1=1
+   limit ${(pageNo - 1) * pageSize},${pageSize} 
+  </select>
+  
+  <!-- 根据id查询Process, 关联将Device查询出来 -->
+   <select id="selectProcessById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select p.ID, p.deviceId, p.ProcessCode, p.ProcessName, p.Description, d.deviceCode,d.deviceSpec,d.deviceName
+     from sys_process p, sys_device d where p.deviceId  = d.id and p.id = #{id}
+  </select>
+
+  
+  
+  
+  
+  
+  
+</mapper>

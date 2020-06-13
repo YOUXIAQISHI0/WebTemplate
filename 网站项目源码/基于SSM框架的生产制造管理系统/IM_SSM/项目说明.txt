@@ -1,0 +1,16 @@
+﻿调试和远程安装加qq1262330535。毕设vip交流群：585175671
+1. 访问地址：
+http://localhost:8080/IM_SSM/
+2. 数据源的配置在文件spring-common.xml中：
+<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/im" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+	</bean>
+	
+
+3. 更新内容：
+新增车间管理模块
+新增生产订单模块

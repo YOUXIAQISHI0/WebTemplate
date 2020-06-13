@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>教堂背景登录表单页面</title>
+
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+
+
+	<div class="app-block">
+		<div class="cube"><img src="images/cube.png" class="img-responsive" alt="" /></div>
+		<form>
+			<input type="text" class="text" value="" placeholder="邮箱"  onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}">
+			<input type="password" value="" placeholder="密码"  />
+			<div class="submit"><input type="submit" onClick="myFunction()" value="登录"></div>
+			<div class="clear"></div>
+			<p><a href="#">忘记密码 ?</a></p>
+		</form>
+		<p class="sign">建立新账号? <a href="#"> 注册</a></p>
+	</div>
+   
+</body>
+</html>

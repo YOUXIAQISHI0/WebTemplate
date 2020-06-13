@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <title>收货地址</title>  
+</head>
+<body>
+	<div class="wrap">
+		<!--标题栏-->
+		<div class="fixed_top">
+			<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+			<h1>收货地址</h1>
+			<div class="top-r"><a href="javascript:;" class="bjbtn">管理</a></div>
+		</div>
+		
+		<div class="container">
+			<ul class="address_list">
+	  			<li class="active">
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>程雨华</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  				<div class="delete"><i class="icons">&#xe62a;</i></div>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>程雨华</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  				<div class="delete"><i class="icons">&#xe62a;</i></div>
+	  			</li>
+	  			<li>
+	  				<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+	  				<h4><span>程雨华</span><span>1586264544</span></h4>
+	  				<p>武汉市江夏区保利海上五月花17栋1702</p>
+	  				<div class="delete"><i class="icons">&#xe62a;</i></div>
+	  			</li>
+					<li>
+						<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+						<h4><span>程雨华</span><span>1586264544</span></h4>
+						<p>武汉市江夏区保利海上五月花17栋1702</p>
+						<div class="delete"><i class="icons">&#xe62a;</i></div>
+					</li>
+					<li>
+						<div class="dzcheck"><i class="icons unchecked">&#xe604;</i><i class="icons checked">&#xe653;</i></div>
+						<h4><span>程雨华</span><span>1586264544</span></h4>
+						<p>武汉市江夏区保利海上五月花17栋1702</p>
+						<div class="delete"><i class="icons">&#xe62a;</i></div>
+					</li>
+	  		</ul>
+  		</div>
+  		
+  		<ul class="address_tab">
+  			<li><a href="new_address.html">新建地址</a></li>
+  			<li><a href="javascript:;">设为默认</a></li>
+  		</ul>
+	</div>
+</body>
+ 
+
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script src="https://cdn.bootcss.com/eruda/1.4.4/eruda.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	//eruda.init();
+        $("body").on("click",".address_list li",function(){
+	    	$(this).addClass("active").siblings().removeClass();
+	    })
+        
+        $("body").on("click",".bjbtn",function(){
+	       $(".delete").fadeToggle() 
+	    })
+        
+        
+        $("body").on("click",".delete",function(){
+	       $(this).parents("li").remove()
+	    })
+        
+        
+        
+	})
+</script>
+</html>

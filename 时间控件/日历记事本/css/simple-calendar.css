@@ -1,0 +1,351 @@
+@CHARSET "UTF-8";
+
+.sc-calendar {
+    min-width: 500px;
+    min-height: 500px;
+    text-align: center;
+    font-family: "Microsoft Yahei";
+    color: #4A4A4A;
+    box-shadow: 2px 4px 5px #bdbdbd;
+    border-width: 1px 0 0 1px;
+    border-color: #E6E4E0;
+    border-style: solid;
+    float: left;
+    margin-right: 20px;
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    font-size: 16px;
+}
+
+.sc-header {
+    height: 35px;
+    border-bottom: 0;
+}
+
+.sc-body {
+    /*height: 93%;*/
+    clear: both;
+    box-shadow: 2px 4px 5px #bdbdbd;
+}
+
+.sc-week {
+    height: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.sc-days {
+    /*height: 88%;*/
+}
+
+.sc-header .sc-yright {
+    margin-right: 4px;
+}
+
+.sc-header .wx-sp-a {
+    margin: 0px 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sc-header .wx-sp-a .layui-badge-dot {
+    margin-right: 4px;
+    border-radius: 0px;
+    width: 10px;
+    height: 10px;
+}
+
+.sc-item {
+    /*height: 20%;*/
+    float: left;
+    font-weight: 600;
+    color: #565555;
+    width: 14.285%;
+    padding-top: 0px;
+    background-color: #ffffff;
+    border-width: 0 0 1px 1px;
+    border-color: #F1EBE4;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.sc-item .wx-day {
+
+}
+
+/*//@-节气或阴历*/
+.sc-item .wx-day .lunar-day {
+    float: right;
+}
+
+.sc-item .wx-mark, .layui-layer-tips .wx-mark {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.sc-item .wx-mark .wx-mark-li, .layui-layer-tips .wx-mark .wx-mark-li {
+    list-style-type: none;
+    margin: 4px 0px;
+    text-align: left;
+    padding: 0px 4px;
+    background: #eee;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+}
+
+.sc-item .wx-mark .wx-mark-li p, .layui-layer-tips .wx-mark .wx-mark-li p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: normal;
+    /*//@-强制不划行，且多余显示省略号。*/
+    white-space: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body .layui-layer-tips {
+    width: auto !important;
+}
+
+body .layui-layer-tips .layui-layer-content {
+    margin: 0px;
+    padding: 4px;
+    /*background: white;*/
+}
+
+body .layui-layer-tips .layui-layer-content > i {
+    z-index: -1;
+    /*border-bottom-color: white;*/
+}
+
+body .layui-layer-tips .wx-mark {
+    background: white;
+    padding: 4px;
+}
+
+body .layui-layer-tips .wx-mark .wx-mark-li {
+    margin: 6px 0px;
+    /*background: white;*/
+    color: black;
+}
+
+.none {
+    display: none !important
+}
+
+body .wx-sp-a.wx-un-clicked, .wx-un-clicked {
+    color: #e8e8e8;
+}
+
+body .wx-sp-a.wx-un-clicked .layui-badge-dot {
+    background: #e8e8e8 !important;
+    background-color: #e8e8e8 !important;
+}
+
+.wx-body {
+    width: auto;
+    margin: 10px;
+}
+
+#calendar {
+    width: auto;
+    margin: auto;
+    margin-bottom: 18px;
+}
+
+/*-----------------*/
+/*-----------------*/
+/*-----------------*/
+/*-----------------*/
+
+.item-nolunar {
+    padding: 0px;
+}
+
+.sc-item:nth-child(7n) .wx-day, .sc-item:nth-child(7n+6) .wx-day {
+    color: rgba(224, 8, 8, 0.74);
+}
+
+.sc-vocation {
+    background-color: #FFEBEC;
+}
+
+/*//@-有备注的时候的样式*/
+.sc-mark {
+    /*background-color: #E5FBFA;*/
+    overflow: hidden;
+}
+
+.sc-vocation:before {
+    content: '休';
+    display: block;
+    position: absolute;
+    font-size: 0.7em;
+    width: 1.2em;
+    font-weight: 100;
+    color: white;
+    background-color: #E00808;
+    margin-top: -10px;
+}
+
+.sc-othermenth {
+    color: #C1C0C0 !important;
+}
+
+.sc-othermenth .wx-day, .sc-othermenth .lunar-day {
+    color: #C7C7C7 !important;
+    font-weight: normal;
+}
+
+/*//@-鼠标移入的样式哦*/
+.sc-active-day, .sc-selected {
+    /*background-color: orange;*/
+    /*color: white;*/
+    /*border: 1px solid orange;*/
+}
+
+/*//@-今天的样式*/
+.sc-today {
+    /*background-color: orange;*/
+    /*color: white !important;*/
+    /*border: 1px solid orange;*/
+}
+
+.sc-item .wx-day {
+    font-size: 14px;
+    text-align: left;
+    margin: 4px 8px;
+}
+
+.sc-item .lunar-day {
+    font-size: 10px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sc-festival .lunar-day {
+    color: #E00808;
+}
+
+/*.sc-item:last-child, .sc-item:nth-child(7n) {
+  border-width: 0 1px 1px 1px;
+}*/
+
+.sc-week-item {
+    height: 100%;
+    padding: 0px;
+    float: left;
+    width: 14.285%;
+    background-color: #FBEC9C;
+    border-width: 1px 0 1px 1px;
+    border-color: #ECE3B1;
+    border-style: solid;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sc-item-small {
+    font-size: 10px !important;
+}
+
+.sc-week-item:last-child {
+    border-width: 1px 1px 1px 1px;
+}
+
+.sc-week-item:nth-child(7n), .sc-week-item:nth-child(7n+6) {
+    color: rgba(224, 8, 8, 0.74) !important;
+}
+
+.sc-actions {
+    float: left;
+    width: 25%;
+    padding: 5px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.sc-actions:last-child {
+    float: right;
+}
+
+.sc-actions-big {
+    width: 24%;
+}
+
+body .sc-actions-big.sc-mark-sp {
+    width: 48%;
+    text-align: right;
+}
+
+@media screen and (max-width: 500px) {
+    .sc-actions {
+        width: 50%;
+    }
+}
+
+.sc-header select {
+    border-color: rgba(0, 0, 0, 0);
+    padding: 0.2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: "Microsoft Yahei";
+    color: #606060;
+    font-size: 13px;
+}
+
+.sc-header input {
+    border-color: rgba(0, 0, 0, 0);
+    padding: 0.2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: "Microsoft Yahei";
+    color: #606060;
+}
+
+.sc-actions div {
+    display: inline-block;
+    /*border: 1px solid #ccc;*/
+    vertical-align: bottom;
+    width: 20px;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    line-height: 0.9em;
+    cursor: pointer;
+}
+
+.sc-return-today {
+    background-color: #eeeefb;
+    border-radius: 2px;
+    /* border: 1px solid #ccc; */
+    width: 60px;
+    font-size: 0.8em;
+    padding: 0.3em;
+    /*margin: auto;*/
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sc-time {
+    margin-top: 3px;
+    font-size: 0.8em;
+    float: right;
+}

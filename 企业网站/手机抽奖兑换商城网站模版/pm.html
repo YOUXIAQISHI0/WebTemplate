@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <title>排行榜</title>  
+</head>
+<body>
+	<div class="wrap">
+		<!--tab-->
+		<ul class="bang_tab">
+			<li class="active"><a href="javascript:;">日榜</a></li>	
+			<li><a href="javascript:;">周榜</a></li>	
+			<li><a href="javascript:;">月榜</a></li>		
+		</ul>
+	  
+		<div class="container_tb">
+			 <ul class="top_bang">
+				  <li>
+				  	<div class="img"><img src="img/pic1.png"/></div>
+				  	<h2>清风徐来</h2>
+				  	<p>已获胜<span>452</span>单</p>
+				  </li>
+					<li>
+						<div class="img"><img src="img/pic1.png"/></div>
+						<h2>清风徐来</h2>
+						<p>已获胜<span>392</span>单</p>
+					</li>
+					<li>
+						<div class="img"><img src="img/pic1.png"/></div>
+						<h2>清风徐来</h2>
+						<p>已获胜<span>352</span>单</p>
+					</li>
+			 </ul>
+			 <ul class="bang_list">
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+				 <li><img src="img/pic2.png"/><h3>不一样的卡布基诺</h3><p>已获胜<span>556</span>单</p></li>
+			 </ul>
+		</div>
+
+	  <div class="footer">
+	  	<ul>
+	  		<li><a href="index.html"><p><i class="icons">&#xe66b;</i></p><h4>首页</h4></a></li>
+	  		<li class="active"><a href="pm.html"><p><i class="icons">&#xe68f;</i></p><h4>排行</h4></a></li>
+	  		<li><a href="help.html"><p><i class="icons">&#xe608;</i></p><h4>客服</h4></a></li>
+	  		<li><a href="my.html"><p><i class="icons">&#xe607;</i></p><h4>我的</h4></a></li>
+	  	</ul>
+	  </div>
+       
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script src="https://cdn.bootcss.com/eruda/1.4.4/eruda.min.js"></script>
+<script type="text/javascript">
+   $(function(){
+   		//eruda.init();
+   			$(".bang_tab li").click(function(){
+   				$(this).addClass("active").siblings().removeClass()
+   			})
+   })
+</script>
+</html>

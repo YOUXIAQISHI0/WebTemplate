@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.js" ></script>
+    <script type="text/javascript" src="js/public.js?123" ></script>
+</head>
+<body>
+	<div class="wrap">
+		<!--顶部-->
+	    <div class="fixed_top">
+	    	<div class="top-l"><a href="javascript:window.history.back()"><i class="icons">&#xe600;</i></a></div>
+	    	<h1>充值记录</h1>
+	    </div>
+
+	    <div class="container" style="padding-bottom:0">
+	       <table class="txjl">
+	       	  <thead>
+	       	  	<tr>
+	       	  		<td width="20%">充值类型</td>
+	       	  		<td width="30%">充值金额</td>
+	       	  		<td width="20%">当前状态</td>
+	       	  		<td width="30%">时间</td>
+	       	  	</tr>
+	       	  </thead>
+	       	  <tbody>
+	       	  	 
+	       	  </tbody>
+	       </table>
+	    </div>
+    </div>
+    
+</body>
+ <script>
+ 	$(function(){
+   		gdata('czlists',{},function(data){
+			if(data.retInt==1){
+				var arr00=["待支付","已支付","已取消"];
+				$.each(data.retRes,function(index,item){
+					var types=null;
+					switch(item.pay_type){
+						case "weixin":
+						      types="微信";
+						      break;
+						case "alipay":
+						      types="支付宝";
+						      break;
+						case "bank":
+						      types="银联";
+						      break;
+					}
+					var tr=$("<tr><td>"+types+"</td><td>"+item.price+"</td><td>"+arr00[item.status - 1]+"</td><td>"+formatDate(item.create_time)+"</td></tr>");
+					$("tbody").append(tr)
+				})
+			}else{
+				//alert(data.retErr)
+			}
+	    })
+ 	})
+ </script>
+</html>

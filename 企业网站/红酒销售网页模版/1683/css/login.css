@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	}
+	
+#login {
+	min-height: 500px;
+	width: 100%;
+}
+#header {
+	height: 87px;
+	width: 100%;
+}
+#logo {
+	height: 87px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#footer {
+}
+#logo_img {
+	float: left;
+	margin-left:20px;
+}
+#login_logo_right {
+	float: right;
+	line-height:87px;
+	color: #666;
+	font-size: 18px;
+}
+span{
+	margin:0 10px;
+	}
+span a {
+	color: #666;
+	text-decoration: none;
+	transition:margin-right 1s;
+}
+span a:hover{
+	margin-right:20px;
+	}
+#logo_right {
+	float:right;
+	margin:30px 20px;
+}
+
+#content_bg {
+	width:100%;
+	min-height: 444px;
+}
+#content {
+	min-height: 444px;
+	text-align:center;
+	position:relative;
+	
+}
+
+#login_content {
+	background-color: #FFF;
+	height: 360px;
+	width: 300px;
+	position: absolute;
+	bottom: 30px;
+	left: 1020px;
+	padding:20px 0px;
+}
+.span_register {
+	font-size: 20px;
+	color: #000;
+	transition:margin-right 1s;
+}
+.span_register:hover{
+	border-bottom:2px solid #900;
+	color:#900;
+	margin-right:-20px;
+	}
+.span_login {
+	font-size: 20px;
+	color: #900;
+	display: inline-block;
+	margin-right: 35px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #900;
+	transition:margin-left 1s;
+}
+.span_login:hover{
+	margin-left:-20px;
+	}
+#syy {
+	margin-top: 20px;
+}
+#img_login_wx {
+	margin-top: 20px;
+	
+}
+#img_login_wx:hover{
+	}
+#phone{
+	width:250px;
+	height:35px;
+	line-height:35px;
+	border:1px solid #900;
+	color:#666;
+	padding-left:10px;
+	}	
+#phone:hover{
+	
+	border:1px solid #bfa9e7;
+	}
+#pwd {
+	height: 35px;
+	width: 250px;
+	margin-top: 20px;
+	padding-left: 10px;
+	line-height:35px;
+	border:1px solid #900;
+	color:#666;
+}
+#pwd:hover{
+	
+	border:1px solid #bfa9e7;
+	}
+p {
+	font-size: 13px;
+	font-weight: bold;
+	text-align:left;
+	margin:20px;
+		
+}
+p .wjipwd a {
+	font-size:12px;
+	color: #900;
+	text-decoration: none;
+	margin-left: 110px;
+}
+#login_btn {
+	font-size: 18px;
+	line-height: 18px;
+	color: #FFF;
+	background-color: #900;
+	height: 35px;
+	width: 250px;
+	border-radius:8px;
+	transition:background 1s;
+}
+#login_btn:hover{
+	background:#FFF;
+	color:#900;
+	}
+h5 {
+	font-weight: normal;
+	margin-top: 20px;
+}
+#footer {
+	background-color: #f4f4f4;
+	height: 150px;
+	width: 100%;
+}
+#bquan {
+	height: 150px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top:25px;
+	
+}
+.bqxx{
+	text-align:center;
+	font-size:14px;
+	color:#666;
+	}
+

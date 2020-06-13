@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyg.im.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.hyg.im.model.User" >
+    <id column="ID" property="ID" jdbcType="INTEGER" />
+    <result column="UserCode" property="userCode" jdbcType="VARCHAR" />
+    <result column="LoginName" property="loginName" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="UserName" property="userName" jdbcType="VARCHAR" />
+    <result column="Sex" property="sex" jdbcType="VARCHAR" />
+    <result column="Birthday" property="birthday" jdbcType="DATE" />
+    <result column="IDNum" property="IDNum" jdbcType="VARCHAR" />
+    <result column="Nation" property="nation" jdbcType="VARCHAR" />
+    <result column="Married" property="married" jdbcType="VARCHAR" />
+    <result column="HireDate" property="hireDate" jdbcType="DATE" />
+    <result column="Position" property="position" jdbcType="VARCHAR" />
+    <result column="job" property="job" jdbcType="VARCHAR" />
+    <result column="Email" property="email" jdbcType="VARCHAR" />
+    <result column="DeptName" property="deptName" jdbcType="VARCHAR" />
+    <result column="Mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+    <result column="Status" property="status" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, UserCode, LoginName, password, UserName, Sex, Birthday, IDNum, Nation, Married, 
+    HireDate, Position, job, Email, DeptName, Mobile, Description, Status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_user
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hyg.im.model.User" >
+    insert into sys_user (ID, UserCode, LoginName, 
+      password, UserName, Sex, 
+      Birthday, IDNum, Nation, 
+      Married, HireDate, Position, 
+      job, Email, DeptName, 
+      Mobile, Description, Status
+      )
+    values (#{ID,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{loginName,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{birthday,jdbcType=DATE}, #{IDNum,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, 
+      #{married,jdbcType=VARCHAR}, #{hireDate,jdbcType=DATE}, #{position,jdbcType=VARCHAR}, 
+      #{job,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{deptName,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hyg.im.model.User" >
+    insert into sys_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        ID,
+      </if>
+      <if test="userCode != null" >
+        UserCode,
+      </if>
+      <if test="loginName != null" >
+        LoginName,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="userName != null" >
+        UserName,
+      </if>
+      <if test="sex != null" >
+        Sex,
+      </if>
+      <if test="birthday != null" >
+        Birthday,
+      </if>
+      <if test="IDNum != null" >
+        IDNum,
+      </if>
+      <if test="nation != null" >
+        Nation,
+      </if>
+      <if test="married != null" >
+        Married,
+      </if>
+      <if test="hireDate != null" >
+        HireDate,
+      </if>
+      <if test="position != null" >
+        Position,
+      </if>
+      <if test="job != null" >
+        job,
+      </if>
+      <if test="email != null" >
+        Email,
+      </if>
+      <if test="deptName != null" >
+        DeptName,
+      </if>
+      <if test="mobile != null" >
+        Mobile,
+      </if>
+      <if test="description != null" >
+        Description,
+      </if>
+      <if test="status != null" >
+        Status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="userCode != null" >
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="loginName != null" >
+        #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="IDNum != null" >
+        #{IDNum,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null" >
+        #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="married != null" >
+        #{married,jdbcType=VARCHAR},
+      </if>
+      <if test="hireDate != null" >
+        #{hireDate,jdbcType=DATE},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="job != null" >
+        #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="deptName != null" >
+        #{deptName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hyg.im.model.User" >
+    update sys_user
+    <set >
+      <if test="userCode != null" >
+        UserCode = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="loginName != null" >
+        LoginName = #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        UserName = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        Sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        Birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="IDNum != null" >
+        IDNum = #{IDNum,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null" >
+        Nation = #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="married != null" >
+        Married = #{married,jdbcType=VARCHAR},
+      </if>
+      <if test="hireDate != null" >
+        HireDate = #{hireDate,jdbcType=DATE},
+      </if>
+      <if test="position != null" >
+        Position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="job != null" >
+        job = #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        Email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="deptName != null" >
+        DeptName = #{deptName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        Mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        Description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        Status = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hyg.im.model.User" >
+    update sys_user
+    set UserCode = #{userCode,jdbcType=VARCHAR},
+      LoginName = #{loginName,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      UserName = #{userName,jdbcType=VARCHAR},
+      Sex = #{sex,jdbcType=VARCHAR},
+      Birthday = #{birthday,jdbcType=DATE},
+      IDNum = #{IDNum,jdbcType=VARCHAR},
+      Nation = #{nation,jdbcType=VARCHAR},
+      Married = #{married,jdbcType=VARCHAR},
+      HireDate = #{hireDate,jdbcType=DATE},
+      Position = #{position,jdbcType=VARCHAR},
+      job = #{job,jdbcType=VARCHAR},
+      Email = #{email,jdbcType=VARCHAR},
+      DeptName = #{deptName,jdbcType=VARCHAR},
+      Mobile = #{mobile,jdbcType=VARCHAR},
+      Description = #{description,jdbcType=VARCHAR},
+      Status = #{status,jdbcType=TINYINT}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  
+  <select id="checkLogin" resultType="int" parameterType="map" >
+    select 
+    count(*)
+    from sys_user
+    where loginName=#{loginName} and password=#{password} and status=0
+  </select>
+  <select id="findUserListCount" resultType="int" parameterType="map" >
+    select 
+    count(*)
+    from sys_user
+   
+  </select>
+  <select id="findUserList" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+   where 1=1
+   limit ${(pageNo - 1) * pageSize},${pageSize} 
+  </select>
+  
+  
+</mapper>

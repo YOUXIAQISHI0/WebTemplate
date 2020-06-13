@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* 基本元素重置 */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,a{margin:0;padding:0;outline:none;}
+html,body{min-height:100%}
+body,input,textarea,select,button,table{font-size:14px/*;line-height:1.25em*/}
+body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;color:#000;-webkit-text-size-adjust:none;background:#f6f6f6}
+img,fieldset{border:0;}
+ul,ol{list-style:none;}
+em,address{font-style:normal;}
+a{color:#666;text-decoration:none;outline:none;}
+/*a:active{border:none!important}  */
+table{border-collapse:collapse;}
+ul li,a,dd,p,span,i,div{cursor:pointer;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+h1,h2,h3,h4,h5,h6,em,i{font-style:normal; font-weight:400; outline:none;}
+img{border:none;vertical-align:middle;max-width:100%}
+u{text-decoration:none}
+/* 重用类样式 */
+.f_l{float:left !important;}
+.f_r{float:right !important;}
+.no_margin{margin:0px !important;}
+.no_border{border:0px !important;}
+.no_bg{background:none !important;}
+.clear_both{clear:both !important;}
+.display_block{display:block !important;}
+.clearfix:after{ content:" "; display:block; height:0; clear:both;visibility:hidden;}
+/*.clearfix{ display:inline-block;}*/
+.hide{display:none}
+.show{display:block}
+.white{background:white}
+.grey{color:#B8B8B8}
+.blue{ color:#00bdff;}
+.red{ color:#be3233!important}
+.gold{color:#F6B900}
+.green{color:#58C94A!important}
+.orange{color:#F99C35}
+.clear{zoom:1;}
+.clear:after{content:'';display:block; height:0; clear:both;visibility:hidden;}
+.text-left{text-align:left}
+.text-center{text-align:center}
+.text-right{text-align:right}
+
+.fixed_top{position:fixed;left:0;top:0;width:100%;z-index:666;background:white}
+.fixed_bottom{position:fixed;left:0;bottom:0;width:100%;z-index:666;background:white}
+
+.bggold{background:#F6B900!important;color:white}
+.bgred{background:#FA7252!important;color:white!important;}
+.bggreen{background:#58C94A!important;color:white!important}
+
+
+p,li,dl,dt,dd,div,i{
+  cursor:pointer;
+ }
+
+.swiper-pagination-bullet-active{background:#c9a063!important}
+/*遮罩*/
+.zz,.zz0,.zz1,.zz2,.zz3,.zz4{background:rgba(0,0,0,.6);position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000}
+.window_info{width:260px;height:150px;background:rgb(255,255,255);position:absolute;left:50%;top:50%;margin-top:-75px;margin-left:-130px;border-radius:5px;box-shadow:0 0 50px 0 #333;overflow:hidden}
+.window_info h3{height:50px;line-height:50px;text-indent:1em;color:white;background:linear-gradient(to right,#17ce71,#14af4b);background-color:#17ce71;position:relative}
+.window_info i{position:absolute;right:10px;top:15px;width:20px;height:20px;font-size:20px;color:white;line-height:20px;text-indent:0}
+.info_detail{width:calc(100% - 20px);height:80px;padding:10px;display:table}
+.info_detail p{display:table-cell;vertical-align:middle;font-size:14px;color:#666;text-align:center;line-height: 24px;}
+.btns{height:36px;padding:7px 0;text-align:center;background:rgba(222,222,222,.2);overflow:hidden}
+.zz .btns a,.zz0 .btns a{display:block;width:60%;height:36px;line-height:36px;text-align:center;color:white;font-size:14px;margin:0 auto}
+.zz .btns a:nth-child(1),.zz0 .btns a:nth-child(1){background-color:#58C94A;color:#fff;border-radius:5px}
+.zz .btns a:nth-child(2),.zz0 .btns a:nth-child(2){color:#cb0b16}
+
+.zz2 .btns a,.zz3 .btns a,.zz4 .btns a{display:inline-block;width:100px;height:36px;line-height:36px;text-align:center;color:white;font-size:14px;margin:0 10px}
+.zz2 .btns a:nth-child(1),.zz3 .btns a:nth-child(1),.zz4 .btns a:nth-child(1){background-color:orange;color:#fff;border-radius:5px}
+.zz2 .btns a:nth-child(2),.zz3 .btns a:nth-child(2),.zz4 .btns a:nth-child(2){background-color:#58C94A;color:#fff;border-radius:5px}
+
+ 
+
+@font-face {
+  font-family: 'icons';  /* project id 526368 */
+  src: url('//at.alicdn.com/t/font_890120_dgm7qlwem1.eot');
+  src: url('//at.alicdn.com/t/font_890120_dgm7qlwem1.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_890120_dgm7qlwem1.woff') format('woff'),
+  url('//at.alicdn.com/t/font_890120_dgm7qlwem1.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_890120_dgm7qlwem1.svg#iconfont') format('svg');
+}
+
+i.icons{
+  font-family:"icons" !important;
+  font-size:20px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align:top;
+  margin-right:5px;
+  margin-left:5px
+}
