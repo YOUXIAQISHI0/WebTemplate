@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索功能</title>
+
+  <style>
+    .content {
+      width: 600px;
+      height: 600px;
+      /* background: yellow; */
+      margin: 50px auto;
+    }
+    #table-1 {
+      width: 500px;
+      line-height: 35px;
+
+    }
+
+    #lin {
+      margin: 20px 0;
+      height: 30px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="content">
+    <input type="text" id="lin" placeholder="请输入需要搜索的内容">
+
+    <table id="table-1" cellspacing='0' border="1" style="text-align: center;">
+      <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>电话</th>
+        <th>地址</th>
+      </tr>
+
+      <tr>
+        <td>林兵</td>
+        <td>男</td>
+        <td>18</td>
+        <td>12345678941</td>
+        <td>富顺</td>
+      </tr>
+      <tr>
+        <td>赖玉英</td>
+        <td>女</td>
+        <td>18</td>
+        <td>12345678942</td>
+        <td>南充</td>
+      </tr>
+      <tr>
+        <td>潘旭</td>
+        <td>女</td>
+        <td>20</td>
+        <td>12345678912</td>
+        <td>富顺</td>
+      </tr>
+      <tr>
+        <td>王威平</td>
+        <td>男</td>
+        <td>20</td>
+        <td>97543152146</td>
+        <td>广元</td>
+      </tr>
+      <tr>
+        <td>李丹</td>
+        <td>女</td>
+        <td>30</td>
+        <td>14725836910</td>
+        <td>江安</td>
+      </tr>
+      <tr>
+        <td>陈志樑</td>
+        <td>男</td>
+        <td>20</td>
+        <td>31546287451</td>
+        <td>富顺</td>
+      </tr>
+      <tr>
+        <td>郭仕宏</td>
+        <td>男</td>
+        <td>20</td>
+        <td>51240316845</td>
+        <td>南充</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="lin_search.js"></script>
+  <script>
+    var table = document.getElementById("table-1");
+    var input = document.getElementById("lin")
+
+
+    input.onkeyup = function () {
+      new Search(table, input)
+    }
+  </script>
+
+
+
+</body>
+
+</html>
