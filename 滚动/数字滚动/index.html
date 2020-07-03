@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery滚动到页面底部后数字从0开始滚动到指定数字文字特效代码 - 代码笔记 www.198zone.com</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.css">
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/countUp.min.js"></script>
+
+</head>
+<body>
+<div style="text-align:center;margin:150px 0; font:normal 44px/24px 'MicroSoft YaHei';">往下滚动！</div>
+<div id="wrap">
+	<section>
+		<h1 class="jumbo" id="myTargetElement">1890</h1>
+		<h1 class="jumbo" id="myTargetElement2">15894</h1>
+		<h1 class="jumbo" id="myTargetElement3">1890</h1>
+	</section>
+</div>
+
+<script type="text/javascript">
+	var options = {
+  useEasing : true, 
+  useGrouping : true, 
+  separator : ',', 
+  decimal : '.', 
+  prefix : '', 
+  suffix : '' 
+};
+var demo = new CountUp("myTargetElement", 0, 1890, 0, 2.5, options);
+var demo2 = new CountUp("myTargetElement2", 0, 15894, 0, 2.5, options);
+var demo3 = new CountUp("myTargetElement3", 0, 385, 0, 2.5, options);
+$(window).scroll(function(){
+	if($(window).scrollTop()>=600){
+		demo.start();
+		demo2.start();
+		demo3.start();
+	}
+})
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://www.198zone.com/" target="_blank">代码笔记</a></p>
+</div>
+</body>
+</html>

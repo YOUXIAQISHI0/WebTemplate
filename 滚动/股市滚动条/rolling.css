@@ -1,0 +1,188 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+body{
+	background:url(images/metal.jpg) top center;
+}
+
+
+.clear{
+	clear:both;
+}
+
+
+#search{
+	background:#000;
+	background:rgba(0,0,0,0.7);
+	width:500px;
+	height:60px;
+	margin:30px auto;
+	margin-top:50px;
+	border-radius:100px;
+	overflow:hidden;
+}
+
+#search img{
+	float:left;
+	width:100px;
+	height:100px;
+	margin:-20px;
+}
+
+#search input{
+	background:none;
+	border:none;
+	float:left;
+	width:80%;
+	height:40px;
+	margin:10px auto;
+	line-height:40px;
+	color:#FFF;
+	font:24px Tahoma, Geneva, sans-serif;
+	outline:none;
+}
+
+
+
+#demoLeft {
+	overflow:hidden;
+	width:600px;
+	height:120px;
+	margin:20px auto 0;
+	box-shadow:inset 0 4px 4px 2px #000;
+}
+
+
+
+#demoLeft .indemo {
+	background:rgba(0,0,0,0.7);
+	background:url(images/opacity_70.png);
+	float: left;
+	width: 500%;
+}
+
+.demo{
+    float:left;
+}
+
+
+.block{
+	float:left;
+	width:200px;
+	height:100px;
+	margin:20px 30px;
+	color:#FFF;
+	text-shadow:2px 4px 2px #000;
+	cursor:pointer;
+}
+
+.info{
+	float:left;
+	width:200px;
+	height:40px;
+	font:bold 28px "Î¢ÈíÑÅºÚ";
+	line-height:40px;
+}
+
+.subinfo{
+	float:left;
+	width:120px;
+	height:40px;
+	font:bold 16px "Î¢ÈíÑÅºÚ";
+	line-height:40px;
+}
+
+
+.pointer{
+	float:left;
+	width:80px;
+	height:40px;
+	text-align:right;
+	font:bold 16px "Î¢ÈíÑÅºÚ";
+	line-height:40px;
+}
+
+
+.up{
+	background:url(images/up.png) no-repeat;
+}
+
+.down{
+	background:url(images/down.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+.buttonSet{
+	width:430px;
+	height:120px;
+	margin:30px auto 0;
+}
+
+
+.button{
+	float:left;
+	margin:20px;
+	width:170px;
+	height:68px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	color:#FFF;
+	font:bold 24px Verdana, Geneva, sans-serif;
+	text-align:center;
+	line-height:68px;
+}
+
+.red{
+	background:url(images/1.png) no-repeat;
+}
+
+.green{
+	background:url(images/2.png) no-repeat;
+}
+
+.red:active{
+	background-position:0 -68px;
+	line-height:70px;
+}
+.green:active{
+	background-position:0 -68px;
+	line-height:70px;
+}
+
+
+
+.calendar{
+	width:450px;
+	height:78px;
+	margin:0 auto;
+}
+
+
+
+.card{
+	background:url(images/BackgroundHistoryNum@2x.png);
+	float:left;
+	width:52px;
+	height:78px;
+	font:bold 40px Arial, Helvetica, sans-serif;
+	line-height:78px;
+	color:#062F41;
+	text-align:center;
+	text-shadow:2px 2px 2px #FFF;
+}
+
+
+.card:hover{
+}
