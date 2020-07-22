@@ -1,0 +1,99 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+.orgchart {
+  background: #fff; 
+}
+.orgchart td.left, .orgchart td.right, .orgchart td.top {
+  border-color: #d2d2d2;
+}
+.orgchart td>.down {
+  background-color: #d2d2d2;
+}
+.orgchart .middle-level .title {
+  background-color: #006699;
+}
+.orgchart .middle-level .content {
+  border-color: #006699;
+}
+.orgchart .product-dept .title {
+  background-color: #009933;
+}
+.orgchart .product-dept .content {
+  border-color: #009933;
+}
+.orgchart .rd-dept .title {
+  background-color: #993366;
+}
+.orgchart .rd-dept .content {
+  border-color: #993366;
+}
+.orgchart .pipeline1 .title {
+  background-color: #996633;
+}
+.orgchart .pipeline1 .content {
+  border-color: #996633;
+}
+.orgchart .frontend1 .title {
+  background-color: #cc0066;
+}
+.orgchart .frontend1 .content {
+  border-color: #cc0066;
+}
+.orgchart>table>tr>td> .node{
+	width: auto!important;
+	height: auto!important;	
+}
+/*.first_node {
+	width: auto!important;
+	height: auto!important;
+}*/
+.orgchart>table>tr>td> .node .title{
+    width: 30px!important;
+    word-break: break-all!important;
+    height: auto!important;
+    -webkit-transform: rotate(-90deg) translate(50%, 50%) rotateY(180deg)!important;	
+    transform: rotate(-90deg) translate(50%, 50%) rotateY(180deg)!important;	
+    -moz-transform: rotate(-90deg) translate(50%, 50%) rotateY(180deg)!important;	
+    -ms-transform: rotate(-90deg) translate(50%, 50%) rotateY(180deg)!important;	
+    white-space: normal!important;
+    font-size: 18px!important;
+}
+.title.special_prouduct {
+    word-break: break-all!important;
+    height: 40px!important;
+    -webkit-transform: rotate(-90deg) translate(-20px, -20px) rotateY(180deg)!important;	
+    transform: rotate(-90deg) translate(-20px, -20px) rotateY(180deg)!important;	
+    -moz-transform: rotate(-90deg) translate(-20px, -20px) rotateY(180deg)!important;	
+    -ms-transform: rotate(-90deg) translate(-20px, -20px) rotateY(180deg)!important;	
+    white-space: normal!important;	
+    padding: 2px;
+    line-height: 18px!important;
+}  
+.orgchart.scale{
+    zoom: 1;  	
+} 
+/*颜色配置*/
+.color0 .title{
+	background-color: #f89521!important;
+}
+.color1 .title{
+	background-color: #f89521!important;
+}
+.color2 .title{
+	background-color: #70c1ff!important;
+}
+.color3 .title{
+	background-color: #76ffa0!important;
+}
+.color4 .title{
+	background-color: #ffd571!important;
+}
+.color5 .title{
+	background-color: #ffb4c4!important;
+}
+.color6 .title{
+	background-color: #dadada!important;
+}

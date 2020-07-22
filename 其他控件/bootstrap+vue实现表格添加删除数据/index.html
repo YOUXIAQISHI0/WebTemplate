@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+          window.onload = function(){
+              new Vue({
+                  el:'#box',
+                  data:{
+                     myData:[],
+                     nowIndex:-100
+                  },
+                  methods:{
+                     add:function(){
+                          this.myData.push({
+                          })
+                     },
+                      del:function(n){
+                          if(n ==-2){
+                              this.myData="";
+                          }else{
+                              this.myData.splice(n,1);
+                          }
+                      }
+                  }
+              })
+          }
+    </script>
+</head>
+<body>
+     <div class="container" id="box">
+         <table class="table table-bordered table-hover">
+             <caption class="h3 text-info">布料详细表</caption>
+             <tr>
+                 <th class="text-center" style="width: 5%;">序号</th>
+                 <th class="text-center" style="width: 55%;">布类</th>
+                 <th class="text-center" style="width: 10%;">克重</th>
+				 <th class="text-center" style="width: 10%;">单位</th>
+                 <th class="text-center" style="width: 10%;">单价</th>
+				 <th class="text-center"><input type="button"  value="+" class="btn btn-primary" v-on:click="add()"/></th>
+             </tr>
+             <tr class="text-center" v-for="item in myData">
+				<td>{{$index+1}}</td>
+				<td>
+						<select id="fab" name="fab" style="width:90%">
+						<option value="1">30s/1 精梳棉 疋染 1x1 罗纹布 (正常整理)</option>
+						<option value="2">32s/1 精梳棉 + 70D 弹性纤维 疋染净色 1x1 罗纹布 (正常整理)</option>
+						<option value="3">32s/1x2 CVC 60/40 疋染  抓毛位衣 (磨毛(面))</option>
+						<option value="4">32s/1 CVC 60/40 疋染 平纹布 (正常整理)</option>
+						<option value="5">26s/1 精梳棉 疋染净色 1x1 罗纹布 (蚀毛)</option>
+						<option value="6">20s/1x3 精梳棉 疋染 扁机领(ottoman) (正常整理)</option> 
+						</select>
+				</td>
+				<td>
+					<input type="text" id="weight" name="weight" style="width:90%"/>
+					
+				</td>
+				<td>
+					<input type="text" id="unit" name="unit" style="width:90%"/>
+				</td>
+				<td>
+					<input type="text" id="price" name="peice" style="width:45%"/>
+				</td>
+				<td>
+					 <button class="btn btn-del btn-sm" data-toggle="modal" data-target="#layer" v-on:click="nowIndex=$index">X</button>
+				</td>
+             </tr>
+             <tr v-show="myData.length==0">
+                 <td colspan="6" class="text-center text-info">
+                     <p>暂无数据...</p>
+                 </td>
+             </tr>
+         </table>
+         <!--弹出框-->
+         <div role="dialog" class="modal fade" id="layer" data-index="{{nowIndex}}">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">
+                              <span>&times;</span>
+                          </button>
+                          <h4 class="modal-title">确认删除吗？</h4>
+                      </div>
+                      <div class="modal-body text-right">
+                          <button class="btn btn-cancel btn-sm" data-dismiss="modal">取消</button>
+                          <button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="del(nowIndex)">确认</button>
+                      </div>
+                  </div>
+              </div>
+         </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta>
+<head>
+    <meta charset="UTF-8">
+    <title>打印指定部分</title>
+    <link rel="stylesheet" href="css/print.css">
+    <script src="js/print.js"></script>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">第一部分</h4>
+            <button class="print-btn" onClick="doPrint()">打印</button>
+        </div>
+        <!--startprint-->  
+        <div class="card-body">
+            <h2 class="content-title">这里指定打印主要靠这个注释设置。</h2>
+        </div>
+        <!--endprint-->
+    </div>
+	
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">第二部分</h4>
+        </div>
+        <div class="card-body">
+           <h2 class="content-title">第二部分内容</h2>
+        </div>
+    </div>
+	
+</body>
+</html>

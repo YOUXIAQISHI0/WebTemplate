@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式---全</title>
+	
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .error_input {
+            border: 1px solid red;
+        }
+
+        /* 改变placeholder的颜色 */
+        input::-webkit-input-placeholder {
+            /* WebKit browsers 适配谷歌 */
+            color: rgba(119, 0, 255, 0.938);
+        }
+
+        input:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 适配火狐 */
+            color: rgba(119, 0, 255, 0.938);
+        }
+
+        input::-moz-placeholder {
+            /* Mozilla Firefox 19+ 适配火狐 */
+            color: rgba(119, 0, 255, 0.938);
+        }
+
+        input:-ms-input-placeholder {
+            /* Internet Explorer 10+  适配ie*/
+            color: rgba(119, 0, 255, 0.938);
+        }
+
+        #sjh {
+            width: 30%;
+            margin: 0 auto;
+            margin-top: 10%;
+            /* border: 1px solid black; */
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            padding-left: 5%;
+            margin-bottom: 2%;
+            border-radius: 5px;
+            border: 1px solid rgb(48, 162, 255);
+            outline: medium;
+        }
+
+        .a,
+        .ab,
+        .abc,
+        .abcd,
+        .abcde,
+        .abcdef,
+        .abcdefg {
+            font-size: 10px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sjh">
+        <input type="text" class="sjh" placeholder="手机号" style="margin-top: 2%;" maxlength="11">
+        <span class="a"></span>
+        <input type="password" class="mm" placeholder="密码">
+        <span class="ab"></span>
+        <input type="password" class="cfmm" placeholder="重复输入密码">
+        <span class="abc"></span>
+        <input type="text" class="yx" placeholder="邮箱">
+        <span class="abcd"></span>
+        <input type="text" class="znsz" placeholder="只能输入数字">
+        <span class="abcde"></span>
+        <input type="text" class="ktbn" placeholder="开头不能是0">
+        <span class="abcdef"></span>
+        <input type="text" class="yhk" placeholder="银行卡">
+        <span class="abcdefg"></span>
+    </div>
+</body>
+
+</html>
