@@ -1,0 +1,181 @@
+.navbar-primary{
+   background-color: #fff;
+   box-shadow: 0 0 12px rgba(0,0,0,.1);
+   .navbar-brand{
+       padding: 0 1rem;
+       border:1px #eee solid;
+       border-radius: 3px;
+       .iconfont{
+           font-size: rem(20);
+       }
+   }
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 220px auto;
+    min-height: 100%;
+  
+    .leftcol{
+        transition: all .2s;
+    }
+    .rightcol{
+        transition: all .2s;
+    }
+    &.wrap-nonav{     
+        
+        .leftcol{
+            margin-left: -220px;
+        }
+        .rightcol{
+            margin-left: -220px;
+        }
+    }
+
+}
+
+.leftcol{
+    background-color:$color-primary;
+    color: lighten($color: $color-primary, $amount: 30%);
+    width: 220px;
+    .logo{
+        a{
+            display: block;
+            padding:.8rem 1rem;
+            text-align: center;
+            img{
+                display: block;
+                margin: 0 auto;
+                @include mq(md){
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+    .mainmenu{
+        @include reset-list();
+        &>li{  
+
+            &>a{
+                color:lighten($color: $color-primary, $amount: 40%);
+                display: block;
+                padding: .7rem 1.6rem .7rem 2.6rem;
+                position: relative;
+                font-size: rem(14);
+                &:hover{
+                    background-color: lighten($color-primary,5%);
+                    color: #fff;
+                }
+                &.active{
+                    background-color: lighten($color-primary,5%);color: #fff;
+                    &::after{
+                        content: " ";
+                        display: block;
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        background-color: $color-accent;
+                        right: 1rem;
+                        top: 1.2rem;
+                        z-index: 10;
+                        border-radius: 50%;
+                    }
+                }
+                .iconfont{
+                    color:lighten($color: $color-primary, $amount: 10%);
+                    font-size: rem(18);
+                    position: absolute;
+                    display: block;
+                    left: 1rem;
+                    top: .45rem;
+                    z-index: 10;
+                }
+                .arrow{
+                    position: absolute;
+                    top: .5rem;
+                    right: 1.8rem;
+                    left: auto;
+                    z-index: 100;
+                    display: block;
+                    transition:all .25s;
+                 
+                }
+               
+                &.open{
+                    color: #fff;
+                    .arrow{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+          
+            .submenu{
+                background-color: darken($color-primary,8%);
+                @include reset-list();
+                display: none;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                li{
+                    a{
+                        color:lighten($color: $color-primary, $amount: 30%);
+                        display: block;
+                        padding: .5rem 1rem .5rem 2.6rem;
+                        font-size: rem(14);
+                        position: relative;
+                        &:hover{
+                            color: #fff;
+                        }
+                        &.active{
+                            color: #fff;
+                            &::after{
+                                content: " ";
+                                display: block;
+                                position: absolute;
+                                width: 8px;
+                                height: 8px;
+                                background-color: $color-accent;
+                                right: 1rem;
+                                top: 1rem;
+                                z-index: 10;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            &.nav-open{
+                &>a{
+                    color: #fff;
+                }
+                .submenu{
+                    display: block;
+                }
+            }
+        }
+    }
+  
+}
+
+.main-content{
+    padding: 1.5rem 2rem;
+    .breadcrumb-container{
+        font-size: rem(12);
+        margin-bottom: 1.5rem;
+    }
+    .subheader{
+        margin-bottom: 1.5rem;
+        .subheader-title{
+            font-size: rem(22);
+            margin: 0;
+            .iconfont{
+                font-size: rem(22);
+                color: $color-secondary;
+            }
+        }
+    }
+}
+.rightcol{
+    position: relative;
+    padding-bottom: 4rem;
+   
+}

@@ -1,0 +1,37 @@
+.page-home {
+    .box {
+        background-color: $color-primary; display: block;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        .iconfont {
+            position: absolute;
+            right: -1rem;
+            top: -2rem;
+            z-index: 10;
+            font-size: rem(108);
+            line-height: 1;
+            opacity: .15;
+        }
+        h3 {
+            small {
+                font-size: rem(12);
+            }
+        }
+        &.b2 {
+            background-color: $color-secondary;
+        }
+        &.b3 {
+            background-color: $color-accent;
+        }
+        &.b4 {
+            background-color: $venus;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

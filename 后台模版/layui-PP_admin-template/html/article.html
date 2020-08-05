@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>文章页面</title>
+  <link rel="stylesheet" href="../static/layui/css/layui.css">
+  <link rel="stylesheet" href="../static/admin/css/app.css">
+  <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css" media="all">
+</head>
+<body>
+    <!-- 公共头部  start-->
+    <div class="nav-title">
+        <div class="tl fl">
+            <button class="layui-btn layui-btn-radius layui-btn-primary layui-btn-xs" onclick="javascript:history.go(-1);"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+            文章管理
+        </div>
+        <div class="tr fr">
+            <button class="layui-btn layui-btn-radius layui-btn-primary layui-btn-xs" onclick="javascript:window.location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+
+        </div>
+    </div>
+    <!-- 公共头部 end-->
+
+    <div class="layui-layout layui-layout-admin pp-main">
+	    <div class="layui-row" style="margin-top: 20px;">
+	        <div class="layui-col-xs6">
+	            <div class="layui-btn-group">
+	              <button class="layui-btn" id="add">增加本页打开</button>
+                  <button class="layui-btn" id="tag_add">标签页打开</button>
+                  <button class="layui-btn" id="box">弹出框打开</button>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs6 search_text" style="text-align: right;">
+	            <form class="layui-form" action="" onsubmit="javascript:return false;">
+	                <div class="demoTable">
+	                    <div class="layui-inline" style="width: 40%">
+	                        <input class="layui-input" name="apiName" id="apiName" autocomplete="off"  placeholder="接口名称" >
+	                    </div>
+	                    <div class="layui-inline pp-search" style="width: 20%;text-align: left;">
+	                          <select name="city" lay-search='' lay-verify="required">
+	                            <option value=""></option>
+	                            <option value="0">北京</option>
+	                            <option value="1">上海</option>
+	                            <option value="2">广州</option>
+	                            <option value="3">深圳</option>
+	                            <option value="4">杭州</option>
+	                          </select>
+	                    </div>
+	                    <button class="layui-btn" data-type="reload" id="reload"><i class="fa fa-search"></i>查询</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+
+	    <table class="layui-hide" id="table_list" lay-filter="table_filter">
+	    </table>
+
+	    <script type="text/html" id="bar">
+	        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">详细</a>
+	        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+	        <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="audit">审核</a>
+	        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">启|停</a>
+	    </script>
+	</div>
+
+<script src="../static/layui/layui.js"></script>
+<script>
+
+    layui.use(['table','form','element'], function(){
+        var table = layui.table;
+        var form = layui.form;
+        var element = layui.element;
+
+        //方法级渲染
+        table.render({
+            elem: '#table_list'
+            ,url: 'article.json'
+            ,cols: [[
+                {checkbox: true, fixed: true},
+                {field:'id', title: 'ID', align:'center',sort: true, width:50}
+                ,{field:'title',title: '标题',width:200}
+                ,{field:'cate_id',title: '栏目名称'}
+                ,{field:'recommand',title: '是否推荐'}
+                ,{field:'headline',title: '是否头条'}
+                ,{field:'hits',title: '点击量'}
+                ,{field:'add_time', title: '发布日期'}
+                ,{fixed: 'right', width:260, align:'center', toolbar: '#bar'}
+            ]]
+            ,id: 'listReload'
+            ,page: true
+            ,height: "full-130"
+        });
+
+        var $ = layui.$, active = {
+            reload: function(){
+                table.reload('listReload', {
+                    where: {
+                        apiName: $('#apiName').val(),
+                        status:$("#status").val()
+                    }
+                });
+            }
+        };
+
+        //本页打开
+        $("#add").on("click",function() {
+            window.location.href="article_add.html"
+        })
+
+        //新标签页打开
+        $("#tag_add").on("click",function() {
+             layer.msg("请调用 window.parent.openTab",{icon: 1},function () {
+                
+             })
+            // window.parent.openTab('article_add.html','新增标签页',"admin-0",'');
+        })
+
+        $("#box").on("click",function() {
+            layer.open({
+                title:'弹出框',
+                type: 2, 
+                area: ['460px', '280px'],
+                content: ['add.html','no'], 
+            }); 
+        })
+
+
+
+        //监听工具条
+        table.on('tool(table_filter)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'edit'){
+                window.location.href="/api/edit?id="+data.id
+            } else if(obj.event === 'del'){
+                var msg = "";
+                if(data.status==0){
+                    msg = '真的启用【'+data.api_name+'】么';
+                }else{
+                    msg = '真的停用【'+data.api_name+'】么';
+                }
+
+                layer.confirm(msg, function(){
+                    var del_data = {"id":data.id}
+                    $.post('/delete', del_data, function (out) {
+                        if (out.status == 0) {
+                            layer.msg("操作成功",{icon: 1},function () {
+                                $("#reload").click();
+                            })
+                        } else {
+                            layer.msg(out.message)
+                        }
+                    }, "json");        
+                    return false;
+                });
+                return false;
+                
+            }else if(obj.event === 'detail'){
+                window.location.href="/api/detail?id="+data.id
+            }else if(obj.event === 'audit'){
+                window.location.href="/api/audit?id="+data.id
+            }else{
+                layer.msg('操作不存在');
+            }
+        });
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

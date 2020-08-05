@@ -1,0 +1,48 @@
+
+  .page-login {
+    background: $color-primary url(../img/bg.svg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    .container{
+      height: 100%;
+    }
+    .row{
+      height: 100%;
+    }
+    .site-footer{
+      a{
+        color: #ccc;
+      }
+    }
+    h1.title {
+      color: #fff;
+     margin: 0;
+     font-size: 1.25rem;
+   
+    }
+  }
+  .loginbox {
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 12px;
+    width: 100%;
+    background-color: #fff;
+    @include vertical-align(); 
+    border-top: 5px $color-secondary solid;
+    
+   
+  }
+
+
+  .loginbox .loginForm {
+    padding: 30px;
+    .form-control{
+      padding: .6rem .8rem;
+      height: auto;
+    }
+    .btn{
+    
+      margin: .5rem .3rem;
+    }
+  }

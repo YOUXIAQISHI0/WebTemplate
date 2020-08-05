@@ -1,0 +1,151 @@
+extends includes/layout.pug
+
+block title
+    | 链接管理
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板
+                        li.breadcrumb-item
+                            a(href='#') Library
+                        li.breadcrumb-item.active(aria-current='page') Data
+            .col-md-auto
+                time#sitetime
+    
+    .card
+        header.card-header
+            .row
+                .col
+                    .card-title-v1 
+                        i.iconfont.icon-link
+                        | 链接列表
+                .col-auto
+                    .control
+                        a.expand(href='#')
+                            i.iconfont.icon-fullscreen
+                        a.compress(href='#')
+                            i.iconfont.icon-shrink
+        section.card-body
+            .card-toolbar.mb-3
+                .row
+                    .col-md
+                        .btn-group(role='group', aria-label='Basic example')
+                            button.btn.btn-outline-info(type='button') 移动
+                            button.btn.btn-outline-info(type='button') 推荐
+                            button.btn.btn-outline-info(type='button') 激活
+                            button.btn.btn-outline-danger(type='button') 删除
+                    .col-md-auto
+                        form.form-inline(role='form')
+                            .form-group.mr-2
+                                label.sr-only(for='keyword') 关键字
+                                input.form-control.mr-1(type="search", name="keyword",placeholder="关键字")
+                                label.sr-only(for='inputCategory') 分类
+                                select#inputCategory.form-control
+                                    option --请选择分类--
+                                    option 友情链接
+                                    option 客户列表
+                            button.btn.btn-primary.btn-sm(type='submit')
+                                i.iconfont.icon-search
+                                |  查询
+
+            
+            .table-responsive
+                table.table.table-hover.box-table
+                    thead
+                        tr
+                            th
+                                input#cbSelectAll(type='checkbox')
+                            th ID
+                            th Logo
+                            th 主题/描述
+                            th 链接
+                            th 排序
+                            th 激活？
+                            th(style='width:260px;') 操作
+                    tbody
+                        tr
+                            td
+                                input(type='checkbox', value='')
+                            td 1
+                            td
+                                img(src='https://www.fillmurray.com/70/70', alt='')
+                            td
+                                | 科学世界
+                                br
+                                a(href='http://www.bing.com')
+                                    small [http://www.bing.com]
+                            td                               
+                                a(href='http://www.bing.com')
+                                    small [http://www.bing.com]
+                            td 21
+                            td
+                                i.iconfont.icon-check-circle-fill.text-success
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='推荐')
+                                    i.iconfont.icon-like
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td
+                                input(type='checkbox', value='')
+                            td 1
+                            td
+                                img(src='https://www.fillmurray.com/70/70', alt='')
+                            td
+                                | 科学世界
+                                br
+                                a(href='http://www.bing.com')
+                                    small [http://www.bing.com]
+                            td                               
+                                a(href='http://www.bing.com')
+                                    small [http://www.bing.com]
+                            td 21
+                            td
+                                i.iconfont.icon-check-circle-fill.text-success
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='推荐')
+                                    i.iconfont.icon-like
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        
+        footer.card-footer
+            .row.table-pager
+                .col-sm
+                    nav(aria-label='...')
+                        ul.pagination
+                            li.page-item.disabled
+                                a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item.active(aria-current='page')
+                                a.page-link(href='#')
+                                    | 2 
+                                    span.sr-only (current)
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next
+                .col-sm-auto
+                    p.pagecount
+                        | 显示1-10条，总计10页，记录数100条

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title> 首页-控制台
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory-->
+    <meta name="theme-color" content="#fafafa">
+    <link href="fonts/iconfont.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <aside class="leftcol" id="leftcol">
+        <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></div>
+        <nav id="menu">
+          <ul class="mainmenu" id="mainmenu">
+            <li><a href="index.html"><i class="iconfont icon-dashboard"></i> 控制面板
+                <div class="arrow-left"></div></a></li>
+            <li class="down-nav"><a href="#"><i class="iconfont icon-table"></i> 表格 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="table_basic.html">简单表格</a></li>
+                <li><a href="table_adv.html">复杂表格</a></li>
+              </ul>
+            </li>
+            <li class="down-nav"><a href="#"><i class="iconfont icon-edit"></i> 表单 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="list-unstyled submenu">
+                <li><a href="form_basic.html">基本表单</a></li>
+                <li><a href="form_adv.html">带验证表单</a></li>
+                <li><a href="form_adv_pic.html">表单带文件上传</a></li>
+              </ul>
+            </li>
+            <li><a href="pages.html"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
+            <li class="customers"><a href="customers.html"><i class="iconfont icon-customer"></i> 客户管理</a></li>
+            <li class="albums"><a href="photos.html"><i class="iconfont icon-image"></i> 相册</a></li>
+            <li class="down-nav links"><a href="#"><i class="iconfont icon-link"></i> 链接<i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="links.html">链接列表</a></li>
+                <li><a href="link_categories.html">链接分类</a></li>
+              </ul>
+            </li>
+            <li><a href="tree.html"><i class="iconfont icon-file-text"></i> 树列表</a></li>
+            <li class="down-nav ortherpage"><a href="#"><i class="iconfont icon-file-image"></i> 其它页面 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="../Login.html"><i class="iconfont icon-angle-double-right"></i> 登录页</a></li>
+                <li><a href="../Register.html"><i class="iconfont icon-angle-double-right"></i> 注册页</a></li>
+                <li><a href="../noaccess.html"><i class="iconfont icon-angle-double-right"></i> 无权限页</a></li>
+                <li><a href="../404.html"><i class="iconfont icon-angle-double-right"></i> 404页面</a></li>
+              </ul>
+            </li>
+            <li class="down-nav settings"><a href="#"><i class="iconfont icon-setting"></i> 常规设置 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="siteinfo.html"><i class="iconfont icon-home"></i> 站点信息</a></li>
+                <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="iconfont icon-info-circle"></i> 企业信息</a></li>
+                <li><a href="/bbi-admin/Common/Social.aspx"><i class="iconfont icon-twitter"></i> 社交资料</a></li>
+                <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="iconfont icon-envelope-o"></i> 邮箱服务设置</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="closemenu"><a href="#"><i class="iconfont icon-chevron-circle-left"></i></a></div>
+      </aside>
+      <section class="rightcol" id="rightcol">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-primary"><a class="navbar-brand" id="openav" href="javascript:void(0);"><i class="iconfont icon-menu"></i></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a class="nav-link" href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#">内容</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">模板</a></li>
+              <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">待建</a></li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">你好，Admin</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">修改密码</a><a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/bbi-admin/loginOut.aspx"><i class="iconfont icon-logout"></i> 退出系统</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="main-content">         
+          <div class="breadcrumb-container">
+            <div class="row">
+              <div class="col-md">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">控制面板</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-md-auto">
+                <time id="sitetime"></time>
+              </div>
+            </div>
+          </div>
+          <div class="page page-home"> 
+            <div class="row mb-4">
+              <div class="col">
+                <div class="box">
+                  <h3 class="title">567<small>篇</small></h3>
+                  <p>新闻资讯</p><i class="iconfont icon-newspaper"></i>
+                </div>
+              </div>
+              <div class="col">
+                <div class="box b2">
+                  <h3 class="title">567<small>个</small></h3>
+                  <p>页面</p><i class="iconfont icon-file-text"></i>
+                </div>
+              </div>
+              <div class="col">
+                <div class="box b3">
+                  <h3 class="title">5667<small>个</small></h3>
+                  <p>产品展示</p><i class="iconfont icon-windows"></i>
+                </div>
+              </div>
+              <div class="col">
+                <div class="box b4">
+                  <h3 class="title">567<small>个</small></h3>
+                  <p>广告位</p><i class="iconfont icon-image"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6"> 
+                <div class="card">
+                  <header class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        <div class="card-title-v1"> <i class="iconfont icon-file-text"></i>最新文章</div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#"><i class="iconfont icon-shrink"></i></a></div>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action" href="#">完善您的相关信息，尤其是技术能力与专业经验 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">我们拒绝恶意报价，一份真实且具有竞争力的报价无疑可以让您更容易中标 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">积极响应与发包方的沟通交流，体现良好的职业素养及专业能力 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">完善您的相关信息，尤其是技术能力与专业经验 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">认真详细阅读理解项目需求，认真详细填写竞标方案与您的竞标优势 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">完善您的相关信息，尤其是技术能力与专业经验 <small class="text-info">(2020-1-21)</small></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6"> 
+                <div class="card">
+                  <header class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        <div class="card-title-v1"> <i class="iconfont icon-file-text"></i>最新产品</div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#"><i class="iconfont icon-shrink"></i></a></div>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action" href="#">完善您的相关信息，尤其是技术能力与专业经验 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">我们拒绝恶意报价，一份真实且具有竞争力的报价无疑可以让您更容易中标 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">积极响应与发包方的沟通交流，体现良好的职业素养及专业能力 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">完善您的相关信息，尤其是技术能力与专业经验 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">认真详细阅读理解项目需求，认真详细填写竞标方案与您的竞标优势 <small class="text-info">(2020-1-21)</small></a><a class="list-group-item list-group-item-action" href="#">完善您的相关信息，尤其是技术能力与专业经验 <small class="text-info">(2020-1-21)</small></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a href="http://heiniaozhi.cn">黑鸟志</a> All Rights Reserved</footer>
+      </section>
+    </div>
+    <script src="js/vendor/modernizr-3.8.0.min.js">    </script>
+    <script src="js/vendor/jquery-3.4.1.min.js">  </script>
+    <script src="js/vendor/jquery.easing.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,774 @@
+@import "config";
+@import "func";
+
+html, body {
+  height: 100%;
+}
+body {
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+xmp {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  font-size: inherit;
+  color: #333;
+  margin: 0;
+}
+
+/** ============== 网站整体布局设置 ============== **/
+// 顶部导航
+.navbar {
+  .navbar-header {
+    float: left;
+  }
+
+  .navbar-sidebar-toggle {
+    float: left;
+    font-size: 25px;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  .navbar-end {
+    float: right;
+    .dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      padding: 4px 12px;
+      background-color: transparent;
+      margin-top: 2px;
+    }
+  }
+  // 通知栏
+  .nav-notifications {
+    height: 48px;
+    float: left;
+    margin-right: 10px;
+
+    .btn-group {
+      display: block;
+      height: 100%;
+      float: left;
+    }
+    .btn-noti {
+      background-color: transparent;
+      height: 100%;
+      position: relative;
+      padding: 0 20px;
+
+      .badge {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-size: 10px;
+        line-height: 10px;
+        padding: 3px 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar {
+    .nav-notifications {
+      display: none;
+    }
+  }
+}
+
+// 左侧导航栏 和 主体容器 的容器
+.wrapper {
+  position: relative;
+  /*overflow: hidden;*/
+  padding-top: 51px;
+  height: 100%;
+  /*padding-bottom: 45px;*/
+  background-color: map_get($sideMenu, 'background');
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// 页面侧边栏
+.sidebar-menu {
+  position: absolute;
+  display: block;
+  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  /*border-right: 1px solid map_get($sideMenu, 'background');*/
+  padding-top: 54px;
+  padding-bottom: 35px;
+  width: 240px;
+  /*background-color: #1c2b36;*/
+  height: 100%;
+  transition: left .5s ease;
+  -webkit-transition: left .5s ease;
+  -moz-transition: left .5s ease;
+  -ms-transition: left .5s ease;
+  -o-transition: left .5s ease;
+
+  .menu-list {
+    list-style: none;
+    a {
+      color: white;
+    }
+
+    &>.menu-item {
+      position: relative;
+      overflow: hidden;
+
+      &>a {
+        position: relative;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        overflow: hidden;
+        padding: 0 10px;
+        transition: background-color .3s ease;
+        -webkit-transition: background-color .3s ease;
+        -moz-transition: background-color .3s ease;
+        -ms-transition: background-color .3s ease;
+        -o-transition: background-color .3s ease;
+
+        &:before {
+          visibility: hidden;
+          opacity: 0;
+          content: ' ';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          border-left: 5px solid #4ec3ff;
+        }
+        &>i {
+          margin: 0 1em;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+        &:hover {
+          text-decoration: none;
+          background-color: map_get($sideMenu, 'menuItemBg');
+        }
+        &:hover:before {
+          visibility: visible;
+          opacity: 1;
+        }
+        &:hover i {
+          color: #7ca0bb;
+        }
+      }
+
+      &.actived>a {
+        background-color: map_get($sideMenu, 'menuItemBg');
+      }
+      &.actived>a:before {
+        visibility: visible;
+        opacity: 1;
+      }
+      &.actived>.sub-menu-list {
+        height: auto;
+      }
+    }
+
+    .sub-menu-list {
+      height: 0;
+      -webkit-transition: height 0.3s;
+      -moz-transition: height 0.3s;
+      -ms-transition: height 0.3s;
+      -o-transition: height 0.3s;
+      transition: height 0.3s;
+
+      &>.sub-menu-item {
+        &>a {
+          display: block;
+          width: 100%;
+          /*height: 30px;
+          line-height: 30px;*/
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+          position: relative;
+        }
+        &>a:hover:before {
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          border-left: 5px solid red;
+          width: 5px;
+          content: ' ';
+        }
+      }
+    }
+  }
+
+  &.collapsed {
+    width: 60px;
+
+    .menu-list {
+      .menu-item {
+        overflow: visible;
+      }
+      .sub-menu-list {
+        position: absolute;
+        left: 60px;
+        top: 0;
+        background-color: #1c2b36;
+        width: 180px;
+        overflow: hidden;
+        margin-left: 15px;
+
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      .menu-item.actived>.sub-menu-list {
+        padding: 10px 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// 页面主容器
+.main-container {
+  position: relative;
+  margin-left: 240px;
+  min-height: 100%;
+  background-color: map_get($theme, 'containerBg');
+  right: 0;
+  left: 0;
+  transition: left .5s ease;
+  -webkit-transition: left .5s ease;
+  -moz-transition: left .5s ease;
+  -ms-transition: left .5s ease;
+  -o-transition: left .5s ease;
+
+  &>.padding {
+    background-color: map_get($theme, 'containerBg');
+  }
+
+  &.stretched {
+    margin-left: 60px;
+  }
+}
+//******** 这一小段代码有着神奇的效果 ************//
+@media screen and (max-width: 600px) {
+  .main-container {
+    margin-left: 0;
+    left: 240px;
+
+    &.stretched {
+      margin-left: 0;
+      left: 0;
+      z-index: 900;
+    }
+  }
+}
+//******** 这一小段代码有着神奇的效果 ************//
+
+// 页面footer
+.main-footer {
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// 回到顶部
+.scroll-to-top {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  background-color: #2baab1;
+  color: white;
+  bottom: 60px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  right: -60px;
+  -webkit-transition: right 0.3s;
+  -moz-transition: right 0.3s;
+  -ms-transition: right 0.3s;
+  -o-transition: right 0.3s;
+  transition: right 0.3s;
+  z-index: 1000;
+
+  &:hover {
+    background-color: #0f0f0f;
+  }
+
+  &.shown {
+    right: 30px;
+  }
+}
+/** ============== 网站整体布局设置 ============== **/
+
+
+/** ============== 覆盖Bootstrap中的样式 ============== **/
+/**
+* 路径导航
+*/
+.breadcrumb {
+  border-radius: 0;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.input-group .input-group-addon {
+  border-radius: 0;
+}
+
+pre,
+.alert,
+.form-control,
+.btn,
+.panel,
+.panel-heading,
+.modal .modal-content,
+.panel-group .panel,
+.nav-tabs>li>a,
+.nav-pills>li>a,
+.img-thumbnail,
+.list-group-item:first-child,
+.list-group-item:last-child {
+  border-radius: 0;
+}
+/**
+* 下拉菜单
+*/
+.dropdown-menu {
+  border-radius: 0;
+}
+/**
+* 分页
+*/
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover,
+.pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  background-color: map_get($theme, 'main');
+  border-color: map_get($theme, 'main');
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span,
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  border-radius: 0;
+}
+/**
+* 徽章
+*/
+.badge {
+  background-color: map_get($theme, 'main');
+
+  &.badge-terques {
+    background-color: map_get($theme, 'terques');
+  }
+  &.badge-yellow {
+    background-color: map_get($theme, 'cyellow');
+  }
+  &.badge-red {
+    background-color: map_get($theme, 'cred');
+  }
+}
+/**
+* 标签页
+*/
+.tab-content {
+  padding: 20px 10px;
+}
+/**
+* 胶囊式标签页
+*/
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus,
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+  background-color: map_get($theme, 'main');
+}
+/** ============== 覆盖Bootstrap中的样式 ============== **/
+
+/** ============== 覆盖插件中的样式 ============== **/
+.daterangepicker {
+  .input-mini,
+  .input-mini.active {
+    border-radius: 0;
+  }
+
+}
+/** ============== 覆盖插件中的样式 ============== **/
+
+
+/** ============== 基于Bootstrap中的样式组件定义 ============== **/
+
+// 输入框组
+.input-group-img {
+  .input-group-addon {
+    padding: 0;
+    height: 40px;
+
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      height: 38px;
+    }
+  }
+}
+
+// 表格 —— 文字水平居中
+.table.table-center {
+  text-align: center;
+
+  &>thead>tr>th {
+    text-align: center;
+  }
+}
+// 表格 —— 文字垂直居中
+.table.table-middle>thead>tr>th,
+.table.table-middle>tbody>tr>th,
+.table.table-middle>tfoot>tr>th,
+.table.table-middle>thead>tr>td,
+.table.table-middle>tbody>tr>td,
+.table.table-middle>tfoot>tr>td {
+  vertical-align: middle;
+}
+
+/** ============== 基于Bootstrap中的样式组件定义 ============== **/
+
+
+
+/** ============== 网站公共样式定义 ============== **/
+.padding {
+  padding: 15px;
+}
+
+/* 分割线 */
+.separator-10 {
+  @include buildSeparator(10px);
+}
+.separator-20 {
+  @include buildSeparator(20px);
+}
+.separator-30 {
+  @include buildSeparator(20px);
+}
+.separator-50 {
+  @include buildSeparator(50px);
+}
+/** ============== 网站公共样式定义 ============== **/
+
+/** ============== 网站的逻辑样式定义 ============== **/
+
+/* 动画加载效果 */
+.loader {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+// 有点“微软”风的加载动画效果
+.loader-01 {
+    position:relative;
+    width: 42px;
+    height: 42px;
+    animation: loader_01 5s infinite linear;
+}
+.loader-01 span {
+    width:20px;
+    height:20px;
+    position:absolute;
+    background:red;
+    display:block;
+    animation: loader_01_span 1s infinite linear;
+    
+    &:nth-child(1) {
+        background:#2ecc71;    
+    }
+    &:nth-child(2) {
+        left:22px;
+        background:#9b59b6;
+        animation-delay: .2s;
+    }
+    &:nth-child(3) {
+        top:22px;
+        background:#3498db;
+        animation-delay: .4s;        
+    }
+    &:nth-child(4) {
+        top:22px;
+        left:22px;
+        background:#f1c40f;
+        animation-delay: .6s;
+    }
+}
+@keyframes loader_01 {
+	0%{transform:rotate(0deg);}
+	50%{transform:rotate(180deg);}
+	100%{transform:rotate(360deg);}
+}
+@keyframes loader_01_span {
+   0% { transform:scale(1); }
+   50% { transform:scale(0.5); }
+   100% { transform:scale(1); }
+}
+
+
+/* 盒子 */
+.box {
+  background-color: white;
+  /*border: 1px solid #ddd;*/
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  /*min-height: 200px;*/
+  overflow: auto;
+  
+  /*&.box-fixed {
+    position: fixed;
+  }*/
+    
+  &>.heading {
+    /*padding: 20px 20px 20px 0;*/
+    border-bottom: 1px solid #ddd;
+
+    &>.title {
+      border-left: 5px solid map_get($theme, 'main');
+      padding-left: 2em;
+      font-size: 14px;
+      margin: 20px 20px 20px 0;
+
+      // 右侧放置的链接
+      .link-right {
+        float: right;
+      }
+
+      // 右侧放置的收起和展开按钮
+      .box-toggle {
+        float: right;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // box 头部有标签导航
+  &.box-tabs-inline {
+    &>.heading {
+      border-bottom: 0;
+      padding-top: 10px;
+      position: relative;
+      overflow: hidden;
+
+      .nav {
+        padding-left: 20px;
+      }
+
+      .box-toggle {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+      }
+    }
+
+    .tab-content {
+      padding: 0;
+    }
+  }
+
+
+  &>.box-inner {
+    padding: 20px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  // 收起box-inner
+  &.collapsed>.box-inner {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+/**
+* 盒子中的块标签
+*/
+.box-label-block {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  height: 100px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  overflow: hidden;
+
+  &.theme {
+    .symbol {
+      background-color: map_get($theme, 'main');
+    }
+  }
+  &.cyellow {
+    .symbol {
+      background-color: map_get($theme, 'cyellow');
+    }
+  }
+  &.terques {
+    .symbol {
+      background-color: map_get($theme, 'terques');
+    }
+  }
+  &.cred {
+    .symbol {
+      background-color: map_get($theme, 'cred');
+    }
+  }
+
+  &:hover {
+    .symbol {
+      width: 0;
+    }
+    .content {
+      border-radius: 4px;
+      border-left-color: #ccc;
+      width: 100%;
+    }
+  }
+
+  .symbol {
+    width: 45%;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    float: left;
+    height: 100%;
+    line-height: 100px;
+    color: white;
+    font-size: 45px;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .content {
+    width: 55%;
+    text-align: center;
+    float: left;
+    height: 100%;
+    border-left: 1px solid transparent;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    -webkit-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    color: #c6cad6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    .title {
+      margin: 0;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+  }
+
+}
+
+/* 全选复选框，以及对应的子复选框 */
+input[type=checkbox] {
+  &.all-cb, &.child-cb {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 搜索表单样式（无label） */
+.form-search {
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  .col-md-2, .col-sm-4, .col-xs-12 {
+    /*padding: 0;
+    margin-right: 5px;*/
+    margin-bottom: 8px;
+    padding: 0 10px;
+  }
+
+  label {
+    margin-right: 5px;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-group,
+  .form-control {
+    width: 100%;
+  }
+
+  .btn-search {
+    margin-right: 10px;
+  }
+}
+/* 搜索表单样式（有label） */
+.form-label-search {
+  margin-bottom: 10px;
+  overflow: hidden;
+  .control-label {
+    margin-right: 5px;
+  }
+  .form-group {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+/** ============== 网站的逻辑样式定义 ============== **/
+
+
+/** ============== 网站的插件样式定义 ============== **/
+
+
+/** ============== 网站的插件样式定义 ============== **/

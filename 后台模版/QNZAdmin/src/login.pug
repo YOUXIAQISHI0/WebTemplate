@@ -1,0 +1,74 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    title 用户登录
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='manifest', href='site.webmanifest')
+    link(rel='apple-touch-icon', href='icon.png')
+    // Place favicon.ico in the root directory
+    meta(name='theme-color', content='#fafafa')
+    link(href='fonts/iconfont.css', rel='stylesheet')
+    link(href='css/styles.min.css', rel='stylesheet')
+    style(type='text/css').
+        .input-group-text {
+            padding:0;
+            overflow: hidden;
+            background-color:#fff;
+        }
+  body
+    .page-login
+      header.site-header
+        .container
+          .row.align-items-center
+            .col-auto
+              .logo
+                img(src='img/logo.svg', alt='')
+            .col
+              h1.title 用户登录
+              
+      .loginbox
+       
+          
+        form.loginForm(method='post')
+          .mb-3
+            label(for='username') 帐号/用户名
+            input#username.form-control(type='text', name='username',required)
+          .mb-3
+            label(for='password') 密码
+            input#password.form-control(type='password', name='password',required)
+          .mb-3
+            label(for="captcha") 验证码
+            .input-group
+              input#captcha.form-control(type="text", name="captcha", placeholder="验证码", required)
+              .input-group-append
+                span.input-group-text
+                  img#imgCaptcha(src="https://www.fillmurray.com/g/120/42", alt="CAPTCHA")
+     
+
+
+          .custom-control.custom-checkbox.mb-3
+            input#rememberme.custom-control-input(type='checkbox')
+            label.custom-control-label(for='rememberme') 记住我
+              
+          .text-center  
+            button.btn.btn-primary(type='submit')
+              i.iconfont.icon-login 
+              | 登录
+            a.btn.btn-outline-secondary(href="/") 
+              i.iconfont.icon-left 
+              | 离开
+      include includes/footer.pug
+
+
+    script(src='js/libs/jquery-1.12.4.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/app.js')
+    script.
+      $(function () {
+      $('button').click(function (e) {
+      e.preventDefault();
+      location.href = 'index.html';
+      });
+      })

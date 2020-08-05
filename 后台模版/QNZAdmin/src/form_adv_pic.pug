@@ -1,0 +1,128 @@
+extends includes/layout.pug
+
+block bkheader
+    script(src='js/vendor/ckeditor/ckeditor.js')
+    script(src='js/vendor/holderjs/holder.min.js')
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板
+                        li.breadcrumb-item
+                            a(href='#') Library
+                        li.breadcrumb-item.active(aria-current='page') Data
+            .col-md-auto
+                time#sitetime
+    .subheader
+        h1.subheader-title
+            i.iconfont.icon-table
+            |  基本表格
+        small
+            | Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
+    form.needs-validation(novalidate='')
+        .card
+            header.card-header
+                .row
+                    .col 数据查询
+                    .col-auto
+                        .control
+                            a.expand(href='#')
+                                i.iconfont.icon-fullscreen
+                            a.compress(href='#', style='display: none;')
+                                i.iconfont.icon-shrink
+            section.card-body
+                .row
+                    .col-md
+                        .form-row
+                            .col-md-4.mb-3
+                                label(for='validationCustom01') First name
+                                input#validationCustom01.form-control(type='text', value='Mark', required='')
+                                .valid-feedback
+                                    | Looks good!
+                            .col-md-4.mb-3
+                                label(for='validationCustom02') Last name
+                                input#validationCustom02.form-control(type='text', value='Otto', required='')
+                                .valid-feedback
+                                    | Looks good!
+                            .col-md-4.mb-3
+                                label(for='validationCustomUsername') Username
+                                .input-group
+                                    .input-group-prepend
+                                        span#inputGroupPrepend.input-group-text @
+                                    input#validationCustomUsername.form-control(type='text', aria-describedby='inputGroupPrepend', required='')
+                                    .invalid-feedback
+                                        | Please choose a username.
+                        .form-row
+                            .col-md-6.mb-3
+                                label(for='validationCustom03') City
+                                input#validationCustom03.form-control(type='text', required='')
+                                .invalid-feedback
+                                    | Please provide a valid city.
+                            .col-md-3.mb-3
+                                label(for='validationCustom04') State
+                                select#validationCustom04.custom-select(required='')
+                                    option(selected='', disabled='', value='') Choose...
+                                    option ...
+                                .invalid-feedback
+                                    | Please select a valid state.
+                            .col-md-3.mb-3
+                                label(for='validationCustom05') Zip
+                                input#validationCustom05.form-control(type='text', required='')
+                                .invalid-feedback
+                                    | Please provide a valid zip.
+                        .form-group
+                            label(for='my-input') 内容
+                            textarea#editor1(name='editor1', rows='10', cols='80')
+                                | This is my textarea to be replaced with CKEditor.
+                        .form-group
+                            .form-check
+                                input#invalidCheck.form-check-input(type='checkbox', value='', required='')
+                                label.form-check-label(for='invalidCheck')
+                                    | Agree to terms and conditions
+                                .invalid-feedback
+                                    | You must agree before submitting.
+                    .col-md-auto
+                        .card
+                            .card-header
+                                | 图片设置
+                            .card-body
+                                img(data-src='holder.js/300x200?text=300x200 \n 缩略图')
+                            .card-footer.text-center
+                                button.btn.btn-outline-primary.btn-sm(type='button')
+                                    i.iconfont.icon-image
+                                    |  浏览
+                                button.btn.btn-outline-danger.btn-sm(type='button')
+                                    i.iconfont.icon-delete
+                                    |  移除
+            footer.card-footer.text-center
+                button.btn.btn-primary(type='submit')
+                    i.iconfont.icon-save
+                    |   提交
+                button.btn.btn-secondary(type='button')
+                    i.iconfont.icon-left
+                    |   返回
+block bkfooter
+    script.
+        CKEDITOR.replace( 'editor1' );
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+        }, false);
+        });
+        }, false);
+        })();
